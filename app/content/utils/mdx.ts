@@ -23,6 +23,12 @@ const DATASET_CONTENT_PATH = path.join(
   'content',
   'datasets',
 );
+const THEME_CONTENT_PATH = path.join(
+  process.cwd(),
+  'app',
+  'content',
+  'themes',
+);
 
 const md = markdownit();
 
@@ -119,6 +125,14 @@ export function getStoriesMetadata(): StoryMetadata[] {
 
 export function getStories() {
   return getMDXData(STORY_CONTENT_PATH) as StoryWithContent[];
+}
+
+export function getThemesMetadata(): StoryMetadata[] {
+  return getMDXMetaData(THEME_CONTENT_PATH) as StoryMetadata[];
+}
+
+export function getThemes() {
+  return getMDXData(THEME_CONTENT_PATH) as StoryWithContent[];
 }
 
 export function getDatasetsMetadata(): DatasetMetadata[] {
