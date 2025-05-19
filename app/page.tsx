@@ -8,18 +8,21 @@ const mainTopSectionData = [
     description:
       'Easily access high quality Earth data from NASA and its associated partners',
     img: '/images/homepage/water_avail_theme.png',
+    path: '/themes/water-resources',
   },
   {
     title: 'Floods',
     description:
       'Easily access high quality Earth data from NASA and its associated partners.',
     img: '/images/homepage/flood_theme.png',
+    path: '/themes/droughts',
   },
   {
     title: 'Droughts',
     description:
       'Easily access high quality Earth data from NASA and its associated partners',
     img: '/images/homepage/drought_theme.png',
+    path: '/themes/floods',
   },
 ];
 
@@ -60,6 +63,9 @@ export default function HomePage() {
                 <div className='margin-top-3'>
                   <h3>{d.title}</h3>
                   <p className='margin-top-1'>{d.description}</p>
+                  <Link href={d.path} className='display-inline-block margin-top-2 text-bold'>
+                  Read More →
+                  </Link>
                 </div>
               </div>
             );
