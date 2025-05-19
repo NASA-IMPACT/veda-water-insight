@@ -7,16 +7,19 @@ const mainTopSectionData = [
     title: 'Water Resources for People, Energy, Commerce and Planets',
     description:
       'Easily access high quality Earth data from NASA and its associated partners',
+    img: '/images/homepage/water_avail_theme.png',
   },
   {
     title: 'Floods',
     description:
       'Easily access high quality Earth data from NASA and its associated partners.',
+    img: '/images/homepage/flood_theme.png',
   },
   {
     title: 'Droughts',
     description:
       'Easily access high quality Earth data from NASA and its associated partners',
+    img: '/images/homepage/drought_theme.png',
   },
 ];
 
@@ -49,7 +52,9 @@ export default function HomePage() {
                 <div>
                   <img
                     className='radius-pill'
-                    src='https://images.unsplash.com/photo-1609520778163-a16fb3862581?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                    src={d.img}
+                    alt={d.title}
+                    style={{ width: '150px', height: '150px', objectFit: 'cover' }}
                   ></img>
                 </div>
                 <div className='margin-top-3'>
