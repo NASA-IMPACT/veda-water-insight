@@ -4,17 +4,17 @@ import { getStoriesMetadata } from 'app/content/utils/mdx';
 
 const mainTopSectionData = [
   {
-    title: 'Earth scientists',
+    title: 'Water Resources for People, Energy, Commerce and Planets',
     description:
       'Easily access high quality Earth data from NASA and its associated partners',
   },
   {
-    title: 'Academic researchers',
+    title: 'Floods',
     description:
-      'Support your research efforts with an open source cloud-computing platform backed by NASA data.',
+      'Easily access high quality Earth data from NASA and its associated partners.',
   },
   {
-    title: 'Science enthusiasts',
+    title: 'Droughts',
     description:
       'Easily access high quality Earth data from NASA and its associated partners',
   },
@@ -36,8 +36,7 @@ export default function HomePage() {
       <div className='grid-container'>
         <div className='grid-row margin-top-5'>
           <h2>
-            VEDA Template is here to help scientists to engage with wider
-            audience
+          NASA Water Insight products provide essential information for managing water resources for the benefit of all sectors of society
           </h2>
         </div>
         <div className='grid-row grid-gap-lg card--homepage-main margin-top-2'>
@@ -50,7 +49,7 @@ export default function HomePage() {
                 <div>
                   <img
                     className='radius-pill'
-                    src='https://placehold.co/400x400'
+                    src='https://images.unsplash.com/photo-1609520778163-a16fb3862581?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                   ></img>
                 </div>
                 <div className='margin-top-3'>

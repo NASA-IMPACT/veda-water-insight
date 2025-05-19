@@ -11,7 +11,7 @@ export default function Footer() {
       division: 'NASA EarthData 2024',
       version: 'BETA VERSION',
       title: 'NASA Official',
-      name: 'Manil Maskey',
+      name: 'Sujay Kumar',
       to: 'test@example.com',
       type: 'email',
     },
