@@ -14,15 +14,15 @@ import VedaUIConfigProvider from 'app/store/providers/veda-ui-config';
 
 export const navItems: NavItem[] = [
   {
-    id: 'data-catalog',
-    title: 'Data Catalog',
-    to: `/${DATASET_CATALOG_PATH}`,
+    id: 'themes',
+    title: 'Themes',
+    to: `/${THEMES_PATH}`,
     type: 'internalLink',
   },
   {
-    id: 'exploration',
-    title: 'Exploration',
-    to: `/${EXPLORATION_PATH}`,
+    id: 'data-catalog',
+    title: 'Data Catalog',
+    to: `/${DATASET_CATALOG_PATH}`,
     type: 'internalLink',
   },
   {
@@ -32,11 +32,12 @@ export const navItems: NavItem[] = [
     type: 'internalLink',
   },
   {
-    id: 'themes',
-    title: 'Themes',
-    to: `/${THEMES_PATH}`,
+    id: 'exploration',
+    title: 'Exploration',
+    to: `/${EXPLORATION_PATH}`,
     type: 'internalLink',
-  },
+  },  
+
 ];
 
 export const subNavItems: NavItem[] = [
@@ -58,7 +59,7 @@ export default function Header() {
   return (
     <VedaUIConfigProvider>
       <PageHeader
-        title={'Water Insight Dashboard'}
+        title={'Water Insight'}
         mainNavItems={navItems}
         subNavItems={subNavItems}
         logoSvg={
