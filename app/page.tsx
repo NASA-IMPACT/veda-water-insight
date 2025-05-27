@@ -44,7 +44,7 @@ export default function HomePage() {
           <h2>
           Water Quantity and the Water Cycle (draft text for Earth.gov Water Resources page) 
           </h2>
-          <div className="body-text">
+          <div className='body-text'>
             <p>
               Water is arguably the most important resource for sustaining ecosystems, agriculture, and life itself. The water cycle describes how water moves throughout the planet’s atmosphere, oceans, and land impacting weather patterns, water availability and natural disasters such as floods and droughts. Although water covers the majority of the Earth’s surface, only 1% of it is readily available for our uses.
             </p>
