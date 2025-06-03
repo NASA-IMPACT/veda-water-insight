@@ -4,7 +4,7 @@ import { getStoriesMetadata } from 'app/content/utils/mdx';
 
 const mainTopSectionData = [
   {
-    title: 'Water Resources for People, Energy, Commerce and Planets',
+    title: 'Water Availability Mapping water for people, energy, commerce and agriculture',
     description:
       'Easily access high quality Earth data from NASA and its associated partners',
     img: '/images/homepage/water_avail_theme.png',
