@@ -4,23 +4,20 @@ import { getStoriesMetadata } from 'app/content/utils/mdx';
 
 const mainTopSectionData = [
   {
-    title: 'Water Availability Mapping water for people, energy, commerce and agriculture',
-    description:
-      'Easily access high quality Earth data from NASA and its associated partners',
+    title: 'Water Availability',
+    description:'Mapping water for human use, energy, and agriculture.',
     img: '/images/homepage/water_avail_theme.png',
     path: '/themes/water-resources',
   },
   {
     title: 'Floods',
-    description:
-      'Easily access high quality Earth data from NASA and its associated partners.',
+    description:'Monitoring floods globally with advanced models and remote sensing data.',
     img: '/images/homepage/flood_theme.png',
     path: '/themes/floods',
   },
   {
     title: 'Droughts',
-    description:
-      'Easily access high quality Earth data from NASA and its associated partners',
+    description:'Mapping droughts and drought conditions throughout the U.S.',
     img: '/images/homepage/drought_theme.png',
     path: '/themes/droughts',
   },
@@ -42,7 +39,7 @@ export default function HomePage() {
       <div className='grid-container'>
         <div className='grid-row margin-top-5'>
           <h2>
-          Water Quantity and the Water Cycle (draft text for Earth.gov Water Resources page) 
+          Introduction text for Water Insight (draft text for Earth.gov Water Resources page) 
           </h2>
           <div className='body-text'>
             <p>
