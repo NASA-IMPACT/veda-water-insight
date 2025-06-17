@@ -1,7 +1,7 @@
 ---
 id: water-resources
 name:  Water Availability
-description: "Mapping water for human use, energy, and agriculture"
+description: "Mapping water for human use, energy, agriculture, and ecosystems"
 media:
   src: /images/homepage/water_avail_theme.png
   alt: An aerial view of a mountain range covered in snow
@@ -21,7 +21,7 @@ taxonomy:
         <img src="/images/themes/data-catalog.png" alt="Dataset" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
         <div style={{ padding: '1rem', textAlign: 'center', fontSize: '1.25rem', fontWeight: '600', color: '#2c3d4f' }}>Dataset</div>
       </a>
-      <a href="https://deploy-preview-2--water-insight.netlify.app/exploration?datasets=%5B%7B%22id%22%3A%22nldas2%22%2C%22settings%22%3A%7B%22isVisible%22%3Atrue%2C%22opacity%22%3A100%2C%22analysisMetrics%22%3A%5B%7B%22id%22%3A%22mean%22%2C%22label%22%3A%22Average%22%2C%22chartLabel%22%3A%22Average%22%2C%22themeColor%22%3A%22infographicB%22%7D%2C%7B%22id%22%3A%22std%22%2C%22label%22%3A%22St+Deviation%22%2C%22chartLabel%22%3A%22St+Deviation%22%2C%22themeColor%22%3A%22infographicD%22%7D%5D%2C%22colorMap%22%3A%22magma%22%2C%22scale%22%3A%7B%22min%22%3A0%2C%22max%22%3A200%7D%7D%7D%5D&taxonomy=%7B%7D&search=&date=2021-12-01T06%3A00%3A00.000Z" style={{ display: 'block', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', textDecoration: 'none' }}>
+      <a href="https://deploy-preview-2--water-insight.netlify.app/exploration?datasets=%5B%7B%22id%22%3A%22lis-tws-nonstationarity-index%22%2C%22settings%22%3A%7B%22isVisible%22%3Atrue%2C%22opacity%22%3A100%2C%22analysisMetrics%22%3A%5B%7B%22id%22%3A%22mean%22%2C%22label%22%3A%22Average%22%2C%22chartLabel%22%3A%22Average%22%2C%22themeColor%22%3A%22infographicB%22%7D%2C%7B%22id%22%3A%22std%22%2C%22label%22%3A%22St+Deviation%22%2C%22chartLabel%22%3A%22St+Deviation%22%2C%22themeColor%22%3A%22infographicD%22%7D%5D%2C%22colorMap%22%3A%22rdylbu%22%2C%22scale%22%3A%7B%22min%22%3A-1%2C%22max%22%3A1%7D%7D%7D%5D&taxonomy=%7B%7D&search=&date=2003-01-01T06%3A00%3A00.000Z&dateRange=" style={{ display: 'block', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', textDecoration: 'none' }}>
         <img src="/images/themes/data-view.png" alt="View Data" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
         <div style={{ padding: '1rem', textAlign: 'center', fontSize: '1.25rem', fontWeight: '600', color: '#2c3d4f' }}>View Data</div>
       </a>
@@ -35,7 +35,30 @@ taxonomy:
 
   The Water Insight team is building the state-of-the-art North American Land Data Assimilation System Phase 3 (NLDAS-3) modeling system for improved estimates of water availability. NLDAS-3 combines the open source NASA Land Information System (LIS) with remotely sensed observations to provide daily estimates of land surface fluxes and states such as soil moisture, streamflow, and snow. The information from NLDAS-3 will be useful not only for water availability, but also for capturing and estimating hazards such as floods and droughts, both of which can be costly for agriculture and human infrastructure.
 
-  
+                  <Figure style={{ textAlign: "center" }}>
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        disablePictureInPicture
+                        disableRemotePlayback
+                        height={"450px"}
+                        style={{ textAlign: "center", maxWidth: "100%" }}
+                    >
+                        <source src={"https://svs.gsfc.nasa.gov/vis/a000000/a005400/a005444/nonstationarity_v25_std_FLAT_fade_2024-12-18_1511_1080p60.mp4"} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <Caption>
+                      <div>
+                        Global Monthly Terrestrial Water Storage Anomaly from January 2003 through December 2019, showing monthly transitions.  
+                        <p><i>Video credit: NASA Scientific Visualization Studio</i></p>
+                      </div>
+                    </Caption>
+                </Figure>
+  </Prose>
+</Block> 
+<Block>
+  <Prose> 
   ## Water Visualizations
   - [NASA SVS viz on Terrestrial Water Storage: Regional Views 2003 - 2019](https://svs.gsfc.nasa.gov/5444/)
   - [Monitoring Global Groundwater from Space](https://svs.gsfc.nasa.gov/31178/)

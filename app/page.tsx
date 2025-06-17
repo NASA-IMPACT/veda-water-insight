@@ -4,23 +4,23 @@ import { getStoriesMetadata } from 'app/content/utils/mdx';
 
 const mainTopSectionData = [
   {
-    title: 'Water Availability',
-    description:'Mapping water for human use, energy, and agriculture.',
-    img: '/images/homepage/water_avail_theme.png',
-    path: '/themes/water-resources',
+    title: 'Droughts',
+    description:'Mapping droughts and drought conditions throughout the U.S.',
+    img: '/images/homepage/drought_theme.png',
+    path: '/themes/droughts',
   },
   {
     title: 'Floods',
     description:'Monitoring floods globally with advanced models and remote sensing data.',
     img: '/images/homepage/flood_theme.png',
     path: '/themes/floods',
-  },
+  },    
   {
-    title: 'Droughts',
-    description:'Mapping droughts and drought conditions throughout the U.S.',
-    img: '/images/homepage/drought_theme.png',
-    path: '/themes/droughts',
-  },
+    title: 'Water Availability',
+    description:'Mapping water for human use, energy, agriculture, and ecosystems.',
+    img: '/images/homepage/water_avail_theme.png',
+    path: '/themes/water-resources',
+  }
 ];
 
 const featuredStories = getStoriesMetadata()
