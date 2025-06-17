@@ -57,18 +57,112 @@ taxonomy:
                 </Figure>
   </Prose>
 </Block> 
+
 <Block>
-  <Prose> 
-  ## Water Visualizations
-  - [NASA SVS viz on Terrestrial Water Storage: Regional Views 2003 - 2019](https://svs.gsfc.nasa.gov/5444/)
-  - [Monitoring Global Groundwater from Space](https://svs.gsfc.nasa.gov/31178/)
-  - [Water Cycle Nonstationarity](https://svs.gsfc.nasa.gov/5442/)
+  <Prose>
+    ## Stories & Visualizations
+
+    <div
+      style={{
+        overflowX: 'auto',
+        whiteSpace: 'nowrap',
+        paddingBottom: '1rem',
+      }}
+    >
+      <div
+        style={{
+          display: 'inline-flex',
+          gap: '1.5rem',
+        }}
+      >
+        {[
+          {
+            href: "https://www.earthdata.nasa.gov/dashboard/stories/nldas",
+            img: "https://www.earthdata.nasa.gov/dashboard/nldas-cover.cbabde54.png",
+            title: "Mapping Water Availability Over North America",
+            date: "Oct 21, 2024",
+          },
+          {
+            href: "https://www.earthdata.nasa.gov/dashboard/stories/tws-trends",
+            img: "https://www.earthdata.nasa.gov/dashboard/jordan_image.91d2c13c.jpg",
+            title: "A New View of the Global Water Cycle: Integrating NASA's Observations",
+            date: "Feb 28, 2023",
+          },
+          {
+            href: "https://svs.gsfc.nasa.gov/5444/",
+            img: "https://svs.gsfc.nasa.gov/vis/a000000/a005400/a005444/5444_SmallPrint.jpg",
+            title: "Terrestrial Water Storage: Regional Views",
+            date: "",
+          },
+          {
+            href: "https://svs.gsfc.nasa.gov/31178/",
+            img: "https://svs.gsfc.nasa.gov/vis/a000000/a003100/a003178/31178_SmallPrint.jpg",
+            title: "Monitoring Global Groundwater from Space",
+            date: "",
+          },
+          {
+            href: "https://svs.gsfc.nasa.gov/5442/",
+            img: "https://svs.gsfc.nasa.gov/vis/a000000/a005400/a005442/5442_SmallPrint.jpg",
+            title: "Water Cycle Nonstationarity",
+            date: "",
+          }
+        ].map(({ href, img, title, date }) => (
+          <a
+            key={title}
+            href={href}
+            style={{
+              minWidth: '300px',
+              maxWidth: '300px',
+              flex: '0 0 auto',
+              textDecoration: 'none',
+              color: 'inherit',
+              display: 'flex',
+              flexDirection: 'column',
+              minHeight: '360px',
+            }}
+          >
+            <img
+              src={img}
+              alt={title}
+              style={{
+                width: '100%',
+                height: '220px',
+                objectFit: 'cover',
+                borderRadius: '12px',
+              }}
+            />
+            <p
+              style={{
+                fontWeight: 'bold',
+                marginTop: '0.75rem',
+                display: '-webkit-box',
+                WebkitBoxOrient: 'vertical',
+                WebkitLineClamp: 3,
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                lineHeight: '1.4em',
+                height: '4.2em', // 1.4em * 2 lines
+                whiteSpace: 'normal', // Important: allow wrapping!
+              }}
+            >
+              {title}
+            </p>
+
+            {date && (
+              <p style={{ fontSize: '0.85em', color: '#555', marginTop: '0.3rem' }}>
+                {date}
+              </p>
+            )}
+          </a>
+        ))}
+      </div>
+    </div>
+  </Prose>
+</Block>
 
 
-  ## Stories
-  - [Mapping Water Availability over North America: NASA is co-developing high-resolution retrospective and real-time data for water resources and agricultural applications Published on Oct 21, 2024](https://www.earthdata.nasa.gov/dashboard/stories/nldas)
-  - [A New View of the Global Water Cycle: Integrating NASA's state-of-the art model and remote sensing observations to reveal human impacts on water cycle Published on Feb 28, 2023](https://www.earthdata.nasa.gov/dashboard/stories/tws-trends)
-
+<Block>
+  <Prose>
   ## Training
   - ARSET - [Groundwater Monitoring using Observations from NASA’s Gravity Recovery and Climate Experiment (GRACE) Missions](https://appliedsciences.nasa.gov/get-involved/training/english/arset-groundwater-monitoring-using-observations-nasas-gravity)
   - ARSET - [Applications of Remote Sensing-Based Evapotranspiration Data Products for Agricultural and Water Resource Management](https://appliedsciences.nasa.gov/get-involved/training/english/arset-applications-remote-sensing-based-evapotranspiration-data)
