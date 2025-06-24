@@ -81,10 +81,14 @@ export default function HomePage() {
           <div className='tablet:grid-col-6'>
             <div
               className='card--homepage-topstory text-base-lightest radius-md display-flex flex-align-end padding-2'
-              style={{ backgroundImage: `url(${topStory.media?.src})` }}
+              style={{
+                backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${topStory.media?.src})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
             >
               <div className='card--homepage-topstory-text'>
-                <h3> {topStory.name}</h3>
+                <h3 style={{ fontWeight: 'bold' }}>{topStory.name}</h3>
                 <p className='margin-top-1'> {topStory.description}</p>
               </div>
               <Link className='link--block' href={topStory.path} />
@@ -97,10 +101,14 @@ export default function HomePage() {
                   <div className='tablet:grid-col'>
                     <div
                       className='card--homepage-substory text-base-lightest radius-md display-flex flex-align-end padding-2'
-                      style={{ backgroundImage: `url(${d.media?.src})` }}
+                      style={{
+                        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${d.media?.src}?v=${d.id})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
                     >
                       <div className='card--homepage-topstory-text'>
-                        <h3> {d.name}</h3>
+                        <h3 style={{ fontWeight: 'bold' }}>{d.name}</h3>
                         <p className='margin-top-1'> {d.description}</p>
                       </div>
                       <Link className='link--block' href={d.path} />

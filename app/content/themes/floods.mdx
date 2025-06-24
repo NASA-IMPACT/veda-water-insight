@@ -36,20 +36,26 @@ taxonomy:
   
   Severe flooding can destroy infrastructure, such as roads and bridges, as well as instruments used to monitor the flow of streams, making on-the-ground assessment of flooding impacts difficult. A major advantage of NASA’s remote sensing and modeling tools is that they provide a birds-eye view to monitor and map flooding in near-real time, and to assess the risk of flooding before an event occurs.
 
-    <Figure style={{ textAlign: "center" }}>
-      <img
-        src="/images/themes/sport_flood.gif"
-        alt="Global Monthly Terrestrial Water Storage Anomaly"
-        height={450}
-        style={{ maxWidth: "100%" }}
-      />
-      <Caption>
-        <div>
-          0-100 cm Relative Soil Moisture (available water; %) valid 12z 23 Jun 2025.  
-          <p><i>Video credit: SPoRT Viewer</i></p>
-        </div>
-      </Caption>
-    </Figure>
+                  <Figure style={{ textAlign: "center" }}>
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        disablePictureInPicture
+                        disableRemotePlayback
+                        height={"450px"}
+                        style={{ textAlign: "center", maxWidth: "100%" }}
+                    >
+                        <source src={"/images/themes/sport_flood.mp4"} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <Caption>
+                      <div>
+                        Devastating flooding occurred in the Carolinas in September 2024 as Hurricane Helene dropped record rainfall on extremely wet soils, leading to flash flooding, landslides, and loss of critical infrastructure. NASA models, driven by earth observing satellite data, captured the nearly saturated soils in advance of Helene’s arrival, helping to warn of the imminent, extreme flood threat.
+                        <p><i>Video credit: SPoRT Viewer</i></p>
+                      </div>
+                    </Caption>
+                </Figure>
                 
 <Block>
   <Prose>
