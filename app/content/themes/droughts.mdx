@@ -15,22 +15,67 @@ taxonomy:
       - Drought
 ---
 <Block>
+  <Figure>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', width: '100%' }}>
+      <a href="https://deploy-preview-2--water-insight.netlify.app/data-catalog" style={{ display: 'block', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', textDecoration: 'none' }}>
+        <img src="/images/themes/data-catalog.png" alt="Dataset" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+        <div style={{ padding: '1rem', textAlign: 'center', fontSize: '1.25rem', fontWeight: '600', color: '#2c3d4f' }}>Dataset</div>
+      </a>
+      <a href="https://deploy-preview-2--water-insight.netlify.app/exploration" style={{ display: 'block', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', textDecoration: 'none' }}>
+        <img src="/images/themes/data-view.png" alt="View Data" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+        <div style={{ padding: '1rem', textAlign: 'center', fontSize: '1.25rem', fontWeight: '600', color: '#2c3d4f' }}>View Data</div>
+      </a>
+    </div>
+  </Figure>
+</Block>
+<Block>
   <Prose>
   ## About Droughts
-  Drought is a climate process referring to a period of time when a region is drier than normal. Ecosystems are adapted to expect an amount of precipitation that is unique to the geography and weather patterns of their region, so when actual rainfall amounts don’t meet the mark, the consequence can be vegetation and crop stress, diminished water storage in reservoirs and aquifers, and greater susceptibility to wildfires. As such, it is important to understand and be able to predict the severity of droughts in order to efficiently allocate resources when drought occurs. There are many ways to measure drought, reflecting its multifaceted impact on the ecosystem. This includes meteorological drought, which describes the current deviation from the normal amount of rainfall, agricultural drought, which considers the actual amount of water available for plants in the soil given the amount of precipitation and evapotranspiration, and hydrological drought, which characterizes the effect on lakes, reservoirs, and aquifers. Since there is a wide variety between regions in what is considered “normal” precipitation, soil moisture, and water storage amount, drought is usually measured in terms of the current position of a drought metric in the distribution of historical values for each locale. For example, the Standardized Precipitation Index (SPI) calculates how many standard deviations the recent amount of rainfall is away from the local mean value, and soil moisture percentiles describe the percentage of time in the known history of the local climate that less water is available for vegetation.
-
-  The long-term data record, quality meteorological inputs and soil physics, and near real-time forecasting capability of the NLDAS-2 and SPoRT-LIS datasets have a storied record of providing the information that agriculturalists, policy makers, and the general public need to evaluate drought and take action to mitigate the negative effects. The upcoming release of the NLDAS-3 data system will carry and improve upon this legacy by producing data at an unprecedented 1km resolution, and integrating an improved system for modeling vegetation and groundwater storage, which can increase the information quality and reduce the cost of managing resources during periods of drought.
+  Drought is an atmospheric or hydrologic process referring to a period of time when a region is drier than normal. Ecosystems are adapted to expect an amount of precipitation that is unique to the geography and weather patterns of their region, so when actual rainfall amounts aren’t sufficient to meet the demand, the consequence can be vegetation and crop stress, diminished water storage in reservoirs and aquifers, and greater susceptibility to wildfires. As such, it is important to understand and be able to predict the severity of droughts in order to efficiently allocate resources when drought does occur. NOAA’s National Integrated Drought Information System (NIDIS) is an [integrated information system](https://www.drought.gov/about/integrated-information-systems) that coordinates drought monitoring, forecasting, planning, and information at federal, tribal, state, and local levels across the country. Each week, the [U.S. Drought Monitor (USDM)](https://droughtmonitor.unl.edu/) is released, showing the current drought conditions across the United States. The USDM has been a team effort since its inception in 1999, produced jointly by the National Drought Mitigation Center at the University of Nebraska-Lincoln, the National Oceanic and Atmospheric Administration (NOAA) and the U.S. Department of Agriculture (USDA). 
   
-  ## Drought Visualizations
-  - [NASA SVS Viz on how Drought conditions set the stage for an intense fire season in California in 2021](https://svs.gsfc.nasa.gov/5051/)
+  The USDM employs a convergence of evidence approach, bringing together weather and hydrological data with records of drought impacts, on-the-ground observations and local expert feedback.There are many ways to measure drought, reflecting its multifaceted impact on the ecosystem. This includes meteorological drought, which describes the current deviation from the normal amount of rainfall, agricultural drought, which considers the actual amount of water available for plants in the soil given the amount of precipitation and evapotranspiration, and hydrological drought, which characterizes the effect on lakes, reservoirs, and aquifers. Since there is a wide variety between regions in what is considered “normal” precipitation, soil moisture, and water storage amount, drought is usually measured in terms of the current position of a drought metric in the distribution of historical values for each locale. For example, the Standardized Precipitation Index (SPI) calculates how many standard deviations the recent amount of rainfall is away from the local mean value, and soil moisture percentiles describe the percentage of time in the known history that less water is available for vegetation.
 
+  Over the past decade, numerous new drought-related datasets have been developed that have been integrated into the operational decision-making process by the USDM. These include drought metrics from advanced land surface model simulations that can provide spatial and temporal information over areas that aren’t covered by ground-based observational networks. The long-term data record, quality meteorological inputs and soil physics, and near real-time forecasting capability of land surface modeling products from NLDAS-2 and SPoRT-LIS datasets have provided the information that agriculturalists, policy makers, and the general public need to evaluate drought and take action to mitigate the negative effects. The upcoming release of the NLDAS-3 data system will improve upon this legacy by producing data at an unprecedented 1-km resolution and by integrating an improved system for modeling vegetation and groundwater storage, which can increase the information quality and reduce the cost of managing resources during periods of drought.
+  
+                    <Figure style={{ textAlign: "center" }}>
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        disablePictureInPicture
+                        disableRemotePlayback
+                        height={"450px"}
+                        style={{ textAlign: "center", maxWidth: "100%" }}
+                    >
+                        <source src={"https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005051/fire_hyro_VIZ01_final_HD_1080p59.94.mp4"} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <Caption>
+                      <div>
+                        Drought conditions set the stage for an intense fire season in California in 2021.  
+                        <p><i>Video credit: [NASA Scientific Visualization Studio](https://svs.gsfc.nasa.gov/)</i></p>
+                      </div>
+                    </Caption>
+                </Figure>
+  
   ## Stories
   - [Tale of Two Droughts story from EIS](https://freshwater.eis.smce.nasa.gov/storymap.html)
-
+  - Mapping Water Availability over North America: NASA is co-developing high-resolution retrospective and real-time data for water resources and agricultural applications (https://www.earthdata.nasa.gov/dashboard/stories/nldas)
+  - Drought on the Great Plains: Progression and Impacts of Flash Droughts in the Great Plains as captured by NASA Models and Earth Observations (https://freshwater.eis.smce.nasa.gov/storymap.html)
+  - The SMCE-Built NASA Earth Information System (EIS) Cloud Computing Platform Enables the Analysis of Flash Droughts (https://www.nccs.nasa.gov/news-events/nccs-highlights/Flash-Drought)
 
   ## Training
+  - ARSET - [Application of NASA SPoRT-Land Information System (SPoRT-LIS) Soil Moisture Data for Drought](https://appliedsciences.nasa.gov/get-involved/training/english/arset-application-nasa-sport-land-information-system-sport-lis-soil)
+  - SPoRT - [NASA SPoRT-LIS Starter Package](https://weather.ndc.nasa.gov/sport/training-repo/#/SPoRT-Land-Information-System-(LIS)-StarterPackage)
 
   ## Resources
+  - [NASA NLDAS-3 webpage](https://ldas.gsfc.nasa.gov/nldas/v3)
+  - https://weather.ndc.nasa.gov/sport/viewer/?dataset=lis_conus&product=rsoim0-100
+  - [U.S. Drought Monitor](https://droughtmonitor.unl.edu/) produced by University of Nebraska Lincoln, USDA and NOAA
+  - NOAA National Integrated Drought Information System (NIDIS) U.S. Drought Portal [(Drought.gov)](http://Drought.gov)
+  - April 2025 NLDAS-3 and Drought Monitoring Workshop sponsored by NASA, NOAA NIDIS, National Drought Mitigation Center [(workshop recording)](https://ldas.gsfc.nasa.gov/sites/default/files/ldas/nldas/NLDAS-3_NOAA-NIDIS-NDMC-NASA_Drought-Workshop-3.mp4)
+  - Ahmad, S.K., S.V. Kumar, T.M. Lahmers, S. Wang, P.-W. Liu, M.L. Wrzesien, et al., 2022: [Flash Drought Onset and Development Mechanisms Captured with Soil Moisture and Vegetation Data Assimilation.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022WR032894) Water Resources Research, 58, doi:10.1029/2022WR032894.
+
 
 
   </Prose>
