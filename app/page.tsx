@@ -44,7 +44,7 @@ export default function HomePage() {
           </h2>
           <div className='body-text'>
           <p>
-          NASA Water Insight products provide essential information for managing water resources for the benefit of all sectors of society.
+          NASA Water Insight provides essential information for managing water and land resources for the benefit of all sectors of society. State and federal agencies are working together to develop this system over North America to monitor and forecast precipitation, soil moisture, snow, groundwater, streamflow, and other variables critical for water resources, energy, and agriculture managers, as well as for early warning of drought and flood conditions.
           </p>
           </div>
         </div>

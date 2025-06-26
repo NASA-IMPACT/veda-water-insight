@@ -50,8 +50,8 @@ export const subNavItems: NavItem[] = [
   {
     id: 'contact-us',
     title: 'Contact us',
-    actionId: 'open-google-form',
-    type: 'action',
+    //actionId: 'open-google-form',
+    //type: 'action',
   },
 ];
 
