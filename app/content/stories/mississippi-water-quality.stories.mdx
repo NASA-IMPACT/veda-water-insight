@@ -1,0 +1,249 @@
+---
+id: mississippi-water-quality
+name: Water Quality in the Mississippi
+description: "NASA Land Surface Models Capture Water Quality Trends in the Upper Mississippi Basin"
+media:
+  src: /images/story/water-quality-mississippi/water-quality-mississippi.png
+  alt: River water with high amounts of algae that are displayed in green.
+  author:
+    name: NASA EIS Freshwater
+    url: https://freshwater.eis.smce.nasa.gov/storymap.html
+pubDate: 2025-06-29T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Agriculture
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Groundwater
+      - Hydrology
+      - Land Use
+
+---
+
+
+<Block>
+    <Prose>
+    ### Water Quality Concerns
+
+    ##### Rising Water Quality Concerns
+    
+    Over 20 million people in 50 cities rely on drinking water from the Mississippi River. Poor water quality costs millions of dollars each year in increased drinking-water treatment, smaller commercial fishing harvests, depressed property values, and lost tourism revenue.
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/water-quality-mississippi/landscape-river-view.png'}
+            alt='Power Plants in Stanton, ND near a river body.'
+            align='left'
+        />
+        <Caption>
+            Landscape view of commercial industry juxtaposed near a river system.
+        </Caption>
+    </Figure>
+</Block>
+
+<Block>
+
+    <Figure>
+        <Image
+            src={'/images/story/water-quality-mississippi/polluted-waters.jpeg'}
+            alt='Polluted waters indicated by a green color in the water.'
+            align='left'
+            height="350px"
+        />
+        <Caption>
+            Harmful algal blooms turn water in Milford Lake emerald green.
+        </Caption>
+    </Figure>
+
+    <Prose>
+    ##### Polluted Runoff
+
+    Excess nitrogen and phosphorus from agriculture, urban runoff and other sources cause algae blooms in the river and its tributaries and contribute to the growing 'dead zone' in the Gulf of Mexico.
+    </Prose>
+
+</Block>
+
+<Block>
+    <Prose>
+    ### Excess Nitrogen in the Upper Mississippi
+    
+    According to the U.S. EPA, 50% of streams in the upper Mississippi River basin have excess nitrogen.
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/water-quality-mississippi/epa-nitrogen.png'}
+            alt='Flowchart of how to use NASA satellite remote sensing datasets to model and monitor irrigation practices.'
+            align="left"
+            height="50%"
+        />
+        <Caption>
+            Total nitrogen concentrations (Source: Wadeable Streams Assessment)
+        </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+    <Figure>
+        <Image
+            src={'/images/story/water-quality-mississippi/polluted-waters.jpeg'}
+            alt='Polluted waters indicated by a green color in the water.'
+            align='left'
+            height="350px"
+        />
+        <Caption>
+            Polluted waters indicated by a green tint within the water column.
+        </Caption>
+    </Figure>
+
+    <Prose>
+    ##### Polluted Runoff
+
+    Excess nitrogen and phosphorus from agriculture, urban runoff and other sources cause algae blooms in the river and its tributaries and contribute to the growing 'dead zone' in the Gulf of Mexico.
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## Modeling Water Quality
+
+        Working with Texas A&M University's [H2I Lab](https://www.adnanrajib.com/), NASA is extending the capabilities of Land Information System (LIS) to model water quality using [Soil & Water Assessment Tool (SWAT)](https://swat.tamu.edu/). SWAT is commonly used to model and predict water pollution, including the human impacts on landscape water quality.
+
+        Using a prototype LIS-SWAT integration, daily nitrate loads were simulated across the 450,000 sq. km Upper Mississippi basin.
+
+        Water quality data from 15 USGS sites were used to validate the modeled nitrate loads. A total of 9400 in-situ observations were used in this evaluation.
+    </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Chart
+      dataPath="/charts/story/site-usgs-05484500.csv"
+      dateFormat="%Y-%m-%d"
+      xTickFormat="%b %d"
+      idKey="Source"            
+      xKey='DateTime' 
+      yKey='Nitrate Load' 
+      yAxisLabel="Nitrate Load"
+      highlightLabel = 'Nitrate Load'
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison with daily average nitrate load at USGS sites shows very high efficacy of LIS-SWAT.   
+     </Caption> 
+  </Figure>
+</Block>
+
+
+<Block>
+    <Prose>
+    ### Impacts on the Aquifer
+
+    ##### Groundwater depletion is captured by LIS
+   
+    Storage depletion modeled by assimilating GRACE observations within the Land Information System (LIS) matches well with USGS observations.
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/ogallala-aquifer/ogallala-aquifer-groundwater-change.png'}
+            alt='USGS observations of groundwater storage changes for 2002-2015.'
+            align='left'
+        />
+        <Caption>
+            USGS observations of groundwater storage changes for 2002-2015.
+        </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+    <Prose>
+    <mark>!! ADD DATA VIS HERE !!</mark>
+
+    Swipe the slider for modeled groundwater storage with GRACE data assimilation (DA) (left) and without GRACE DA (right)
+    </Prose>
+</Block>
+
+<Block>
+    <Figure>
+        <Image
+            src={'/images/story/ogallala-aquifer/ogallala-aquifer-north-tws-ts.png'}
+            alt='Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Northern Ogallala'
+            align='left'
+        />
+        <Caption>
+            Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Northern Ogallala.
+        </Caption>
+    </Figure>
+
+    <Prose>
+    ##### Contrasting Management Impacts in the Northern and Southern Ogallala
+   
+    For the Northern Ogallala, sufficient precipitation helps prevent the depletion of the aquifer caused by  water withdrawals.
+    
+    Without assimilating GRACE observations, the model tends to underestimate groundwater recharge. So, assimilation is essential to capture water storage recovery after the 2012 drought.
+    </Prose>
+</Block>
+
+
+<Block>
+    <Prose>
+    <mark>!! ADD DATA VIS HERE !!</mark>
+
+    Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Northern Ogallala
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    In contrast, for the Southern Ogallala, severe groundwater depletion is observed due to pumping.
+    
+    Assimilating GRACE TWS and MODIS LAI contributes to a **better estimation of irrigation withdrawal** and captures its impact on long-term water storage decline.
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/ogallala-aquifer/ogallala-aquifer-south-tws-ts.png'}
+            alt='Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
+            align='left'
+        />
+        <Caption>
+            Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala.
+        </Caption>
+    </Figure>
+</Block>
+
+
+
+<Block>
+    <Prose>
+    <mark>!! ADD DATA VIS HERE !!</mark>
+
+    Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    ### Conclusions
+
+    Remote sensing data from GRACE, MODIS, and GPM plays a **key role in understanding changes in the Ogallala Aquifer** fromirrigation and other uses.
+    
+    Decline in groundwater storage in the Southern Ogallala Aquifer is well-captured by leveraging **NASA models and datasets**.
+    </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    Authors: 
+
+    Developers:
+  </Prose>
+</Block>
