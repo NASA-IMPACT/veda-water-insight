@@ -77,16 +77,13 @@ taxonomy:
 </Block>
 
 
+
 <Block>
     <Prose>
     ### Modeling Irrigation
 
     NASA's land surface hydrology model **assimilates inputs from multiple sensors** to model irrigation.
-    </Prose>
-</Block>
 
-<Block type='wide'>
-    <Figure>
         <Image
             src={'/images/story/ogallala-aquifer/ogallala-aquifer-flowchart.png'}
             alt='Ogallala Aquifer Flowchart.'
@@ -95,7 +92,7 @@ taxonomy:
         <Caption>
             Flowchart of how to use NASA satellite remote sensing datasets to model and monitor irrigation practices.
         </Caption>
-    </Figure>
+    </Prose>
 </Block>
 
 <Block>
@@ -121,12 +118,37 @@ taxonomy:
 
 
 <Block>
-    <Prose>
-    <mark>!! ADD DATA VIS HERE !!</mark>
+    <Prose >
+        ##### **Currently this is a static image. We need to ingest into our STAC catalogue in order to render the WMTS. **
+        ###### Swipe the slider for modeled groundwater storage with GRACE data assimilation (DA) (left) and without GRACE DA (right)
 
-    Swipe the slider for modeled groundwater storage with GRACE data assimilation (DA) (left) and without GRACE DA (right)
+    <div className="grid-row">
+        <div className="grid-col-6">
+            <Figure>
+                <Image
+                    src={'/images/story/ogallala-aquifer/tmp_ogallala_left_slider.png'}
+                    alt='Modeled groundwater storage with GRACE data assimilation (DA).'
+                />
+                <Caption>
+                    Modeled groundwater storage with GRACE data assimilation (DA). 
+                </Caption>
+            </Figure>
+        </div>
+        <div className="grid-col-6">
+            <Figure>
+                <Image
+                    src={'/images/story/ogallala-aquifer/tmp_ogallala_right_slider.png'}
+                    alt='Modeled groundwater storage without GRACE data assimilation.'
+                />
+                <Caption>
+                    Modeled groundwater storage without GRACE data assimilation. 
+                </Caption>
+            </Figure>
+        </div>
+    </div>
     </Prose>
 </Block>
+
 
 <Block>
     <Figure>
