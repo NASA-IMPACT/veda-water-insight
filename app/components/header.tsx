@@ -8,15 +8,15 @@ import {
   DATASET_CATALOG_PATH,
   EXPLORATION_PATH,
   STORY_HUB_PATH,
-  THEMES_PATH,
+  TOPICS_PATH,
 } from 'app/config';
 import VedaUIConfigProvider from 'app/store/providers/veda-ui-config';
 
 export const navItems: NavItem[] = [
   {
-    id: 'themes',
-    title: 'Themes',
-    to: `/${THEMES_PATH}`,
+    id: 'topics',
+    title: 'Topics',
+    to: `/${TOPICS_PATH}`,
     type: 'internalLink',
   },
   {

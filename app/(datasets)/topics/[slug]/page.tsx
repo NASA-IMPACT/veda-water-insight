@@ -1,19 +1,19 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { CustomMDX } from 'app/components/mdx';
-import { getThemes } from 'app/content/utils/mdx';
+import { getTopics } from 'app/content/utils/mdx';
 import { LegacyGlobalStyles, PageHero } from '@lib';
 import './index.scss';
 import Providers from 'app/(datasets)/providers';
 
 async function generateStaticParams() {
-  const posts = getThemes();
+  const posts = getTopics();
 
   return posts.map((post) => ({ slug: post.slug }));
 }
 
 export default function StoryOverview({ params }: { params: any }) {
-  const post = getThemes().find((post) => post.slug === params.slug);
+  const post = getTopics().find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();

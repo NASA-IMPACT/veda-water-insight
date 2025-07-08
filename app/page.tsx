@@ -7,19 +7,19 @@ const mainTopSectionData = [
     title: 'Water Availability',
     description:'Mapping water for human use, energy, agriculture, and ecosystems.',
     img: '/images/homepage/water_avail_theme.png',
-    path: '/themes/water-resources',
+    path: '/topics/water-resources',
   },
   {
     title: 'Floods',
     description:'Data-driven insights for flood preparedness.',
     img: '/images/homepage/flood_theme.png',
-    path: '/themes/floods',
+    path: '/topics/floods',
   },
   {
     title: 'Droughts',
     description:'Mapping droughts and drought conditions throughout the U.S.',
     img: '/images/homepage/drought_theme.png',
-    path: '/themes/droughts',
+    path: '/topics/droughts',
   }      
 
 ];

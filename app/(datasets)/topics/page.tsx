@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { getThemesMetadata } from 'app/content/utils/mdx';
+import { getTopicsMetadata } from 'app/content/utils/mdx';
 
 // @NOTE: Dynamically load to ensure only CSR since these depends on VedaUI ContextProvider for routing...
 const StoriesHub = dynamic(() => import('../stories/hub'), {
@@ -9,15 +9,15 @@ const StoriesHub = dynamic(() => import('../stories/hub'), {
 });
 
 export default function Page() {
-  const stories = getThemesMetadata().map((d) => ({
+  const stories = getTopicsMetadata().map((d) => ({
     ...d.metadata,
-    path: `themes/${d.slug}`,
+    path: `topics/${d.slug}`,
   }));
 
   return (
     <div className='grid-container'>
       <div className='margin-top-8 margin-bottom-3'>
-        <h1 className='font-sans-xl'>Themes</h1>
+        <h1 className='font-sans-xl'>Topics</h1>
         <p className='font-sans-md margin-top-1'>
           This dashboard explores key indicators to track and compare changes
           over time.
