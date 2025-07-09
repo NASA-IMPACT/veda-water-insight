@@ -1,0 +1,274 @@
+---
+id: mississippi-river-delta
+name: Human Impacts on the Mississippi River Delta
+description: "NASA Models Reveal Climate-Induced and Management Impacts on the Mississippi River Delta"
+media:
+  src: /images/story/river-delta-mississippi/delta-cover-image.png
+  alt: NASA Astronaut image from ISS in July 2019 of Mississippi River Delta
+  author:
+    name: NASA EIS Freshwater
+    url: https://freshwater.eis.smce.nasa.gov/storymap.html
+pubDate: 2025-06-20T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+  - name: Subtopics
+    values:
+      - Floods
+
+---
+
+<Block>
+    <Prose>
+    ### Delta under Pressure
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        NASA Earth observations and models show increased flooded area over the Delta. Land loss and flooding have direct impacts on people, their livelihoods, as well as on the Delta ecosystem and natural resources.
+     <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/chartcld.png'}
+            alt='Flooding timeline.'
+            align='left'
+        />
+        <Caption>
+            Coastal Land Dynamics in the Delta (from NASA's Delta-X mission)
+        </Caption>
+    </Figure>   
+    </Prose>
+
+
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/miss-delta-land-change.png'}
+            alt='Flooding timeline.'
+            align='left'
+        />
+        <Caption>
+        <mark>!! ADD DATA VIS HERE !!</mark>
+        </Caption>
+
+    </Figure>
+
+</Block>
+
+<Block>
+    <Prose>
+    ### Extreme Inflows and Rising Sea Level 
+    The Delta is experiencing increasing extreme streamflows, as seen from USGS observations and Land Information System (LIS)-modeled outputs. 
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/chartflow.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    </Figure>    
+    </Prose>
+
+  <Figure>
+    <Chart
+      dataPath="/charts/story/river-delta-mississippi/tws_anomaly_melted.csv"
+      dateFormat="%m/%d/%y"
+      idKey='Source' 
+      xKey='DateTime' 
+      yKey='Value' 
+      yAxisLabel='TWS Anomaly (mm)'
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    >
+    TWS anomaly (mm) and trend (slope = 15mm/yr)  
+    </Caption> 
+  </Figure>
+</Block>
+
+<Block>
+   
+  <Figure>
+    <Chart
+      dataPath="/charts/story/river-delta-mississippi/sea-level-trend-melted.csv"
+      dateFormat="%m/%d/%y"
+      idKey='Source' 
+      xKey='DateTime' 
+      yKey='Value' 
+      yAxisLabel='TWS Anomaly (mm)'
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    >
+    TWS anomaly (mm) and trend (slope = 15mm/yr)  
+    </Caption> 
+  </Figure>
+</Block>
+
+<Block>
+    <Prose>
+    ### Scenario Modeling
+    #### Modeling Framework
+    To analyze the impacts from hydrology, sea level rise, and water management, we modeled four what-if scenarios using the LIS framework and the Hydrological Modeling and Analysis Platform (HyMAP) routing model.
+    </Prose>
+
+    <Figure style={{ backgroundColor: 'black', padding: '2rem'}}>
+        <Image
+            src={'/images/story/river-delta-mississippi/scen.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+        <Caption>
+            Among the factors that impact the Delta, we only consider hydrology, sea level rise, and water management in the scenario modeling framework.
+        </Caption>
+    </Figure>
+</Block>
+
+
+
+<Block>
+    <Prose>
+    ##### Impacts on the Delta
+
+    Using the three factors - hydrology, sea level rise, and water management, modeled annual flooded area shows an increasing trend.
+
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/trend-timeseries.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    </Figure>
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    ##### Impacts of Sea Level Rise
+
+    Sea level rise results in increased flooded area along the coastal parts of the Delta.
+    <mark>!! ADD DATA VIS HERE !!</mark>
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/tmp-sea-level-rise.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    </Figure>
+    <Caption>
+    Impacts of sea level rise on flooded areas obtained by subtracting flooded area during 2016-20 based on monthly climatology (scenario III) from observed sea level (scenario II). 
+    </Caption>
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/sea-level-rise-legend.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    </Figure>
+</Block>
+
+
+<Block>
+    <Prose>
+    ##### Impact of Hydrological Changes
+
+    Water cycle acceleration has caused a significant rise in flooded area from 1993-97 to 2016-20.   
+    <mark>!! ADD DATA VIS HERE !!</mark>
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/tmp-sea-level-rise2.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    </Figure>
+    <Caption>
+    Impacts of hydrological changes by computing the difference between flooded area over early (1993-97) and late (2016-20) periods under no-management (naturalized) system and constant sea level (scenario IV).    
+    </Caption>
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/sea-level-rise-legend.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    </Figure>
+</Block>
+
+
+
+<Block>
+    <Prose>
+    ##### Impact of Water Management
+
+   Water management via flood control structures reduces flooded area in the Delta, protecting up to ~33000 people during extreme events. <br />
+    <mark>!! ADD DATA VIS HERE !!</mark>
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/tmp-sea-level-rise3.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    </Figure>
+    <Caption>
+     Impact of water management obtained by differencing flooded area during 2016-20 from water management scenario (scenario I) and no-management system (scenario II).    
+    </Caption>
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/sea-level-rise-legend.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    </Figure>
+</Block>
+
+
+
+<Block>
+  <Prose>
+    <mark>!! ADD DATA VIS HERE !! VEDA UI doesn't support timeseries with non-dates yet</mark> <br />
+    Water management provides increasing flood protection for more extreme flood events. 
+
+    Hydrological changes pose larger risk than sea level rise on the Delta.
+
+  </Prose>
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/tmp-time-series-flooding.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    <Caption>
+    Percentiles indicate floods that exceed 50% (median), 95% (18 days/year) and 99.72% (1 day/year) of daily events
+    </Caption>
+    </Figure>
+</Block>
+
+
+
+<Block>
+    <Prose>
+    ## Conclusion
+    
+    <Figure>
+        <Image
+            src={'/images/story/river-delta-mississippi/conclusion.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+    </Figure>
+    </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    Authors: 
+
+    Developers:
+  </Prose>
+</Block>
