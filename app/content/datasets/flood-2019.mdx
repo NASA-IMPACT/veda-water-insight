@@ -1,0 +1,158 @@
+---
+id: flood-2019
+name: flood-2019
+isHidden: false
+description: Data used to visualize in flood 2019 EIS story
+media:
+  src: /images/story/flood-2019/flood-2019-farm.png
+  alt: False Color Composite satellite imagery of the burned area from the Palisades Fire.
+  author:
+    name:  NASA
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+  - name: Source
+    values:
+      - NASA
+  - name: Event
+    values:
+      - CA Wildfire      
+layers:
+  - id: GPM_3IMERGDF.v07
+    type: cmr
+    stacCol: GPM_3IMERGDF
+    tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
+    name: GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree
+    description: "GPM Level 3 IMERG Final Daily 10 x 10 km (GPM_3IMERGDF) accumulated precipitation"
+    time_density: day
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      tile_scale: 3
+      resampling: bilinear
+      variable: precipitation
+      colormap_name: gnbu
+      rescale:
+        - 0
+        - 46
+      maxzoom: 12
+      concept_id: C2723754864-GES_DISC
+      backend: xarray
+    legend:
+      unit:
+        label:
+      type: gradient
+      min: "0 mm/hr"
+      max: "46 mm/hr"
+      stops:
+        [
+          "#f7fcf0",
+          "#e6f5e1",
+          "#d7efd1",
+          "#c5e8c2",
+          "#abdeb6",
+          "#8bd2bf",
+          "#6bc3c9",
+          "#4bafd1",
+          "#3193c2",
+          "#1878b4",
+          "#085da0",
+          "#084081",
+        ]
+    compare:
+      datasetId: flood-2019
+      layerId: GPM_3IMERGDF.v07
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
+
+
+  - id: sentinel1_waterextent
+    stacCol: sentinel1_waterextent
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    name: sentinel1_waterextent
+    type: wms
+    description: sentinel1_waterextent
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      layers: "3/18/2019 at 001353 utc (s1a)"
+      version: 1.3.0
+      crs: EPSG:3857
+    legend:
+      unit:
+        label: Inches
+      type: gradient
+      min: 0
+      max: 1000
+      stops:
+        - rgb(255,255,255)
+        - rgb(176,190,197)
+        - rgb(27,79,114)
+        - rgb(40,116,166)
+        - rgb(52,152,219)
+        - rgb(133,193,233)
+        - rgb(187,222,251)
+        - rgb(20,90,50)
+        - rgb(34,153,84)
+        - rgb(125,206,160)
+        - rgb(74,35,90)
+        - rgb(125,60,152)
+        - rgb(179,157,219)
+        - rgb(239,80,83)
+        - rgb(245,127,23)
+        - rgb(255,241,118)
+    analysis:
+      exclude: true
+    info:
+      source: NASA
+      spatialExtent: Alaska
+      temporalResolution: Daily
+      unit: Inches
+
+---
+
+<Block>
+  <Figure>
+  <Map
+    datasetId='flood-2019'
+    layerId='GPM_3IMERGDF.v07'
+    dateTime='2019-05-12'
+    zoom={3}
+    center={[-94.8866, 35.7244]}
+    compareDateTime= '2019-05-14'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    GPM IMERG peak rainfall rate over Eastern United States Texas on March 12, 2019 and March 14, 2019.
+  </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+  <Map
+    datasetId='flood-2019'
+    layerId='sentinel1_waterextent'
+    dateTime='2019-03-18'
+    zoom={3}
+    center={[-94.8866, 35.7244]}
+
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    GPM IMERG peak rainfall rate over Eastern United States Texas on March 12, 2019 and March 14, 2019.
+  </Caption>
+  </Figure>
+</Block>
