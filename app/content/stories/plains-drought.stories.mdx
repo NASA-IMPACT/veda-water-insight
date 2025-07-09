@@ -20,16 +20,6 @@ taxonomy:
 ---
 
 <Block>
-  <Prose>
-    Authors: NASA EIS Freshwater<sup>1</sup>, Andrew Blackford<sup>2</sup>
-
-    <sup>1</sup> National Aeronautics and Space Administration Earth Information System
-
-    <sup>2</sup> The University of Alabama in Huntsville
-  </Prose>
-</Block>
-
-<Block>
     <Prose>
     ### Introduction
 
@@ -109,25 +99,36 @@ taxonomy:
     </Figure>
 </Block>
 
-<Block>
-    <Prose>
-    ### Evolution of the Droughts
-    </Prose>
-</Block>
 
 <Block>
     <Prose>
+    ## Evolution of the Droughts
     ##### What Triggered the Two Droughts?
     
     In 2017, the unusually low precipitation during the normally rainy season resulted in a very rapid onset of drought conditions. 
+
+    <Figure>
+      <Image
+          src={'/images/story/plains-drought/plains-drought-pcp-anomaly-ts.png'}
+          alt='Precipitation anomaly time series.'
+          align='left'
+      />
+      <Caption>
+      Standardized anomalies for GPM precipitation over Northern Great Plains, 2017 highlighting large negative anomalies during May-July.
+      </Caption>
+    </Figure>
     </Prose>
 
+
   <Figure>
+    <Prose>
+      GPM captured the large negative anomalies in precipitation over the region for May-July, 2017.
+      <br/>
+    </Prose>
      <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
       <source
         src={'/images/story/plains-drought/plains-drought-pcp-anomaly.mp4'}
       />
-      Your browser does not support the video tag.
     </video>
 
     <Caption>
@@ -136,27 +137,6 @@ taxonomy:
   </Figure>
 
 </Block>
-
-
-<Block>
-
-  <Figure>
-    <Image
-        src={'/images/story/plains-drought/plains-drought-pcp-anomaly-ts.png'}
-        alt='Precipitation anomaly time series.'
-        align='left'
-    />
-    <Caption>
-    Standardized anomalies for GPM precipitation over Northern Great Plains, 2017 highlighting large negative anomalies during May-July.
-    </Caption>
-  </Figure>
-  
-    <Prose>
-    GPM captured the large negative anomalies in precipitation over the region for May-July, 2017.
-    </Prose>
-
-</Block>
-
 
 <Block>
     <Prose>
@@ -372,11 +352,22 @@ taxonomy:
     ##### Lodgepole Complex Fire
 
     Massive wildfire erupted on July 19, 2017 and spread over 270,000 acres in Montana.
+  <Figure>
+    <Image
+        src={'/images/story/plains-drought/plains-drought-MT-fire.png'}
+        alt='Lodgepole Complex Fire'
+        align='left'
+    />
+    <Caption>
+    Lodgepole Complex Fire.
+    </Caption>
+  </Figure>
+
     </Prose>
 
   <Figure>
     <Image
-        src={'/images/story/plains-drought/plains-drought-MT-fire.png'}
+        src={'/images/story/plains-drought/lodgepole-complex-fire-location.png'}
         alt='Lodgepole Complex Fire'
         align='left'
     />
@@ -394,15 +385,46 @@ taxonomy:
     
     <mark>!! ADD DATA VIS HERE !!</mark>
 
-    MODIS Terra Corrected Reflectance Bands 7-2-1; Left: Pre-fire July 13, Right: Active fire July 23.
 
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/plains-drought/tmp_modis_slider.png'}
+            alt='MODIS Terra Corrected Reflectance Bands 7-2-1; Left: Pre-fire July 13, Right: Active fire July 23.'
+            align='left'
+        />
+        <Caption>
+          MODIS Terra Corrected Reflectance Bands 7-2-1; Left: Pre-fire July 13, Right: Active fire July 23. The MODIS fire product MCD64A1 also captures the extent of the wildfire        
+        </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+    <Figure>
+        <Image
+            src={'/images/story/plains-drought/tmp_arcgis_filler.png'}
+            alt='MODIS Terra Corrected Reflectance Bands 7-2-1; Left: Pre-fire July 13, Right: Active fire July 23.'
+            align='left'
+        />
+        <Caption>
+          Areas labelled as 'burned' in MCD64A1 between July 19 and July 26, 2017.        
+        </Caption>
+    </Figure>
+
+    <Prose>
+    ##### Sensing Fire from MODIS
+   
     The MODIS fire product MCD64A1 also captures the extent of the wildfire.
 
     <mark>!! ADD DATA VIS HERE !!</mark>
     
-    Areas labelled as 'burned' in MCD64A1 between July 19 and July 26, 2017.
+    
 
     </Prose>
+
+
 </Block>
 
 <Block>
@@ -451,4 +473,17 @@ taxonomy:
 
     https://calmit.unl.edu/drought
     </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    #### Authorship
+    Authors: NASA EIS Freshwater<sup>1</sup>
+
+    Developers: NASA IMPACT<sup>2</sup>
+
+    <sup>1</sup> National Aeronautics and Space Administration Earth Information System
+
+    <sup>2</sup> NASA Interagency Implementation of Advanced Concepts Team
+  </Prose>
 </Block>
