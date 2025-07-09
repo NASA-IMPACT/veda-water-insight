@@ -55,6 +55,8 @@ taxonomy:
     </Figure>
 </Block>
 
+
+
 <Block>
     <Prose>
     ### Pre-Flood Conditions
@@ -72,6 +74,17 @@ taxonomy:
     Standardized anomalies for root zone soil moisture for August-October 2018
 
     </Prose>
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/tmp_arcgis_filler.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+        <Caption>
+            Standardized anomalies for root zone soil moisture for August-October 2018
+        </Caption>
+    </Figure>
+    
 </Block>
 
 <Block>
@@ -79,12 +92,24 @@ taxonomy:
     ##### Huge Blizzard
 
     GPM IMERG captures a huge blizzard in mid-March that blanketed the region in deep snow.
-
-    <mark>!! ADD DATA VIS HERE !!</mark>
-
-    GPM IMERG precipitation for March 12-14, 2019 
-
     </Prose>
+
+      <Figure>
+      <Map
+        datasetId='flood-2019'
+        layerId='GPM_3IMERGDF.v07'
+        dateTime='2019-05-12'
+        zoom={2}
+        center={[-94.8866, 35.7244]}
+        compareDateTime= '2019-05-14'
+      />
+      <Caption
+        attrAuthor='NASA'
+        attrUrl='https://nasa.gov/'
+      >
+        GPM IMERG peak rainfall rate over Eastern United States Texas on March 12, 2019 and March 14, 2019.
+      </Caption>
+      </Figure>
 </Block>
 
 
@@ -97,16 +122,38 @@ taxonomy:
     <mark>!! ADD DATA VIS HERE !!</mark>
 
     SLIDER - MODIS Corrected Reflectance from NASA GIBS (Bands 7-2-1) Left: Mar 2015, Right: Mar 2019 
+    
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/tmp_png_filler.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+        <Caption>
+            ""
+        </Caption>
+    </Figure>
+
     </Prose>
 </Block>
 
 <Block>
     <Prose>
-    Flood inundation is captured by Sentinel-1 imagery, hosted by the NASA Disasters Mapping Portal.
 
     <mark>!! ADD DATA VIS HERE !!</mark>
 
     Flood water (red pixels) and permanent water (blue pixels) mapped with Sentinel-1. [Data hosted on NASA Disasters Mapping Portal]
+
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/sentinel-flood-water-pixels.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+        <Caption>
+            Flood inundation is captured by Sentinel-1 imagery, hosted by the NASA Disasters Mapping Portal.
+        </Caption>
+    </Figure>    
     </Prose>
 </Block>
 
@@ -114,17 +161,35 @@ taxonomy:
     <Prose>
     ##### Rapid Snowmelt
 
-    The rain-on-snow event on the unusually deep snowpack caused rapid snowmelt which intensified spring flooding.
-
     <mark>!! ADD DATA VIS HERE !!</mark>
 
     SLIDER - Snow depth on March 10 (left) before the rain-on-snow event and on March 29, 2019 (right) after the rain-on-snow event
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/tmp_rapid_snowmelt.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+        <Caption>
+          The rain-on-snow event on the unusually deep snowpack caused rapid snowmelt which intensified spring flooding.
+        </Caption>
+    </Figure>    
     </Prose>
 </Block>
 
 <Block>
     <Prose>
     The rapid melting of the deep snowpack in mid-March was captured by assimilating snow depth observations from AMSR2 within the LIS framework.
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/missouri-river-basin.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+        <Caption>
+        Missouri River Basin (red boundary) where the snow depth timeseries is averaged
+        </Caption>
+    </Figure>    
     </Prose>
 
   <Figure>
@@ -167,11 +232,25 @@ taxonomy:
     ##### Record Flooding
 
     Rapid snowmelt and heavy rainfall resulted in **record streamflows** in spring and summer.
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/missouri-river-streamflow.png'}
+            alt='Flooded farm in the Midwest.'
+            align='left'
+        />
+        <Caption>
+        Missouri River Basin (red boundary) where the snow depth timeseries is averaged
+        </Caption>
+    </Figure>   
+
     </Prose>
 </Block>
 
+
 <Block>
     <Prose>
+
+
     ##### Soils Too Wet To Plant
 
     Wet soil conditions persisted months after the flooding, leaving farmers with no option but to wait for soils to dry out.
@@ -179,13 +258,32 @@ taxonomy:
     Assimilating downscaled soil moisture from SMAP captures the wet conditions persisting in late-May to early-June.
 
     <mark>!! ADD DATA VIS HERE !!</mark>
-
-    Root zone soil moisture anomaly averaged over May 27-June 2, 2019
     </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/tmp_arcgis_filler.png'}
+            alt='Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
+        />
+        <Caption>
+        Root zone soil moisture anomaly averaged over May 27-June 2, 2019        
+        </Caption>
+    </Figure>
+
 </Block>
 
 <Block>
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/ag_impacts_background.jpg'}
+            alt='Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
+        />
+        <Caption>
+        Root zone soil moisture anomaly averaged over May 27-June 2, 2019        
+        </Caption>
+    </Figure>
     <Prose>
+
     ### Agricultural Impacts
 
     ##### Planting Delays Cause Major Farming losses
@@ -206,8 +304,17 @@ taxonomy:
 
     <mark>!! ADD DATA VIS HERE !!</mark>
 
-    LAI anomaly for Jun 27, 2019 after the flooding event in spring.
     </Prose>
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/tmp_arcgis_filler.png'}
+            alt='Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
+        />
+        <Caption>
+        LAI anomaly for Jun 27, 2019 after the flooding event in spring.
+        </Caption>
+    </Figure>
+
 </Block>
 
 <Block>
@@ -216,10 +323,19 @@ taxonomy:
 
     According to USDA 2019 Crop Data, the planted fields were reduced by around 12% compared to the five-year average for corn and soybean.
 
-    <mark>!! ADD DATA VIS HERE !!</mark>
+    <mark>!! ADD DATA VIS HERE !!  -- need to create a COG</mark>
 
-    Prevented acreage for corn in 2019 (by state), in thousands of acres. 
     </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/corn-prevented.png'}
+            alt='Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
+        />
+        <Caption>
+        Prevented acreage for corn in 2019 (by state), in thousands of acres. 
+        </Caption>
+    </Figure>
 </Block>
 
 <Block>
