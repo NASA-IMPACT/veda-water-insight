@@ -117,12 +117,36 @@ taxonomy:
 
         Water quality data from 15 USGS sites were used to validate the modeled nitrate loads. A total of 9400 in-situ observations were used in this evaluation.
     </Prose>
+    <Figure>
+        <Image
+            src={'/images/story/water-quality-mississippi/mississippi-basin.png'}
+            alt='Polluted waters indicated by a green color in the water.'
+            align='left'
+            height="350px"
+        />
+        <Caption>
+            USGS sites for validation in Upper Mississippi Basin.
+        </Caption>
+    </Figure>
+
 </Block>
 
-<Block type='wide'>
+<Block>
+  <Prose>
+      <Figure>
+        <Image
+            src={'/images/story/water-quality-mississippi/boundary_site_05484500.png'}
+            alt='Polluted waters indicated by a green color in the water.'
+            align='left'
+        />
+        <Caption>
+            Site # USGS 05484500
+        </Caption>
+    </Figure>
+  </Prose>
   <Figure>
     <Chart
-      dataPath="/charts/story/site-usgs-05484500.csv"
+      dataPath="/charts/story/water-quality-mississippi/site-usgs-05484500.csv"
       dateFormat="%Y-%m-%d"
       xTickFormat="%b %d"
       idKey="Source"            
@@ -142,108 +166,85 @@ taxonomy:
 
 
 <Block>
-    <Prose>
-    ### Impacts on the Aquifer
 
-    ##### Groundwater depletion is captured by LIS
-   
-    Storage depletion modeled by assimilating GRACE observations within the Land Information System (LIS) matches well with USGS observations.
-    </Prose>
-
-    <Figure>
+  <Figure>
+    <Chart
+      dataPath="/charts/story/water-quality-mississippi/site-usgs-05420500-melted.csv"
+      dateFormat="%Y-%m-%d"
+      xTickFormat="%b %d"
+      idKey="Source"            
+      xKey='DateTime' 
+      yKey='Nitrate Load' 
+      yAxisLabel="Nitrate Load"
+      highlightLabel = 'Nitrate Load'
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison with daily average nitrate load at USGS sites shows very high efficacy of LIS-SWAT.   
+     </Caption> 
+  </Figure>
+  <Prose>
+      <Figure>
         <Image
-            src={'/images/story/ogallala-aquifer/ogallala-aquifer-groundwater-change.png'}
-            alt='USGS observations of groundwater storage changes for 2002-2015.'
+            src={'/images/story/water-quality-mississippi/boundary_site_05420500.png'}
+            alt='Polluted waters indicated by a green color in the water.'
             align='left'
         />
         <Caption>
-            USGS observations of groundwater storage changes for 2002-2015.
+            Site # USGS 05420500
         </Caption>
     </Figure>
+  </Prose>
 </Block>
 
 
 <Block>
-    <Prose>
-    <mark>!! ADD DATA VIS HERE !!</mark>
-
-    Swipe the slider for modeled groundwater storage with GRACE data assimilation (DA) (left) and without GRACE DA (right)
-    </Prose>
-</Block>
-
-<Block>
-    <Figure>
+  <Prose>
+      <Figure>
         <Image
-            src={'/images/story/ogallala-aquifer/ogallala-aquifer-north-tws-ts.png'}
-            alt='Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Northern Ogallala'
+            src={'/images/story/water-quality-mississippi/boundary_site_05446500.png'}
+            alt='Polluted waters indicated by a green color in the water.'
             align='left'
         />
         <Caption>
-            Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Northern Ogallala.
+            Site # USGS 05446500
         </Caption>
     </Figure>
-
-    <Prose>
-    ##### Contrasting Management Impacts in the Northern and Southern Ogallala
-   
-    For the Northern Ogallala, sufficient precipitation helps prevent the depletion of the aquifer caused by  water withdrawals.
-    
-    Without assimilating GRACE observations, the model tends to underestimate groundwater recharge. So, assimilation is essential to capture water storage recovery after the 2012 drought.
-    </Prose>
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath="/charts/story/water-quality-mississippi/site-usgs-05484500.csv"
+      dateFormat="%Y-%m-%d"
+      xTickFormat="%b %d"
+      idKey="Source"            
+      xKey='DateTime' 
+      yKey='Nitrate Load' 
+      yAxisLabel="Nitrate Load"
+      highlightLabel = 'Nitrate Load'
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison with daily average nitrate load at USGS sites shows very high efficacy of LIS-SWAT.   
+     </Caption> 
+  </Figure>
 </Block>
 
 
-<Block>
-    <Prose>
-    <mark>!! ADD DATA VIS HERE !!</mark>
-
-    Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Northern Ogallala
-    </Prose>
-</Block>
-
-<Block>
-    <Prose>
-    In contrast, for the Southern Ogallala, severe groundwater depletion is observed due to pumping.
-    
-    Assimilating GRACE TWS and MODIS LAI contributes to a **better estimation of irrigation withdrawal** and captures its impact on long-term water storage decline.
-    </Prose>
-
-    <Figure>
-        <Image
-            src={'/images/story/ogallala-aquifer/ogallala-aquifer-south-tws-ts.png'}
-            alt='Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
-            align='left'
-        />
-        <Caption>
-            Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala.
-        </Caption>
-    </Figure>
-</Block>
-
-
-
-<Block>
-    <Prose>
-    <mark>!! ADD DATA VIS HERE !!</mark>
-
-    Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala
-    </Prose>
-</Block>
 
 <Block>
     <Prose>
     ### Conclusions
 
-    Remote sensing data from GRACE, MODIS, and GPM plays a **key role in understanding changes in the Ogallala Aquifer** fromirrigation and other uses.
-    
-    Decline in groundwater storage in the Southern Ogallala Aquifer is well-captured by leveraging **NASA models and datasets**.
+    <ul>
+    <li> Interoperable LIS-SWAT framework allows NASA to estimate water quality with improved accuracy.</li><br />
+    <li> In addition to nitrate, LIS_SWAT can also simulate phosphorous, sediment, stream temperature, and many more water quality variables.</li><br />
+    <li> Understanding the impacts of increasing nutrient pollution throughout the Mississippi River basin is critical to water quality management decisions</li><br />
+    <li> This emerging partnership with Texas A&M's H2I Lab is already expanding NASA's capabilities in understanding human impacts on freshwater quality.</li>
+    </ul>
     </Prose>
 </Block>
 
-<Block>
-  <Prose>
-    Authors: 
-
-    Developers:
-  </Prose>
-</Block>
