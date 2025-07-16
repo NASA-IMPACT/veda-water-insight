@@ -1,7 +1,7 @@
 ---
 id: tws-trends
 name: A New View of the Global Water Cycle
-description: "Integrating NASA's state-of-the art model and remote sensing observations to reveal human impacts on water cycle"
+description: " A remote sensing-informed view of water availability"
 featured: true
 media:
   src: /images/story/jordan_image.jpg
@@ -13,28 +13,41 @@ pubDate: 2023-03-01
 taxonomy:
   - name: Topics
     values:
-      - Water Resources
-      - Hydrology 
+      - Water Availability
       - Drought
-      - Precipitation 
-      - Soil Moisture 
+ - name: Topics
+    values:      
+      - Agriculture
       - Evapotranspiration
-  - name: Source
-    values: 
-      - NASA EIS
+
 ---
 <Block>
   <Prose>
   ## Introduction
-  <mark>🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧</mark>
-  
   Freshwater is what makes Earth habitable, sustaining ecosystems and human civilization. The global water cycle supplies water and regulates weather patterns. The cycling of water links the changes on land with the ocean and atmosphere. Understanding the variability and availability of freshwater is challenging because of multiple earth processes that continually interact with each other, including those that govern precipitation, ground soil moisture retention, snow accumulation and melt, evapotranspiration and vegetation dynamics. Such processes become even more complex under human water resources management.
 
-  The EIS team integrates the Noah-MP land surface model within [NASA’s LIS framework](https://lis.gsfc.nasa.gov/) and Earth observations by assimilating soil moisture from the Climate Change Initiative Program released by European Space Agency  ([ESA CCI](https://esa-soilmoisture-cci.org/)), leaf area index from Moderate Resolution Imaging Spectroradiometer ([MODIS](https://lpdaac.usgs.gov/products/mcd15a2hv006/)), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and the follow-on satellites ([GRACE/GRACE-FO](https://earth.gsfc.nasa.gov/geo/data/grace-mascons)). Using this data assimilation approach, the team provides a daily global water cycle reanalysis product for 2003-2021 at a 10 km spatial resolution. This allows us to better quantify surface variables and groundwater, human management influence, and hydrological extremes. These resulting reanalysis datasets are publicly available and interactable via this NASA VEDA platform, including key water, energy, and carbon fluxes such as terrestrial water storage (TWS) and gross primary production (GPP). For more information, please visit the corresponding [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/data-catalog?taxonomy=%7B%22Topics%22%3A%22eis%22%7D).
-
-  Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
-
+  HydroGlobe-10km integrates the Noah-MP land surface model and Earth observations within [NASA’s LIS framework](https://lis.gsfc.nasa.gov/) by assimilating soil moisture from European Space Agency products [(ESA CCI)](https://esa-soilmoisture-cci.org/), leaf area index from NASA’s Moderate Resolution Imaging Spectroradiometer [(MODIS)](https://lpdaac.usgs.gov/products/mcd15a2hv006/), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and the follow-on satellites [(GRACE/GRACE-FO)](https://earth.gsfc.nasa.gov/geo/data/grace-mascons). Using this data assimilation approach, HydroGlobe-10km provides a global water cycle reanalysis product for 2003-2021 at a daily time scale. This product allows us to better quantify surface variables and groundwater, human management influence, and hydrological extremes. Resulting datasets are available to test and interact with via this open source visualization and analysis dashboard, including key water, energy, and carbon fluxes such as terrestrial water storage (TWS) and gross primary production (GPP). For more information, please visit the corresponding HydroGlobe data catalog page
+  
   Authors: Wanshu Nie, Melissa Wrzesien, Shahryar Ahmad, Sujay Kumar, Kim Locke
+  Developers: 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Freshwater is depleting
+  
+  ## Irrigation induced groundwater depletion
+  The vast agricultural regions such as the North China Plain and Northwestern India rely heavily on groundwater pumping for irrigation. By integrating GRACE/GRACE-FO terrestrial water storage anomaly data into the global reanalysis, we are able to identify areas of greater depletion.
+
+  ## The Earth is greening
+  Meanwhile, data from HydroGlobe-10km shown here and from other Earth satellite observations indicate increasing greenness from vegetation in recent decades, highlighting the influence of land use changes in shaping these patterns.
+  
+  ## Agricultural practices are the dominant drivers of the greening Earth:
+  Greening from the expansion of croplands combined with the increased use of fertilizer and irrigation contribute to the global net increase in leaf area index and gross primary production. HydroGlobe-10km gross primary production data reveal strong increasing trends in parts of China and India’s croplands.
+
+  ## Comparing the trends in water and carbon cycles
 
   </Prose>
 </Block>
@@ -48,7 +61,8 @@ taxonomy:
     datetime='2003-01-01'
   >
     ## Freshwater is depleting
-    Over the globe, terrestrial water storage in many places is decreasing, driven by the independent or combined impacts of natural variability, human groundwater pumping, and climate change.
+    Over the globe, terrestrial water storage in many places is decreasing, driven by the independent or combined impacts of natural variability, groundwater pumping, and other human influences.
+
   </Chapter>
   <Chapter
     center={[105.5001,30.7899]}
@@ -58,7 +72,8 @@ taxonomy:
     datetime='2003-01-01'
   >
     ## Irrigation induced groundwater depletion
-    The vast agricultural regions such as the North China Plain and Northwestern India rely heavily on groundwater pumping for irrigation. By integrating GRACE/GRACE-FO terrestrial water storage anomaly data into the global reanalysis, we are able to identify these “hotspot” depletion areas.
+    The vast agricultural regions such as the North China Plain and Northwestern India rely heavily on groundwater pumping for irrigation. By integrating GRACE/GRACE-FO terrestrial water storage anomaly data into the global reanalysis, we are able to identify areas of greater depletion.
+  
   </Chapter>
   <Chapter
     center={[77.63,24.27]}
@@ -68,7 +83,8 @@ taxonomy:
     datetime='2003-01-01'
   >
     ## The Earth is greening
-    Meanwhile, data from our model simulations shown here and from [other satellite observations](https://doi.org/10.1038/s41893-019-0220-7) indicate increasing greenness from vegetation over the Earth’s lands in recent decades, highlighting the influence of human land use in shaping  these greening patterns.
+    Meanwhile, data from HydroGlobe-10km shown here and from other Earth satellite observations indicate increasing greenness from vegetation in recent decades, highlighting the influence of land use changes in shaping these patterns.
+  
   </Chapter>
   <Chapter
     center={[105.5001,30.7899]}
@@ -78,16 +94,14 @@ taxonomy:
     datetime='2003-01-01'
   >
     ## Agricultural practices are the dominant drivers of the greening Earth:
-    Cropland greening from increased use of fertilizer and irrigation and the expansion of croplands contribute the most to the net increase in leaf area index and gross primary production globally. Our reanalysis-based gross primary production data reveal strong increasing trends in parts of China and India’s croplands.
+    Greening from the expansion of croplands combined with the increased use of fertilizer and irrigation contribute to the global net increase in leaf area index and gross primary production. HydroGlobe-10km gross primary production data reveal strong increasing trends in parts of China and India’s croplands.
   </Chapter>
 </ScrollytellingBlock>
 
 <Block>
   <Prose>
   ## Comparing the trends in water and carbon cycles
-  We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends. These trend data sets are also provided in the [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/data-catalog?taxonomy=%7B%22Topics%22%3A%22eis%22%7D).
-
-⚠️  Our results of the GPP trends for some areas are contradictory to the greening trends reported by [Chen et al. 2019](https://doi.org/10.1038/s41893-019-0220-7), which may stem from uncertainties and discrepancies of data sources and the limitation of the model physics. This requires a more in-depth assessment. ⚠️
+  We applied a seasonal and trend decomposition algorithm to get estimates of terrestrial water storage and gross primary production. This method helps account for [nonstationarities](https://doi.org/10.1073/pnas.2403707121) and seasonal shifts in water storage and provides a more robust estimate of trends. These trend datasets are also provided in the HydroGlobe-10km data catalog page.
 
   </Prose>
 </Block>
@@ -141,12 +155,8 @@ taxonomy:
     />
     </Figure>
     <Prose>
-    ## Annual Changes for the South Asia Hotspot
-    In order to take a closer look at the water, energy, and carbon cycle changes for the hot spot region, we take South Asia as an example. The time series here shows the annual average anomalies for terrestrial water storage and evapotranspiration, as well as the annual total anomalies for gross primary production. The region has a TWS decrease at a rate of -3.6 mm/yr and GPP increase at a rate of 4.4 gC/m2/yr. The depletion of groundwater is reducing the interaction between the groundwater reservoir and deep layer soil moisture, leading to reduced deep soil evaporation. Enhanced vegetation growth may lead to increased transpiration. The TWS and GPP trends oppositely impact ET, resulting in ET with no significant long-term trend for these regions. Assimilating multi-source remote sensing products has constrained both freshwater changes and the human impact on water-vegetation interactions.
-
-
-    Analyze the global renalaysis data further:
-    [interactive notebook](https://nasa-veda.2i2c.cloud/hub/user-redirect/lab/tree/veda-eis-global-reanalysis/analysing_trend_from_global_DA.ipynb)
+    ## Changes the water cycle for South Asia 
+    In order to take a closer look at the water, energy, and carbon cycle changes shown in HydroGlobe-10km, we use South Asia as an example. The time series here shows the annual average anomalies for terrestrial water storage and evapotranspiration, as well as the annual total anomalies for gross primary production. The region has a TWS decrease at a rate of -3.6 mm/yr and GPP increase at a rate of 4.4 gC/m2/yr. Groundwater depletion reduces deep soil evaporation due to decreased soil moisture. Enhanced vegetation growth may lead to increased transpiration. The TWS and GPP trends oppositely impact evapotranspiration (ET), resulting in no significant long-term trend for ET. Assimilating multi-source remote sensing products has constrained both freshwater changes and human influences on water-vegetation interactions.
 
     </Prose>
  </Block>
@@ -155,13 +165,13 @@ taxonomy:
   <Prose>
     ## Additional resources
 
-    * [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+    * [HydroGlobe](https://ldas.gsfc.nasa.gov/hydroglobe)
     * [Land Information System](https://lis.gsfc.nasa.gov/)
+    * [HydroGlobe Discussions](https://github.com/NASAWaterInsight/HydroGlobe/discussions)
+    * [Water Cycle Nonstationarity visualizations](https://svs.gsfc.nasa.gov/5442/)
 
-    ### Explore the remote sensing data sets
 
-    * [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
-    * [ESA CCI](https://esa-soilmoisture-cci.org/)
-    * [MODIS](https://modis.gsfc.nasa.gov/)
+    ## References
+    - W. Nie, S.V. Kumar, A. Getirana, L. Zhao, M.L. Wrzesien, G. Konapala, S.K. Ahmad, K.A. Locke, T.R. Holmes, B.D. Loomis, & M. Rodell, Nonstationarity in the global terrestrial water cycle and its interlinkages in the Anthropocene, Proc. Natl. Acad. Sci. U.S.A. 121 (45) e2403707121, https://doi.org/10.1073/pnas.2403707121 (2024).
   </Prose>
 </Block>
