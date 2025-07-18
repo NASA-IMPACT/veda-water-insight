@@ -7,7 +7,7 @@ media:
   alt: NASA Astronaut image from ISS in July 2019 of Mississippi River Delta
   author:
     name: NASA
-    url: https://freshwater.eis.smce.nasa.gov/storymap.html
+    url: https://eoimages.gsfc.nasa.gov/images/imagerecords/145000/145286/iss059e036323_lrg.jpg
 taxonomy:
   - name: Topics
     values:
@@ -28,13 +28,10 @@ taxonomy:
 
 <Block>
     <Prose>
-    ### Delta under Pressure
-    </Prose>
-</Block>
+    ### Delta under Pressure 
+    <br />
 
-<Block>
-    <Prose>
-        NASA Earth observations and models show increased flooded area over the Delta. Land loss and flooding have direct impacts on people, their livelihoods, as well as on the Delta ecosystem and natural resources.
+    NASA Earth observations and models show increased flooded area over the Delta. Land loss and flooding have direct impacts on people, their livelihoods, as well as on the Delta ecosystem and natural resources.
      <Figure>
         <Image
             src={'/images/story/river-delta-mississippi/chartcld.png'}
@@ -42,7 +39,7 @@ taxonomy:
             align='left'
         />
         <Caption>
-            Coastal Land Dynamics in the Delta (from NASA's Delta-X mission)
+            Coastal Land Dynamics in the Delta (from <a href="https://deltax.jpl.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA JPL Delta-X</a> mission)
         </Caption>
     </Figure>   
     </Prose>
@@ -54,12 +51,7 @@ taxonomy:
             alt='Flooding timeline.'
             align='left'
         />
-        <Caption>
-        <mark>!! ADD DATA VIS HERE !!</mark>
-        </Caption>
-
     </Figure>
-
 </Block>
 
 <Block>
@@ -88,7 +80,7 @@ taxonomy:
       attrAuthor='NASA' 
       attrUrl='https://nasa.gov/'
     >
-    TWS anomaly (mm) and trend (slope = 15mm/yr)  
+    TWS anomaly (mm) and trend (slope = 15mm/yr).  
     </Caption> 
   </Figure>
 </Block>
@@ -102,13 +94,13 @@ taxonomy:
       idKey='Source' 
       xKey='DateTime' 
       yKey='Value' 
-      yAxisLabel='TWS Anomaly (mm)'
+      yAxisLabel='Sea Level (meters)'
     />
     <Caption 
       attrAuthor='NASA' 
       attrUrl='https://nasa.gov/'
     >
-    TWS anomaly (mm) and trend (slope = 15mm/yr)  
+    Sea level (meters), trend between 1993-2020 (blue line; slope = 2.7mm/yr), and trend between 2002-2020 (green line; 5.1mm/yr).
     </Caption> 
   </Figure>
 </Block>
@@ -155,25 +147,34 @@ taxonomy:
     ##### Impacts of Sea Level Rise
 
     Sea level rise results in increased flooded area along the coastal parts of the Delta.
-    <mark>!! ADD DATA VIS HERE !!</mark>
-    <Figure>
-        <Image
-            src={'/images/story/river-delta-mississippi/tmp-sea-level-rise.png'}
-            alt='Flooded farm in the Midwest.'
-            align='left'
-        />
-    </Figure>
-    <Caption>
-    Impacts of sea level rise on flooded areas obtained by subtracting flooded area during 2016-20 based on monthly climatology (scenario III) from observed sea level (scenario II). 
-    </Caption>
     </Prose>
-
+    
     <Figure>
-        <Image
-            src={'/images/story/river-delta-mississippi/sea-level-rise-legend.png'}
-            alt='Flooded farm in the Midwest.'
-            align='left'
-        />
+        <div style={{position: 'relative', width: '100%'}}>
+            <Image
+                src={'/images/story/river-delta-mississippi/sea-level-rise-1.png'}
+                alt='Map showing impacts of sea level rise on flooded areas'
+                align='left'
+            />
+            <div style={{
+                position: 'absolute',
+                bottom: '10px',
+                left: '10px',
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                padding: '1px',
+                borderRadius: '4px',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+            }}>
+                <img 
+                    src='/images/story/river-delta-mississippi/sea-level-rise-legend.png'
+                    alt='Sea level rise legend'
+                    style={{height: '100px', width: 'auto'}}
+                />
+            </div>
+        </div>
+        <Caption>
+        Impacts of sea level rise on flooded areas obtained by subtracting flooded area during 2016-20 based on monthly climatology (scenario III) from observed sea level (scenario II). 
+        </Caption>
     </Figure>
 </Block>
 
@@ -183,25 +184,34 @@ taxonomy:
     ##### Impact of Hydrological Changes
 
     Water cycle acceleration has caused a significant rise in flooded area from 1993-97 to 2016-20.   
-    <mark>!! ADD DATA VIS HERE !!</mark>
-    <Figure>
-        <Image
-            src={'/images/story/river-delta-mississippi/tmp-sea-level-rise2.png'}
-            alt='Flooded farm in the Midwest.'
-            align='left'
-        />
-    </Figure>
-    <Caption>
-    Impacts of hydrological changes by computing the difference between flooded area over early (1993-97) and late (2016-20) periods under no-management (naturalized) system and constant sea level (scenario IV).    
-    </Caption>
     </Prose>
-
+    
     <Figure>
-        <Image
-            src={'/images/story/river-delta-mississippi/sea-level-rise-legend.png'}
-            alt='Flooded farm in the Midwest.'
-            align='left'
-        />
+        <div style={{position: 'relative', width: '100%'}}>
+            <Image
+                src={'/images/story/river-delta-mississippi/sea-level-rise-2.png'}
+                alt='Impact of hydrological changes on flooded areas'
+                align='left'
+            />
+            <div style={{
+                position: 'absolute',
+                bottom: '10px',
+                left: '10px',
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                padding: '1px',
+                borderRadius: '4px',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+            }}>
+                <img 
+                    src='/images/story/river-delta-mississippi/sea-level-rise-legend.png'
+                    alt='Sea level rise legend'
+                    style={{height: '100px', width: 'auto'}}
+                />
+            </div>
+        </div>
+        <Caption>
+        Impacts of hydrological changes by computing the difference between flooded area over early (1993-97) and late (2016-20) periods under no-management (naturalized) system and constant sea level (scenario IV).    
+        </Caption>
     </Figure>
 </Block>
 
@@ -211,26 +221,35 @@ taxonomy:
     <Prose>
     ##### Impact of Water Management
 
-   Water management via flood control structures reduces flooded area in the Delta, protecting up to ~33000 people during extreme events. <br />
-    <mark>!! ADD DATA VIS HERE !!</mark>
-    <Figure>
-        <Image
-            src={'/images/story/river-delta-mississippi/tmp-sea-level-rise3.png'}
-            alt='Flooded farm in the Midwest.'
-            align='left'
-        />
-    </Figure>
-    <Caption>
-     Impact of water management obtained by differencing flooded area during 2016-20 from water management scenario (scenario I) and no-management system (scenario II).    
-    </Caption>
+   Water management via flood control structures reduces flooded area in the Delta, protecting up to <a href="https://earth.gov/ghgcenter/data-catalog/sedac-popdensity-yeargrid5yr-v4.11" target="_blank" rel="noopener noreferrer">33,000 people during extreme events.</a>
     </Prose>
-
+    
     <Figure>
-        <Image
-            src={'/images/story/river-delta-mississippi/sea-level-rise-legend.png'}
-            alt='Flooded farm in the Midwest.'
-            align='left'
-        />
+        <div style={{position: 'relative', width: '100%'}}>
+            <Image
+                src={'/images/story/river-delta-mississippi/sea-level-rise-3.png'}
+                alt='Impact of water management on flooded areas'
+                align='left'
+            />
+            <div style={{
+                position: 'absolute',
+                bottom: '10px',
+                left: '10px',
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                padding: '1px',
+                borderRadius: '4px',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+            }}>
+                <img 
+                    src='/images/story/river-delta-mississippi/sea-level-rise-legend.png'
+                    alt='Sea level rise legend'
+                    style={{height: '100px', width: 'auto'}}
+                />
+            </div>
+        </div>
+        <Caption>
+        Impact of water management obtained by differencing flooded area during 2016-20 from water management scenario (scenario I) and no-management system (scenario II).    
+        </Caption>
     </Figure>
 </Block>
 
@@ -238,7 +257,6 @@ taxonomy:
 
 <Block>
   <Prose>
-    <mark>!! ADD DATA VIS HERE !! VEDA UI doesn't support timeseries with non-dates yet</mark> <br />
     Water management provides increasing flood protection for more extreme flood events. 
 
     Hydrological changes pose larger risk than sea level rise on the Delta.
@@ -251,7 +269,8 @@ taxonomy:
             align='left'
         />
     <Caption>
-    Percentiles indicate floods that exceed 50% (median), 95% (18 days/year) and 99.72% (1 day/year) of daily events
+    Percentiles indicate floods that exceed 50% (median), 95% (18 days/year) and 99.72% (1 day/year) of daily events.<br />
+    Source:  <a href="https://www.weather.gov/gis/Rivers" target="_blank" rel="noopener noreferrer">River Network Dataset</a> Source: <a href="https://lpdaac.usgs.gov/news/release-of-gfsad-30-meter-cropland-extent-products/" target="_blank" rel="noopener noreferrer">Cropland Dataset</a>
     </Caption>
     </Figure>
 </Block>
@@ -265,8 +284,9 @@ taxonomy:
     <Figure>
         <Image
             src={'/images/story/river-delta-mississippi/conclusion.png'}
-            alt='Flooded farm in the Midwest.'
+            alt='Image from MODIS onboard Terra satellite from Feb 2, 2020.'
             align='left'
+            author='https://earthobservatory.nasa.gov/images/146251/winter-flooding-on-the-mississippi'
         />
     </Figure>
     </Prose>
@@ -277,6 +297,6 @@ taxonomy:
     #### Authorship
     Developers: NASA ODSI<sup>1</sup>
     
-    <sup>1</sup> NASA’s Office of Data Science and Informatics (ODSI)
+    <sup>1</sup> NASA's Office of Data Science and Informatics (ODSI)
   </Prose>
 </Block>

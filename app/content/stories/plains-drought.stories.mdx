@@ -52,13 +52,14 @@ taxonomy:
       <source
         src={'/images/story/plains-drought/plains-drought-USDM.mp4'}
       />
-      Your browser does not support the video tag.
     </video>
 
     <Caption>
-    United States Drought Monitor progression during the summers of 2016 and 2017.
+    United States Drought Monitor progression during the summers of 2016 and 2017. <br />
+    Source: <a href="https://droughtmonitor.unl.edu/DmData/TimeSeries.aspx" target="_blank" rel="noopener noreferrer">USDM</a>
     </Caption>
   </Figure>
+
 
     <Prose>
     ### Drought Overview 
@@ -443,7 +444,7 @@ taxonomy:
         align='left'
     />
     <Caption>
-    United States Department of Agriculture crop production time series.
+    United States Department of Agriculture crop production time series. <br />Source: <a href="https://quickstats.nass.usda.gov/" target="_blank" rel="noopener noreferrer">USDA CropLand Data Layers</a>
     </Caption>
   </Figure>
 </Block>
@@ -451,28 +452,38 @@ taxonomy:
 <Block>
     <Prose>
     ### Conclusions
-    
-    Integrating datasets from **GPM, MODIS, AMSR2, and SMAP is necessary** to capture a more complete evolution of droughts.
-    
-    Remote sensing datasets also help capture the impacts of flash droughts on **agriculture and post-drought wildfires**.
+
+    <Figure>
+        <div style={{position: 'relative', width: '100%'}}>
+            <Image
+                src={'/images/story/plains-drought/drought_crack.jpeg'}
+                alt='Drought cracked ground'
+                align='left'
+            />
+            <div style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                color: 'white',
+                padding: '60px 80px',
+                borderRadius: '8px',
+                width: '85%',
+                textAlign: 'center',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.9)'
+            }}>
+                <p style={{margin: '0 0 15px 0', fontSize: '22px', fontWeight: 'bold'}}>
+                    Integrating datasets from <strong>GPM, MODIS, AMSR2, and SMAP is necessary</strong> to capture a more complete evolution of droughts.
+                </p>
+                <p style={{margin: 0, fontSize: '22px'}}>
+                    Remote sensing datasets also help capture the impacts of flash droughts on <strong>agriculture and post-drought wildfires</strong>.
+                </p>
+            </div>
+        </div>
+    </Figure>
     </Prose>
-</Block>
-
-
-
-<Block>
-    <Prose>
-    #### References
-    https://research.noaa.gov/article/ArtMID/587/ArticleID/2460/Climate-change-to-make-events-like-2017-Northern-Plains-drought-more-likely
-   
-    https://research.noaa.gov/article/ArtMID/587/ArticleID/2472/Climate-change-to-make-hot-droughts-hotter-in-the-US-southern-plains
-   
-    https://droughtmonitor.unl.edu/DmData/TimeSeries.aspx
-   
-    https://quickstats.nass.usda.gov/
-
-    https://calmit.unl.edu/drought
-    </Prose>
+    
 </Block>
 
 <Block>
