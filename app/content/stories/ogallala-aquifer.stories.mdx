@@ -46,6 +46,7 @@ taxonomy:
     </Figure>
 </Block>
 
+
 <Block>
     <Figure>
         <Image
@@ -61,7 +62,7 @@ taxonomy:
     <Prose>
     ##### Declining Water Levels
 
-    Groundwater levels have declined as irrigation and agriculture have intensified in the region.
+    <a href="https://pubs.usgs.gov/sir/2017/5040/sir20175040.pdf" target="_blank" rel="noopener noreferrer">Groundwater levels have declined</a> as irrigation and agriculture have intensified in the region.
     </Prose>
 </Block>
 
@@ -73,7 +74,10 @@ taxonomy:
             align='left'
         />
         <Caption>
-            Annual TWS change (GRACE) and annual irrigation fraction map (Landsat) over a portion of Texas.
+            Annual TWS change (GRACE) and annual irrigation fraction map (Landsat) over a portion of Texas. <br />
+            Data Sources: Water Storage <a href="https://grace.jpl.nasa.gov/resources/13/annual-water-storage-changes-over-the-us-from-grace/" target="_blank" rel="noopener noreferrer">NASA JPL</a>; Irrigation <a href="https://doi.org/10.1016/j.rse.2019.111400" target="_blank" rel="noopener noreferrer">Deines, J.M. et al. (2019)</a>
+
+             
         </Caption>
     </Figure>
 
@@ -114,7 +118,8 @@ taxonomy:
             align='left'
         />
         <Caption>
-            USGS observations of groundwater storage changes for 2002-2015.
+            USGS observations of groundwater storage changes for 2002-2015. <br />Data Source: <a href="https://ne.water.usgs.gov/projects/HPA/data.html" target="_blank" rel="noopener noreferrer">USGS</a>
+
         </Caption>
     </Figure>
 </Block>
@@ -122,9 +127,7 @@ taxonomy:
 
 <Block>
     <Prose >
-        ##### **Currently this is a static image. We need to ingest into our STAC catalogue in order to render the WMTS. **
-        ###### Swipe the slider for modeled groundwater storage with GRACE data assimilation (DA) (left) and without GRACE DA (right)
-
+    ###### Modeled groundwater storage 
     <div className="grid-row">
         <div className="grid-col-6">
             <Figure>
@@ -201,9 +204,36 @@ taxonomy:
     <Prose>
     ### Conclusions
 
-    Remote sensing data from GRACE, MODIS, and GPM plays a **key role in understanding changes in the Ogallala Aquifer** fromirrigation and other uses.
     
-    Decline in groundwater storage in the Southern Ogallala Aquifer is well-captured by leveraging **NASA models and datasets**.
+    <Figure>
+        <div style={{position: 'relative', width: '100%'}}>
+            <Image
+                src={'/images/story/ogallala-aquifer/ogallala-aquifer-background1.png'}
+                alt='Ogallala Aquifer agricultural landscape'
+                align='left'
+            />
+            <div style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                color: 'white',
+                padding: '60px 80px',
+                borderRadius: '8px',
+                width: '85%',
+                textAlign: 'center',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.3)'
+            }}>
+                <p style={{margin: '0 0 15px 0', fontSize: '22px', fontWeight: 'bold'}}>
+                    Remote sensing data from GRACE, MODIS, and GPM plays a <strong>key role in understanding changes in the Ogallala Aquifer</strong> from irrigation and other uses.
+                </p>
+                <p style={{margin: 0, fontSize: '22px'}}>
+                    Decline in groundwater storage in the Southern Ogallala Aquifer is well-captured by leveraging <strong>NASA models and datasets</strong>.
+                </p>
+            </div>
+        </div>
+    </Figure>
     </Prose>
 </Block>
 
