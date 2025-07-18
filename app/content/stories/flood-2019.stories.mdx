@@ -76,22 +76,25 @@ taxonomy:
     <Prose>
     ##### Soggy Soils, Frozen Soils
 
-    Across much of the Midwest and Northern Plains, soils were saturated throughout the fall and winter, especially in the Corn Belt.
-
-    <mark>!! ADD DATA VIS HERE !!</mark>
-
-    Standardized anomalies for root zone soil moisture for August-October 2018
+    Across much of the Midwest and Northern Plains, soils were saturated throughout the fall and winter, especially in the Corn Belt. 
 
     </Prose>
     <Figure>
-        <Image
-            src={'/images/story/flood-2019/tmp_arcgis_filler.png'}
-            alt='Flooded farm in the Midwest.'
-            align='left'
-        />
-        <Caption>
-            Standardized anomalies for root zone soil moisture for August-October 2018
-        </Caption>
+    <Map
+        datasetId='flood-2019'
+        layerId='fldas-soil-moisture-anomalies'
+        dateTime='2018-08-01'
+        compareDateTime='2018-10-31'
+        zoom={3.8}
+        center={[-91.0547, 41.0431]}
+
+    />
+    <Caption
+        attrAuthor='NASA'
+        attrUrl='https://nasa.gov/'
+    >
+        Comparison of 0-10cm soil moisture anomalies from FLDAS across the Midwest and Northern Great Plains between August 1, 2018 and October 31, 2018.
+    </Caption>
     </Figure>
     
 </Block>
@@ -108,15 +111,15 @@ taxonomy:
         datasetId='flood-2019'
         layerId='GPM_3IMERGDF.v07'
         dateTime='2019-05-12'
-        zoom={2}
-        center={[-94.8866, 35.7244]}
+        zoom={5}
+        center={[-96.3353, 40.1889]}
         compareDateTime= '2019-05-14'
       />
       <Caption
         attrAuthor='NASA'
         attrUrl='https://nasa.gov/'
       >
-        GPM IMERG peak rainfall rate over Eastern United States Texas on March 12, 2019 and March 14, 2019.
+        GPM IMERG captures a huge blizzard in mid-March that blanketed the region in deep snow between March 12, 2019 and March 14, 2019.
       </Caption>
       </Figure>
 </Block>
@@ -128,18 +131,53 @@ taxonomy:
 
     The extent of 2019 flooding can be seen over the Missouri River near Omaha, NE when compared with another MODIS-captured scene from 2015.
 
-    <mark>!! ADD DATA VIS HERE !!</mark>
-
-    SLIDER - MODIS Corrected Reflectance from NASA GIBS (Bands 7-2-1) Left: Mar 2015, Right: Mar 2019 
-    
-    <Figure>
-        <Image
-            src={'/images/story/flood-2019/tmp_png_filler.png'}
-            alt='Flooded farm in the Midwest.'
-            align='left'
-        />
+    <Figure>          
+        <a 
+            href="https://worldview.earthdata.nasa.gov/?v=-98.68464391701187,39.79619220521505,-93.31531135337957,42.723380861228875&z=2&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,MODIS_Aqua_CorrectedReflectance_Bands721,MODIS_Terra_CorrectedReflectance_Bands721(hidden),VIIRS_NOAA21_CorrectedReflectance_TrueColor(hidden),VIIRS_NOAA20_CorrectedReflectance_TrueColor(hidden),VIIRS_SNPP_CorrectedReflectance_TrueColor(hidden),MODIS_Aqua_CorrectedReflectance_TrueColor(hidden),MODIS_Terra_CorrectedReflectance_TrueColor&lg=true&l1=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,MODIS_Aqua_CorrectedReflectance_Bands721,MODIS_Terra_CorrectedReflectance_Bands721(hidden),VIIRS_NOAA21_CorrectedReflectance_TrueColor(hidden),VIIRS_NOAA20_CorrectedReflectance_TrueColor(hidden),VIIRS_SNPP_CorrectedReflectance_TrueColor(hidden),MODIS_Aqua_CorrectedReflectance_TrueColor(hidden),MODIS_Terra_CorrectedReflectance_TrueColor&lg1=true&ca=false&cv=54&s=-95.9372,41.2587&t=2015-03-16-T12%3A10%3A48Z&t1=2019-03-20-T12%3A10%3A48Z&em=true" 
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+                display: 'block',
+                width: '100%',
+                height: 'auto',
+                textDecoration: 'none',
+                backgroundColor: '#f0f0f0',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                padding: '10px',
+                cursor: 'pointer'
+            }}
+        >
+            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '10px'}}>
+                <div>
+                    <img 
+                        src="/images/story/flood-2019/modis-flood-march-16-2015.png" 
+                        alt="MODIS image showing normal water levels on March 16, 2015"
+                        style={{width: '100%', height: 'auto', borderRadius: '4px'}}
+                    />
+                    <p style={{textAlign: 'center', color: '#666', fontSize: '14px', marginTop: '5px'}}>March 16, 2015 - Normal water levels</p>
+                </div>
+                <div>
+                    <img 
+                        src="/images/story/flood-2019/modis-flood-march-31-2019.png" 
+                        alt="MODIS image showing extensive flooding on March 31, 2019"
+                        style={{width: '100%', height: 'auto', borderRadius: '4px'}}
+                    />
+                    <p style={{textAlign: 'center', color: '#666', fontSize: '14px', marginTop: '5px'}}>March 31, 2019 - Extensive flooding</p>
+                </div>
+            </div>
+            <div style={{
+                textAlign: 'center',
+                color: '#333',
+                fontSize: '18px',
+                fontWeight: 'bold',
+                padding: '10px'
+            }}>
+                Click to view interactive comparison in NASA Worldview →
+            </div>
+        </a>
         <Caption>
-            ""
+            MODIS Corrected Reflectance from NASA GIBS (Bands 7-2-1) - Comparison between March 2015 (left) and March 2019 (right) showing the extent of flooding near Omaha, NE. Click above for an interactive comparison in NASA Worldview.
         </Caption>
     </Figure>
 
@@ -148,9 +186,30 @@ taxonomy:
 
 <Block>
     <Prose>
+    ##### NASA Worldview Embed (Pending Approval)
+    
+    Once NASA approves embedding for this domain, the interactive comparison will appear below:
+    </Prose>
+    
+    <Figure>
+        <iframe 
+            src="https://worldview.earthdata.nasa.gov/?v=-98.68464391701187,39.79619220521505,-93.31531135337957,42.723380861228875&z=2&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,MODIS_Aqua_CorrectedReflectance_Bands721,MODIS_Terra_CorrectedReflectance_Bands721(hidden),VIIRS_NOAA21_CorrectedReflectance_TrueColor(hidden),VIIRS_NOAA20_CorrectedReflectance_TrueColor(hidden),VIIRS_SNPP_CorrectedReflectance_TrueColor(hidden),MODIS_Aqua_CorrectedReflectance_TrueColor(hidden),MODIS_Terra_CorrectedReflectance_TrueColor&lg=true&l1=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,MODIS_Aqua_CorrectedReflectance_Bands721,MODIS_Terra_CorrectedReflectance_Bands721(hidden),VIIRS_NOAA21_CorrectedReflectance_TrueColor(hidden),VIIRS_NOAA20_CorrectedReflectance_TrueColor(hidden),VIIRS_SNPP_CorrectedReflectance_TrueColor(hidden),MODIS_Aqua_CorrectedReflectance_TrueColor(hidden),MODIS_Terra_CorrectedReflectance_TrueColor&lg1=true&ca=false&cv=54&s=-95.9372,41.2587&t=2015-03-16-T12%3A10%3A48Z&t1=2019-03-20-T12%3A10%3A48Z&em=true" 
+            role="application" 
+            sandbox="allow-modals allow-scripts allow-same-origin allow-forms allow-popups" 
+            width="100%" 
+            height="600" 
+            allow="fullscreen; autoplay;" 
+            loading="lazy"
+            style={{border: 'none'}}
+        />
+        <Caption>
+            Interactive MODIS Corrected Reflectance comparison showing flooding extent changes between March 2015 and March 2019.
+        </Caption>
+    </Figure>
+</Block>
 
-    <mark>!! ADD DATA VIS HERE !!</mark>
-
+<Block>
+    <Prose>
     Flood water (red pixels) and permanent water (blue pixels) mapped with Sentinel-1. [Data hosted on NASA Disasters Mapping Portal]
 
     <Figure>
@@ -170,17 +229,55 @@ taxonomy:
     <Prose>
     ##### Rapid Snowmelt
 
-    <mark>!! ADD DATA VIS HERE !!</mark>
+    The rain-on-snow event on the unusually deep snowpack caused rapid snowmelt which intensified spring flooding.
 
-    SLIDER - Snow depth on March 10 (left) before the rain-on-snow event and on March 29, 2019 (right) after the rain-on-snow event
     <Figure>
-        <Image
-            src={'/images/story/flood-2019/tmp_rapid_snowmelt.png'}
-            alt='Flooded farm in the Midwest.'
-            align='left'
-        />
+        <a 
+            href="https://www.nohrsc.noaa.gov/nsa/js_animate.html?year=2019&month=3&day=25&type=nsm_depth&region=Midwest"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+                display: 'block',
+                width: '100%',
+                height: 'auto',
+                textDecoration: 'none',
+                backgroundColor: '#e3f2fd',
+                border: '1px solid #1976d2',
+                borderRadius: '4px',
+                padding: '10px',
+                cursor: 'pointer'
+            }}
+        >
+            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '10px'}}>
+                <div>
+                    <img 
+                        src="/images/story/flood-2019/snow-depth-march-10-2019.png" 
+                        alt="Snow depth on March 10, 2019 before the rain-on-snow event"
+                        style={{width: '100%', height: 'auto', borderRadius: '4px'}}
+                    />
+                    <p style={{textAlign: 'center', color: '#666', fontSize: '14px', marginTop: '5px'}}>March 10, 2019 - Before rain-on-snow event</p>
+                </div>
+                <div>
+                    <img 
+                        src="/images/story/flood-2019/snow-depth-march-29-2019.png" 
+                        alt="Snow depth on March 29, 2019 after the rain-on-snow event"
+                        style={{width: '100%', height: 'auto', borderRadius: '4px'}}
+                    />
+                    <p style={{textAlign: 'center', color: '#666', fontSize: '14px', marginTop: '5px'}}>March 29, 2019 - After rapid snowmelt</p>
+                </div>
+            </div>
+            <div style={{
+                textAlign: 'center',
+                color: '#1976d2',
+                fontSize: '18px',
+                fontWeight: 'bold',
+                padding: '10px'
+            }}>
+                Click to view interactive snow depth animation →
+            </div>
+        </a>
         <Caption>
-          The rain-on-snow event on the unusually deep snowpack caused rapid snowmelt which intensified spring flooding.
+            <a href = "https://www.nohrsc.noaa.gov/nsa/index.html?region=Midwest&year=2019&month=3&day=29&units=e">NOAA National Snow Analysis</a> - Snow depth animation for the Midwest region in March 2019 showing the rapid snowmelt event that contributed to flooding.
         </Caption>
     </Figure>    
     </Prose>
@@ -196,7 +293,7 @@ taxonomy:
             align='left'
         />
         <Caption>
-        Missouri River Basin (red boundary) where the snow depth timeseries is averaged
+        Missouri River Basin (red boundary) where the snow depth timeseries is averaged.
         </Caption>
     </Figure>    
     </Prose>
@@ -243,18 +340,17 @@ taxonomy:
     Rapid snowmelt and heavy rainfall resulted in **record streamflows** in spring and summer.
     <Figure>
         <Image
-            src={'/images/story/flood-2019/missouri-river-streamflow.png'}
-            alt='Flooded farm in the Midwest.'
+            src={'/images/story/flood-2019/st-charles-location.png'}
+            alt='Missouri River location near St. Charles Missouri.'
             align='left'
         />
         <Caption>
-        Missouri River Basin (red boundary) where the snow depth timeseries is averaged
+        Streamflow on Missouri River at St. Charles, MO.
         </Caption>
     </Figure>   
 
     </Prose>
 </Block>
-
 
 <Block>
     <Prose>
@@ -264,19 +360,25 @@ taxonomy:
 
     Wet soil conditions persisted months after the flooding, leaving farmers with no option but to wait for soils to dry out.
     
-    Assimilating downscaled soil moisture from SMAP captures the wet conditions persisting in late-May to early-June.
-
-    <mark>!! ADD DATA VIS HERE !!</mark>
+    Soil moisture analysis from FLDAS captures the wet conditions persisting in late-May to early-June.
     </Prose>
 
     <Figure>
-        <Image
-            src={'/images/story/flood-2019/tmp_arcgis_filler.png'}
-            alt='Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
-        />
-        <Caption>
-        Root zone soil moisture anomaly averaged over May 27-June 2, 2019        
-        </Caption>
+    <Map
+        datasetId='flood-2019'
+        layerId='fldas-soil-moisture-anomalies'
+        dateTime='2019-05-27'
+        compareDateTime='2019-06-02'
+        zoom={5}
+        center={[-93.4178, 37.9794]}
+
+    />
+    <Caption
+        attrAuthor='NASA'
+        attrUrl='https://nasa.gov/'
+    >
+        Comparison of 0-10cm soil moisture anomalies from FLDAS across the Midwest between May 27, 2019 and June 2, 2019.
+    </Caption>
     </Figure>
 
 </Block>
@@ -311,19 +413,33 @@ taxonomy:
 
     The abnormally low leaf area index (LAI) from MODIS captures delayed planting in the Cornbelt region.
 
-    <mark>!! ADD DATA VIS HERE !!</mark>
-
     </Prose>
     <Figure>
-        <Image
-            src={'/images/story/flood-2019/tmp_arcgis_filler.png'}
-            alt='Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
-        />
+        <div style={{position: 'relative', width: '100%'}}>
+            <Image
+                src={'/images/story/flood-2019/modis-lai-6-27-2019.png'}
+                alt='LAI anomaly for Jun 27, 2019 after the flooding event in spring.'
+            />
+            <div style={{
+                position: 'absolute',
+                bottom: '10px',
+                right: '10px',
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                padding: '8px',
+                borderRadius: '4px',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+            }}>
+                <img 
+                    src='/images/story/flood-2019/modis-legend.png'
+                    alt='MODIS LAI legend'
+                    style={{height: '60px', width: 'auto'}}
+                />
+            </div>
+        </div>
         <Caption>
         LAI anomaly for Jun 27, 2019 after the flooding event in spring.
         </Caption>
     </Figure>
-
 </Block>
 
 <Block>
@@ -331,16 +447,30 @@ taxonomy:
     ##### Farmers Planted Fewer Acres
 
     According to USDA 2019 Crop Data, the planted fields were reduced by around 12% compared to the five-year average for corn and soybean.
-
-    <mark>!! ADD DATA VIS HERE !!  -- need to create a COG</mark>
-
     </Prose>
 
     <Figure>
-        <Image
-            src={'/images/story/flood-2019/corn-prevented.png'}
-            alt='Terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
-        />
+        <div style={{position: 'relative', width: '100%'}}>
+            <Image
+                src={'/images/story/flood-2019/corn-prevented-base.png'}
+                alt='Map showing prevented acreage for corn in 2019 by state'
+            />
+            <div style={{
+                position: 'absolute',
+                bottom: '10px',
+                left: '10px',
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                padding: '1px',
+                borderRadius: '4px',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+            }}>
+                <img 
+                    src='/images/story/flood-2019/corn-prevented-legend.png'
+                    alt='Corn prevented acreage legend'
+                    style={{height: '80px', width: 'auto'}}
+                />
+            </div>
+        </div>
         <Caption>
         Prevented acreage for corn in 2019 (by state), in thousands of acres. 
         </Caption>
@@ -351,7 +481,7 @@ taxonomy:
     <Prose>
     ### Conclusions
 
-    The simultaneous use of datasets from **GPM, MODIS, AMSR2, and SMAP** is necessary to capture the causes and extent of the flooding, as well as its impacts on agriculture.
+    The simultaneous use of datasets from **GPM, MODIS, AMSR2, and FLDAS** is necessary to capture the causes and extent of the flooding, as well as its impacts on agriculture.
     
     Using **Earth observations to model and understand extreme events** improves our ability to better manage water resources, plan for and respond to disasters, and assess food production and security across the globe.
     </Prose>

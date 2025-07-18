@@ -1,7 +1,7 @@
 ---
 id: flood-2019
 name: flood-2019
-isHidden: true
+isHidden: false
 description: Data used to visualize in flood story
 media:
   src: /images/story/flood-2019/flood-2019-farm.png
@@ -38,7 +38,7 @@ layers:
       colormap_name: gnbu
       rescale:
         - 0
-        - 46
+        - 23
       maxzoom: 12
       concept_id: C2723754864-GES_DISC
       backend: xarray
@@ -47,7 +47,7 @@ layers:
         label:
       type: gradient
       min: "0 mm/hr"
-      max: "46 mm/hr"
+      max: "23 mm/hr"
       stops:
         [
           "#f7fcf0",
@@ -119,6 +119,51 @@ layers:
       temporalResolution: Daily
       unit: Inches
 
+
+  - id: fldas-soil-moisture-anomalies
+    stacCol: fldas-soil-moisture-anomalies
+    name: 'FLDAS Surface Soil Moisture Anomalies'
+    type: raster
+    description: 'Anomalies in surface soil moisture (10cm)'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      bidx: 1
+      colormap_name: rdbu
+      rescale:
+        - -0.3
+        - 0.3
+      nodata: -9999
+    legend:
+      unit:
+        label: kg mm3/mm3
+      type: gradient
+      label: kg mm3/mm3
+      min: "-0.3"
+      max: "0.3"
+      stops:
+      - "#a50026"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#313695"
+    compare:
+      datasetId: fldas-soil-moisture-anomalies
+      layerId: fldas-soil-moisture-anomalies
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy-MM-dd')} VS ${dateFns.format(compareDatetime, 'yyyy-MM-dd')}`;
+        }
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: kg mm3/mm3
+
+
+
+
+
 ---
 
 <Block>
@@ -155,6 +200,26 @@ layers:
     attrUrl='https://nasa.gov/'
   >
     GPM IMERG peak rainfall rate over Eastern United States Texas on March 12, 2019 and March 14, 2019.
+  </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+  <Map
+    datasetId='flood-2019'
+    layerId='fldas-soil-moisture-anomalies'
+    dateTime='2018-09-01'
+    compareDateTime='2018-11-01'
+    zoom={4}
+    center={[-91.0547, 39.0431]}
+
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Comparison of 0-10cm soil moisture anomalies across the Midwest and Northern Great Plains between August 1, 2018 and October 31, 2018.
   </Caption>
   </Figure>
 </Block>
