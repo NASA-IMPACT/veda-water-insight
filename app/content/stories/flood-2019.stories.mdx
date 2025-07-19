@@ -71,32 +71,26 @@ taxonomy:
     </Prose>
 </Block>
 
+
 <Block>
     <Prose>
     ##### Soggy Soils, Frozen Soils
 
     Across much of the Midwest and Northern Plains, soils were saturated throughout the fall and winter, especially in the Corn Belt. 
 
-    </Prose>
     <Figure>
-    <Map
-        datasetId='flood-2019'
-        layerId='fldas-soil-moisture-anomalies'
-        dateTime='2018-08-01'
-        compareDateTime='2018-10-31'
-        zoom={3.8}
-        center={[-91.0547, 41.0431]}
-
-    />
-    <Caption
-        attrAuthor='NASA'
-        attrUrl='https://nasa.gov/'
-    >
-        Comparison of 0-10cm soil moisture anomalies from FLDAS across the Midwest and Northern Great Plains between August 1, 2018 and October 31, 2018.
-    </Caption>
-    </Figure>
-    
+        <Image
+            src={'/images/story/flood-2019/smap-august-october.png'}
+            alt='Soil Moisture Anomalies between August and October 2018.'
+            align='left'
+        />
+        <Caption>
+            Standardized anomalies for root zone soil moisture for August-October 2018. Red colors indicate dry anomalies and blue colors indicate wet anomalies.
+        </Caption>
+    </Figure>    
+    </Prose>
 </Block>
+
 
 <Block>
     <Prose>
@@ -420,7 +414,7 @@ taxonomy:
     <Prose>
     ### Conclusions
 
-    The simultaneous use of datasets from **GPM, MODIS, AMSR2, and FLDAS** is necessary to capture the causes and extent of the flooding, as well as its impacts on agriculture.
+    The simultaneous use of datasets from **GPM, MODIS, AMSR2, and SMAP** is necessary to capture the causes and extent of the flooding, as well as its impacts on agriculture.
     
     Using **Earth observations to model and understand extreme events** improves our ability to better manage water resources, plan for and respond to disasters, and assess food production and security across the globe.
     </Prose>
