@@ -164,56 +164,34 @@ taxonomy:
     ##### Rapid Snowmelt
 
     The rain-on-snow event on the unusually deep snowpack caused rapid snowmelt which intensified spring flooding.
+    
+    <div className="grid-row">
+        <div className="grid-col-6">
+            <Figure>
+                <Image
+                    src={'/images/story/flood-2019/snow-depth-1.png'}
+                    alt='Snow depth before the rain-on-snow event'
+                    align='left'
+                />
+                <Caption>
+                    March 10, 2019 - Snow depth before rain-on-snow event
+                </Caption>
+            </Figure>
+        </div>
+        <div className="grid-col-6">
+            <Figure>
+                <Image
+                    src={'/images/story/flood-2019/snow-depth-2.png'}
+                    alt='Snow depth after rapid snowmelt'
+                    align='left'
+                />
+                <Caption>
+                    March 29, 2019 - Snow depth after rapid snowmelt
+                </Caption>
+            </Figure>
+        </div>
+    </div>
 
-    <Figure>
-        <a 
-            href="https://www.nohrsc.noaa.gov/nsa/js_animate.html?year=2019&month=3&day=25&type=nsm_depth&region=Midwest"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-                display: 'block',
-                width: '100%',
-                height: 'auto',
-                textDecoration: 'none',
-                backgroundColor: '#e3f2fd',
-                border: '1px solid #1976d2',
-                borderRadius: '4px',
-                padding: '10px',
-                cursor: 'pointer'
-            }}
-        >
-            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '10px'}}>
-                <div>
-                    <img 
-                        src="/images/story/flood-2019/snow-depth-march-10-2019.png" 
-                        alt="Snow depth on March 10, 2019 before the rain-on-snow event"
-                        style={{width: '100%', height: 'auto', borderRadius: '4px'}}
-                    />
-                    <p style={{textAlign: 'center', color: '#666', fontSize: '14px', marginTop: '5px'}}>March 10, 2019 - Before rain-on-snow event</p>
-                </div>
-                <div>
-                    <img 
-                        src="/images/story/flood-2019/snow-depth-march-29-2019.png" 
-                        alt="Snow depth on March 29, 2019 after the rain-on-snow event"
-                        style={{width: '100%', height: 'auto', borderRadius: '4px'}}
-                    />
-                    <p style={{textAlign: 'center', color: '#666', fontSize: '14px', marginTop: '5px'}}>March 29, 2019 - After rapid snowmelt</p>
-                </div>
-            </div>
-            <div style={{
-                textAlign: 'center',
-                color: '#1976d2',
-                fontSize: '18px',
-                fontWeight: 'bold',
-                padding: '10px'
-            }}>
-                Click to view interactive snow depth animation →
-            </div>
-        </a>
-        <Caption>
-            <a href = "https://www.nohrsc.noaa.gov/nsa/index.html?region=Midwest&year=2019&month=3&day=29&units=e">NOAA National Snow Analysis</a> - Snow depth animation for the Midwest region in March 2019 showing the rapid snowmelt event that contributed to flooding.
-        </Caption>
-    </Figure>    
     </Prose>
 </Block>
 
