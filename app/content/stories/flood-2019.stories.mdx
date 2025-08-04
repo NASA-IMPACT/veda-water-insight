@@ -159,41 +159,26 @@ taxonomy:
     </Prose>
 </Block>
 
+
 <Block>
+  <Figure>
     <Prose>
     ##### Rapid Snowmelt
-
-    The rain-on-snow event on the unusually deep snowpack caused rapid snowmelt which intensified spring flooding.
-    
-    <div className="grid-row">
-        <div className="grid-col-6">
-            <Figure>
-                <Image
-                    src={'/images/story/flood-2019/snow-depth-1.png'}
-                    alt='Snow depth before the rain-on-snow event'
-                    align='left'
-                />
-                <Caption>
-                    March 10, 2019 - Snow depth before rain-on-snow event
-                </Caption>
-            </Figure>
-        </div>
-        <div className="grid-col-6">
-            <Figure>
-                <Image
-                    src={'/images/story/flood-2019/snow-depth-2.png'}
-                    alt='Snow depth after rapid snowmelt'
-                    align='left'
-                />
-                <Caption>
-                    March 29, 2019 - Snow depth after rapid snowmelt
-                </Caption>
-            </Figure>
-        </div>
-    </div>
-
+    <CompareImage
+      leftImageSrc='/images/story/flood-2019/snow-depth-1.png'
+      leftImageAlt='Snow depth before the rain-on-snow event'
+      leftImageLabel='Before rain-on-snow event'
+      rightImageSrc='/images/story/flood-2019/snow-depth-2.png'
+      rightImageAlt='Snow depth after rapid snowmelt'
+      rightImageLabel='After rapid snowmelt'
+    />
+    <Caption>
+    The rain-on-snow event on the unusually deep snowpack caused rapid snowmelt which intensified spring flooding. March 10, 2019 - Snow depth before rain-on-snow event; March 29, 2019 - Snow depth after rapid snowmelt.
+    </Caption>
     </Prose>
+  </Figure>
 </Block>
+
 
 <Block>
     <Prose>
@@ -228,7 +213,23 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block>
+<Block>  
+    <Prose>
+    ##### Record Flooding
+
+    Rapid snowmelt and heavy rainfall resulted in **record streamflows** in spring and summer.
+    <Figure>
+        <Image
+            src={'/images/story/flood-2019/st-charles-location.png'}
+            alt='Missouri River location near St. Charles Missouri.'
+            align='left'
+        />
+        <Caption>
+        Streamflow on Missouri River at St. Charles, MO.
+        </Caption>
+    </Figure>   
+    </Prose>
+
   <Figure>
     <Chart
       dataPath="/charts/story/flood-2019-streamflow.csv"
@@ -245,57 +246,19 @@ taxonomy:
     Streamflow as measured on the Missouri River at St. Charles, Missouri during water year 2019 compared to climatology.  
     </Caption> 
   </Figure>
-  
-    <Prose>
-    ##### Record Flooding
-
-    Rapid snowmelt and heavy rainfall resulted in **record streamflows** in spring and summer.
-    <Figure>
-        <Image
-            src={'/images/story/flood-2019/st-charles-location.png'}
-            alt='Missouri River location near St. Charles Missouri.'
-            align='left'
-        />
-        <Caption>
-        Streamflow on Missouri River at St. Charles, MO.
-        </Caption>
-    </Figure>   
-
-    </Prose>
 </Block>
 
 <Block>
     <Prose>
-
-
-    ##### Soils Too Wet To Plant
+    ##### Soils Too Wet To Plant - Agricultural Impacts
 
     Wet soil conditions persisted months after the flooding, leaving farmers with no option but to wait for soils to dry out.
-    
-    Soil moisture analysis from FLDAS captures the wet conditions persisting in late-May to early-June.
+
+    The Midwest 2019 flood coincided with the corn and soybean planting season, causing many farmers to delay planting their crops, switch crops, or not plant at all.
+
+    According to the American Farm Bureau Federation, farm subsidies made up 40% of farm income in 2019 — $33 billion out of an expected $88 billion total.
     </Prose>
 
-    <Figure>
-    <Map
-        datasetId='flood-2019'
-        layerId='fldas-soil-moisture-anomalies'
-        dateTime='2019-05-27'
-        compareDateTime='2019-06-02'
-        zoom={5}
-        center={[-93.4178, 37.9794]}
-
-    />
-    <Caption
-        attrAuthor='NASA'
-        attrUrl='https://nasa.gov/'
-    >
-        Comparison of 0-10cm soil moisture anomalies from FLDAS across the Midwest between May 27, 2019 and June 2, 2019.
-    </Caption>
-    </Figure>
-
-</Block>
-
-<Block>
     <Figure>
         <Image
             src={'/images/story/flood-2019/ag_impacts_background.jpg'}
@@ -305,17 +268,7 @@ taxonomy:
         Record spring flooding in the Midwest which flooded an agricultural field. <br /> Image Credit: <a href="https://droughtmonitor.unl.edu/DmData/TimeSeries.aspx" target="_blank" rel="noopener noreferrer">Environmental Defense Fund</a>  
         </Caption>
     </Figure>
-    <Prose>
 
-    ### Agricultural Impacts
-
-    ##### Planting Delays Cause Major Farming losses
-
-    The Midwest 2019 flood coincided with the corn and soybean planting season, causing many farmers to delay planting their crops, switch crops, or not plant at all.
-
-    According to the American Farm Bureau Federation, farm subsidies made up 40% of farm income in 2019 — $33 billion out of an expected $88 billion total.
-
-    </Prose>
 </Block>
 
 <Block>
@@ -324,7 +277,7 @@ taxonomy:
 
     The abnormally low leaf area index (LAI) from MODIS captures delayed planting in the Cornbelt region.
 
-    </Prose>
+    
     <Figure>
         <div style={{position: 'relative', width: '100%'}}>
             <Image
@@ -351,6 +304,7 @@ taxonomy:
         LAI anomaly for Jun 27, 2019 after the flooding event in spring.
         </Caption>
     </Figure>
+    </Prose>
 </Block>
 
 <Block>
