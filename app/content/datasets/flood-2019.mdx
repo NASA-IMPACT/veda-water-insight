@@ -1,7 +1,7 @@
 ---
 id: flood-2019
 name: flood-2019
-isHidden: false
+isHidden: true
 description: Data used to visualize in flood story
 media:
   src: /images/story/flood-2019/omaha_oli_2019075_lrg-cover.jpg
@@ -72,94 +72,6 @@ layers:
         }
 
 
-  - id: sentinel1_waterextent
-    stacCol: sentinel1_waterextent
-    stacApiEndpoint: https://dev.openveda.cloud/api/stac
-    name: sentinel1_waterextent
-    type: wms
-    description: sentinel1_waterextent
-    initialDatetime: newest
-    projection:
-      id: 'equirectangular'
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      layers: "3/18/2019 at 001353 utc (s1a)"
-      version: 1.3.0
-      crs: EPSG:3857
-    legend:
-      unit:
-        label: Inches
-      type: gradient
-      min: 0
-      max: 1000
-      stops:
-        - rgb(255,255,255)
-        - rgb(176,190,197)
-        - rgb(27,79,114)
-        - rgb(40,116,166)
-        - rgb(52,152,219)
-        - rgb(133,193,233)
-        - rgb(187,222,251)
-        - rgb(20,90,50)
-        - rgb(34,153,84)
-        - rgb(125,206,160)
-        - rgb(74,35,90)
-        - rgb(125,60,152)
-        - rgb(179,157,219)
-        - rgb(239,80,83)
-        - rgb(245,127,23)
-        - rgb(255,241,118)
-    analysis:
-      exclude: true
-    info:
-      source: NASA
-      spatialExtent: Alaska
-      temporalResolution: Daily
-      unit: Inches
-
-
-  - id: fldas-soil-moisture-anomalies
-    stacCol: fldas-soil-moisture-anomalies
-    name: 'FLDAS Surface Soil Moisture Anomalies'
-    type: raster
-    description: 'Anomalies in surface soil moisture (10cm)'
-    zoomExtent:
-      - 0
-      - 11
-    sourceParams:
-      bidx: 1
-      colormap_name: rdbu
-      rescale:
-        - -0.3
-        - 0.3
-      nodata: -9999
-    legend:
-      unit:
-        label: kg mm3/mm3
-      type: gradient
-      label: kg mm3/mm3
-      min: "-0.3"
-      max: "0.3"
-      stops:
-      - "#a50026"
-      - "#fee090"
-      - "#e0f3f8"
-      - "#313695"
-    compare:
-      datasetId: fldas-soil-moisture-anomalies
-      layerId: fldas-soil-moisture-anomalies
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy-MM-dd')} VS ${dateFns.format(compareDatetime, 'yyyy-MM-dd')}`;
-        }
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Annual 
-      unit: kg mm3/mm3
-
 
 
 
@@ -185,41 +97,3 @@ layers:
   </Figure>
 </Block>
 
-<Block>
-  <Figure>
-  <Map
-    datasetId='flood-2019'
-    layerId='sentinel1_waterextent'
-    dateTime='2019-03-18'
-    zoom={3}
-    center={[-94.8866, 35.7244]}
-
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    GPM IMERG peak rainfall rate over Eastern United States Texas on March 12, 2019 and March 14, 2019.
-  </Caption>
-  </Figure>
-</Block>
-
-<Block>
-  <Figure>
-  <Map
-    datasetId='flood-2019'
-    layerId='fldas-soil-moisture-anomalies'
-    dateTime='2018-09-01'
-    compareDateTime='2018-11-01'
-    zoom={4}
-    center={[-91.0547, 39.0431]}
-
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    Comparison of 0-10cm soil moisture anomalies across the Midwest and Northern Great Plains between August 1, 2018 and October 31, 2018.
-  </Caption>
-  </Figure>
-</Block>
