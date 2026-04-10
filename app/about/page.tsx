@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div className='grid-container'>
       <p>
-        Content describing your program and instance of the VEDA Dashboard will go here. It is fully configurable to include graphics and links, similar to other pages.
+      NASA Water Insight combines NASA’s unique and trusted satellite-based Earth observations with state-of-the-art land, weather, and water modeling capabilities to produce information for water resource managers, farmers, weather forecasters, private industry, and the public. Working with community members, data is transformed to useful information products available via this open-access dashboard and our partner agencies. Learn more about our products by exploring Data Stories and the Data Catalog on this dashboard and on our website here: https://ldas.gsfc.nasa.gov/nldas/v3.
       </p>
     </div>
   );

@@ -1,0 +1,234 @@
+---
+id: ogallala-aquifer
+name: The Human Footprint on the Ogallala Aquifer
+description: "NASA Models and Datasets Capture Irrigation and Groundwater Depletion Impacts"
+media:
+  src: /images/story/ogallala-aquifer/header-image.png
+  alt: Satellite remote sensing data showing irrigated fields.
+  author:
+    name: NASA
+    url: https://freshwater.eis.smce.nasa.gov/storymap.html
+taxonomy:
+  - name: Topics
+    values:
+      - Water Availability
+  - name: Subtopics
+    values:
+      - Groundwater
+      - Hydrology
+      - Land Use
+      - Terrestrial water storage
+      - Leaf area index
+      - Evapotranspiration
+  - name: Source
+    values:
+      - NASA Water Insight
+---
+
+<Block>
+    <Prose>
+    ### Groundwater and Irrigation
+
+    ##### Largest U.S. groundwater resource is rapidly depleting
+    
+    The Ogallala Aquifer provides over 30% of the water for irrigation used in the country. However, overuse is rapidly depleting this aquifer, threatening those who depend on this resource.
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/ogallala-aquifer/ogallala-aquifer-pivot.png'}
+            alt='Center-pivot low-energy sprinkler irrigation in Nebraska.'
+            align='left'
+        />
+        <Caption>
+            Center-pivot low-energy sprinkler irrigation in Nebraska.
+        </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+    <Prose>
+    ##### Declining Water Levels
+    <a href="https://pubs.usgs.gov/sir/2017/5040/sir20175040.pdf" target="_blank" rel="noopener noreferrer">Groundwater levels have declined</a> as irrigation and agriculture have intensified in the region.
+
+    <Figure>
+        <Image
+            src={'/images/story/ogallala-aquifer/ogallala-aquifer-map.png'}
+            alt='Ogallala Aquifer Extent.'
+            align='left'
+        />
+        <Caption>
+            Ogallala Aquifer Extent.
+        </Caption>
+    </Figure>
+
+
+    </Prose>
+</Block>
+
+<Block>
+    <Figure>
+        <Image
+            src={'/images/story/ogallala-aquifer/first-year-irrigated.gif'}
+            alt='First year of irrigation by land parcel over a portion of Texas.'
+            align='left'
+        />
+        <Caption>
+            Annual TWS change (GRACE) and annual irrigation fraction map (Landsat) over a portion of Texas. <br />
+            Data Sources: Water Storage <a href="https://grace.jpl.nasa.gov/resources/13/annual-water-storage-changes-over-the-us-from-grace/" target="_blank" rel="noopener noreferrer">NASA JPL</a>; Irrigation <a href="https://doi.org/10.1016/j.rse.2019.111400" target="_blank" rel="noopener noreferrer">Deines, J.M. et al. (2019)</a>
+
+             
+        </Caption>
+    </Figure>
+
+</Block>
+
+
+
+<Block>
+    <Prose>
+    ### Modeling Irrigation
+
+    NASA's land surface hydrology model **assimilates inputs from multiple sensors** to model irrigation.
+
+        <Image
+            src={'/images/story/ogallala-aquifer/ogallala-aquifer-flowchart.png'}
+            alt='Ogallala Aquifer Flowchart.'
+            align='left'
+        />
+        <Caption>
+            Flowchart of how to use NASA satellite remote sensing datasets to model and monitor irrigation practices.
+        </Caption>
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    ### Impacts on the Aquifer
+
+    ##### Groundwater depletion is captured by LIS
+   
+    Storage depletion modeled by assimilating GRACE observations within the Land Information System (LIS) matches well with USGS observations.
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/ogallala-aquifer/ogallala-aquifer-groundwater-change.png'}
+            alt='USGS observations of groundwater storage changes for 2002-2015.'
+            align='left'
+            height='900px'
+        />
+        <Caption>
+            USGS observations of groundwater storage changes for 2002-2015. <br />Data Source: <a href="https://ne.water.usgs.gov/projects/HPA/data.html" target="_blank" rel="noopener noreferrer">USGS</a>
+
+        </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+  <Figure>
+    <CompareImage
+      leftImageSrc='/images/story/ogallala-aquifer/tmp_ogallala_left_slider.png'
+      leftImageAlt='Modeled groundwater storage with GRACE data assimilation (DA)'
+      leftImageLabel='With GRACE DA'
+      rightImageSrc='/images/story/ogallala-aquifer/tmp_ogallala_right_slider.png'
+      rightImageAlt='Modeled groundwater storage without GRACE data assimilation'
+      rightImageLabel='Without GRACE DA'
+    />
+    <Caption>
+      Comparison of modeled groundwater storage with and without GRACE data assimilation for the Ogallala Aquifer region.
+    </Caption>
+  </Figure>
+</Block>
+
+
+
+
+<Block>
+<Prose>
+    ##### Contrasting Management Impacts in the Northern and Southern Ogallala
+   
+    For the Northern Ogallala, sufficient precipitation helps prevent the depletion of the aquifer caused by  water withdrawals.
+    
+    Without assimilating GRACE observations, the model tends to underestimate groundwater recharge. So, assimilation is essential to capture water storage recovery after the 2012 drought.
+</Prose>
+    <Figure>
+        <Image
+            src={'/images/story/ogallala-aquifer/ogallala-aquifer-north-tws-ts.png'}
+            alt='Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Northern Ogallala'
+            align='left'
+        />
+        <Caption>
+            Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Northern Ogallala.
+        </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+    <Prose>
+    In contrast, for the Southern Ogallala, severe groundwater depletion is observed due to pumping.
+    
+    Assimilating GRACE TWS and MODIS LAI contributes to a **better estimation of irrigation withdrawal** and captures its impact on long-term water storage decline.
+    </Prose>
+
+    <Figure>
+        <Image
+            src={'/images/story/ogallala-aquifer/ogallala-aquifer-south-tws-ts.png'}
+            alt='Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala'
+            align='left'
+        />
+        <Caption>
+            Time series of terrestrial water storage trends modeled using GRACE data assimilation in the LIS framework for the Southern Ogallala.
+        </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+    <Prose>
+    ### Conclusions
+
+    
+    <Figure>
+        <div style={{position: 'relative', width: '100%'}}>
+            <Image
+                src={'/images/story/ogallala-aquifer/ogallala-aquifer-background1.png'}
+                alt='Ogallala Aquifer agricultural landscape'
+                align='left'
+            />
+            <div style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                color: 'white',
+                padding: '60px 80px',
+                borderRadius: '8px',
+                width: '85%',
+                textAlign: 'center',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.3)'
+            }}>
+                <p style={{margin: '0 0 15px 0', fontSize: '22px', fontWeight: 'bold'}}>
+                    Remote sensing data from GRACE, MODIS, and GPM plays a <strong>key role in understanding changes in the Ogallala Aquifer</strong> from irrigation and other uses.
+                </p>
+                <p style={{margin: 0, fontSize: '22px'}}>
+                    Decline in groundwater storage in the Southern Ogallala Aquifer is well-captured by leveraging <strong>NASA models and datasets</strong>.
+                </p>
+            </div>
+        </div>
+    </Figure>
+    </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    #### Authorship
+    Developers: NASA ODSI<sup>1</sup>
+    
+    <sup>1</sup> NASA’s Office of Data Science and Informatics (ODSI)
+  </Prose>
+</Block>

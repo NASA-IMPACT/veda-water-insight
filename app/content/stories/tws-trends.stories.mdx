@@ -1,0 +1,176 @@
+---
+id: tws-trends
+name: A New View of the Global Water Cycle
+description: " A remote sensing-informed view of water availability"
+featured: true
+media:
+  src: /images/story/jordan_image.jpg
+  alt: Meandering wadis combine to form dense, branching networks across the stark, arid landscape of southeastern Jordan. The Arabic word "wadi" means a gulley or streambed that typically remains dry except after drenching, seasonal rains.
+  author:
+    name: NASA
+    url: https://eros.usgs.gov/media-gallery/earth-as-art/2/jordan
+taxonomy:
+  - name: Topics
+    values:
+      - Water Availability
+      - Drought
+      - Floods
+  - name: Subtopics
+    values:
+      - Precipitation
+      - Surface meteorology
+      - Soil moisture
+      - Snow and SWE
+      - Evapotranspiration
+      - Terrestrial water storage
+      - Leaf area index
+      - Surface water storage
+      - Surface water elevation
+  - name: Source
+    values:
+      - NASA Water Insight
+
+---
+<Block>
+  <Prose>
+  ## Introduction
+  Freshwater is what makes Earth habitable, sustaining ecosystems and human civilization. The global water cycle supplies water and regulates weather patterns. The cycling of water links the changes on land with the ocean and atmosphere. Understanding the variability and availability of freshwater is challenging because of multiple earth processes that continually interact with each other, including those that govern precipitation, ground soil moisture retention, snow accumulation and melt, evapotranspiration and vegetation dynamics. Such processes become even more complex under human water resources management.
+
+  HydroGlobe-10km integrates the Noah-MP land surface model and Earth observations within [NASA’s LIS framework](https://lis.gsfc.nasa.gov/) by assimilating soil moisture from European Space Agency products [(ESA CCI)](https://esa-soilmoisture-cci.org/), leaf area index from NASA’s Moderate Resolution Imaging Spectroradiometer [(MODIS)](https://lpdaac.usgs.gov/products/mcd15a2hv006/), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and the follow-on satellites [(GRACE/GRACE-FO)](https://earth.gsfc.nasa.gov/geo/data/grace-mascons). Using this data assimilation approach, HydroGlobe-10km provides a global water cycle reanalysis product for 2003-2021 at a daily time scale. This product allows us to better quantify surface variables and groundwater, human management influence, and hydrological extremes. Resulting datasets are available to test and interact with via this open source visualization and analysis dashboard, including key water, energy, and carbon fluxes such as terrestrial water storage (TWS) and gross primary production (GPP). For more information, please visit the corresponding HydroGlobe data catalog page
+  
+  Authors: Wanshu Nie, Melissa Wrzesien, Shahryar Ahmad, Sujay Kumar, Kim Locke
+  Developers: 
+
+  </Prose>
+</Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[77.63,24.27]}
+    zoom={2}
+    datasetId='lis-global-da-trends'
+    layerId='lis-global-da-tws-trend'
+    datetime='2003-01-01'
+  >
+    ## Freshwater is depleting
+    Over the globe, terrestrial water storage in many places is decreasing, driven by the independent or combined impacts of natural variability, groundwater pumping, and other human influences.
+
+  </Chapter>
+  <Chapter
+    center={[105.5001,30.7899]}
+    zoom={3.8}
+    datasetId='lis-global-da-trends'
+    layerId='lis-global-da-tws-trend'
+    datetime='2003-01-01'
+  >
+    ## Irrigation induced groundwater depletion
+    The vast agricultural regions such as the North China Plain and Northwestern India rely heavily on groundwater pumping for irrigation. By integrating GRACE/GRACE-FO terrestrial water storage anomaly data into the global reanalysis, we are able to identify areas of greater depletion.
+  
+  </Chapter>
+  <Chapter
+    center={[77.63,24.27]}
+    zoom={2}
+    datasetId='lis-global-da-trends'
+    layerId='lis-global-da-gpp-trend'
+    datetime='2003-01-01'
+  >
+    ## The Earth is greening
+    Meanwhile, data from HydroGlobe-10km shown here and from other Earth satellite observations indicate increasing greenness from vegetation in recent decades, highlighting the influence of land use changes in shaping these patterns.
+  
+  </Chapter>
+  <Chapter
+    center={[105.5001,30.7899]}
+    zoom={3.8}
+    datasetId='lis-global-da-trends'
+    layerId='lis-global-da-gpp-trend'
+    datetime='2003-01-01'
+  >
+    ## Agricultural practices are the dominant drivers of the greening Earth:
+    Greening from the expansion of croplands combined with the increased use of fertilizer and irrigation contribute to the global net increase in leaf area index and gross primary production. HydroGlobe-10km gross primary production data reveal strong increasing trends in parts of China and India’s croplands.
+  </Chapter>
+</ScrollytellingBlock>
+
+<Block>
+  <Prose>
+  ## Comparing the trends in water and carbon cycles
+  We applied a seasonal and trend decomposition algorithm to get estimates of terrestrial water storage and gross primary production. This method helps account for [nonstationarities](https://doi.org/10.1073/pnas.2403707121) and seasonal shifts in water storage and provides a more robust estimate of trends. These trend datasets are also provided in the HydroGlobe-10km data catalog page.
+
+  </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+     <Map
+     datasetId='lis-global-da-trends'
+     layerId='lis-global-da-tws-trend'
+     dateTime='2003-01-01'
+     compareDateTime='2003-01-01'
+     zoom={2}
+     center={[0,0]}
+     />
+    <Caption
+     attrAuthor='NASA'
+     attrUrl='https://nasa.gov/'
+   >
+    Theil-Sen Slope estimation of the decomposed trend  component of terrestrial water storage (mm/yr) and gross primary production (gC/m2/yr) for 2003-2021 from global reanalysis dataset.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+    <Figure>
+    <Chart
+      dataPath="/charts/story/SouthAsia_TWS_annual_data.csv"
+      dateFormat="%Y"
+      idKey='Data Type'
+      xKey='Year'
+      yKey='Water Components'
+      yAxisLabel='TWS Annual Change (mm)'
+    />
+
+     <Chart
+       dataPath="/charts/story/SouthAsia_GPP_annual_data.csv"
+       dateFormat="%Y"
+       idKey='Data Type'
+       xKey='Year'
+       yKey='GPP'
+       yAxisLabel='GPP Annual Change (gC/m2/yr)'
+     />
+
+    <Chart
+      dataPath="/charts/story/SouthAsia_ET_annual_data.csv"
+      dateFormat="%Y"
+      idKey='Data Type'
+      xKey='Year'
+      yKey='Water Components'
+      yAxisLabel='ET Annual Change (mm)'
+    />
+    </Figure>
+    <Prose>
+    ## Changes the water cycle for South Asia 
+    In order to take a closer look at the water, energy, and carbon cycle changes shown in HydroGlobe-10km, we use South Asia as an example. The time series here shows the annual average anomalies for terrestrial water storage and evapotranspiration, as well as the annual total anomalies for gross primary production. The region has a TWS decrease at a rate of -3.6 mm/yr and GPP increase at a rate of 4.4 gC/m2/yr. Groundwater depletion reduces deep soil evaporation due to decreased soil moisture. Enhanced vegetation growth may lead to increased transpiration. The TWS and GPP trends oppositely impact evapotranspiration (ET), resulting in no significant long-term trend for ET. Assimilating multi-source remote sensing products has constrained both freshwater changes and human influences on water-vegetation interactions.
+
+    </Prose>
+ </Block>
+
+<Block>
+  <Prose>
+    ## Additional resources
+    * [Land Information System](https://lis.gsfc.nasa.gov/)
+    * [HydroGlobe Discussions](https://github.com/NASAWaterInsight/HydroGlobe/discussions)
+    * [Water Cycle Nonstationarity visualizations](https://svs.gsfc.nasa.gov/5442/)
+
+
+    ## References
+    - W. Nie, S.V. Kumar, A. Getirana, L. Zhao, M.L. Wrzesien, G. Konapala, S.K. Ahmad, K.A. Locke, T.R. Holmes, B.D. Loomis, & M. Rodell, Nonstationarity in the global terrestrial water cycle and its interlinkages in the Anthropocene, Proc. Natl. Acad. Sci. U.S.A. 121 (45) e2403707121, https://doi.org/10.1073/pnas.2403707121 (2024).
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    #### Authorship
+    Developers: NASA ODSI<sup>1</sup>
+    
+    <sup>1</sup> NASA’s Office of Data Science and Informatics (ODSI)
+  </Prose>
+</Block>

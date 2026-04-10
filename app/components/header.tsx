@@ -8,20 +8,21 @@ import {
   DATASET_CATALOG_PATH,
   EXPLORATION_PATH,
   STORY_HUB_PATH,
+  TOPICS_PATH,
 } from 'app/config';
 import VedaUIConfigProvider from 'app/store/providers/veda-ui-config';
 
 export const navItems: NavItem[] = [
   {
-    id: 'data-catalog',
-    title: 'Data Catalog',
-    to: `/${DATASET_CATALOG_PATH}`,
+    id: 'topics',
+    title: 'Topics',
+    to: `/${TOPICS_PATH}`,
     type: 'internalLink',
   },
   {
-    id: 'exploration',
-    title: 'Exploration',
-    to: `/${EXPLORATION_PATH}`,
+    id: 'data-catalog',
+    title: 'Data Catalog',
+    to: `/${DATASET_CATALOG_PATH}`,
     type: 'internalLink',
   },
   {
@@ -30,6 +31,13 @@ export const navItems: NavItem[] = [
     to: `/${STORY_HUB_PATH}`,
     type: 'internalLink',
   },
+  {
+    id: 'exploration',
+    title: 'Exploration',
+    to: `/${EXPLORATION_PATH}`,
+    type: 'internalLink',
+  },  
+
 ];
 
 export const subNavItems: NavItem[] = [
@@ -42,8 +50,8 @@ export const subNavItems: NavItem[] = [
   {
     id: 'contact-us',
     title: 'Contact us',
-    actionId: 'open-google-form',
-    type: 'action',
+    to: '/contact',
+    type: 'internalLink',
   },
 ];
 
@@ -51,7 +59,7 @@ export default function Header() {
   return (
     <VedaUIConfigProvider>
       <PageHeader
-        title={'Earthdata VEDA Dashboard'}
+        title={'Water Insight'}
         mainNavItems={navItems}
         subNavItems={subNavItems}
         logoSvg={

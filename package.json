@@ -13,11 +13,12 @@
     "fix": "yarn run format && yarn run lint:fix"
   },
   "resolutions": {
-    "@types/react": "18.2.8"
+    "@types/react": "18.2.8",
+    "react-compare-image": "3.1.0" 
   },
   "dependencies": {
     "@devseed-ui/theme-provider": "^4.1.0",
-    "@teamimpact/veda-ui": "^6.1.1",
+    "@teamimpact/veda-ui": "6.10.2",
     "@uswds/uswds": "^3.10.0",
     "geist": "1.2.2",
     "gray-matter": "^4.0.3",
@@ -47,7 +48,7 @@
     "prettier": "^3.3.3",
     "prettier-eslint": "^16.3.0",
     "typescript": "5.3.3",
-    "vitest": "^3.0.9",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.9"
   }
 }
