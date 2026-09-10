@@ -38,7 +38,7 @@ taxonomy:
   NLDAS is a widely used land modeling environment that generates estimates of land surface fluxes and states such as soil moisture, snow, and streamflow. These estimates are critical for drought and flood monitoring, water availability and water resource management, climate assessments, and other uses. For instance, the University of Nebraska-Lincoln’s [National Drought Mitigation Center](https://drought.unl.edu/) (NDMC) relies on NLDAS data for their drought assessments published weekly in the [U.S. Drought Monitor](https://www.drought.gov/data-maps-tools/us-drought-monitor). Applications like [OpenET](https://etdata.org/) and [QuickDRI](https://quickdri.unl.edu/) also rely on the quality of NLDAS meteorological forcing and model outputs. The phase 2 of NLDAS (NLDAS-2) is currently operational at NOAA, with long-term archives of data back to Jan 1979 available from NASA. 
   <Figure>
       <Image
-      src={new URL('./media/nldas3/nldas-fig1.png', import.meta.url).href}
+      src={'./images/story/nldas-fig1.png'}
     />
     <Caption attrAuthor='NASA NLDAS Team' attrUrl='https://www.nasa.gov/goddard/'>
       NASA 2023 stakeholder workshop participant responses to the question, “How do you use NLDAS?” 
@@ -51,7 +51,7 @@ taxonomy:
   <Prose>
   ## Community-Centered Model Development
   Building on stakeholder feedback and advancements in Earth observations and data assimilation, teams across NASA are working on major enhancements to the NLDAS environment called “NLDAS Phase 3” (NLDAS-3). The vision for NLDAS-3 is to provide near field scale (~1 km), high quality, observation-informed estimates of land surface and hydrology conditions.  Specifically, NLDAS-3 aims to:   
-  - Improve the spatial resolution by providing meteorological forcing and land-surface model output at 1km resolution;
+  - Improve the spatial resolution by providing meteorological forcing and land-surface model output at 1-km resolution;
   - Expand the spatial coverage to encompass all of North and Central America, including Alaska, Hawaii, and Puerto Rico (see figures below);  
   - Utilize high quality surface meteorological data;
   - Reduce the current NLDAS-2 latency of 3.5 days to near real-time; 
@@ -61,7 +61,7 @@ taxonomy:
 
   <Figure>
       <Image
-      src={new URL('./media/nldas3/nldas3-fig1b.png', import.meta.url).href}
+      src={'./images/story/nldas3-fig1b.png'}
     />
     <Caption attrAuthor='NASA NLDAS Team' attrUrl='https://lis.gsfc.nasa.gov'>
       Spatial domain of NLDAS-2 (CONUS) vs. NLDAS-3 (North and Central America).
@@ -124,19 +124,15 @@ taxonomy:
     </table>
   </div>
 </Figure>
-  </Prose>
-</Block>
 
-<Block>
-  <Prose>
   To make these improvements, science and modeling teams across NASA centers are using the open source NASA Land Information System (LIS) framework (Kumar et al., 2006; Peters-Lidard et al., 2007), a state-of-the-art software suite for high performance terrestrial hydrology modeling and data assimilation. LIS software is open-source and available at [GitHub](https://github.com/NASA-LIS/LISF). 
+    <Figure>
+      <Image
+      src={'./images/story/lis-logo.png'}
+    />
+    <Caption attrAuthor='NASA NLDAS Team' attrUrl='https://lis.gsfc.nasa.gov//'></Caption>
+    </Figure>
   </Prose>
-  <Figure>
-    <Image
-    src={new URL('./media/nldas3/lis-logo.png', import.meta.url).href}
-  />
-  <Caption attrAuthor='NASA NLDAS Team' attrUrl='https://lis.gsfc.nasa.gov//'></Caption>
-  </Figure>
 </Block>
 
 <Block> 
@@ -167,8 +163,8 @@ taxonomy:
   <Prose>
   ## Data Browser
   Users are encouraged to further examine the NLDAS-2 and sample NLDAS-3 precipitation using the following two data catalogs links.  They contain monthly-averaged precipitation from both products for a ~20-year period.  Click on “Explore Data” in the upper right of these two data catalogs.
-  - <Link to="/data-catalog/nldas2">NLDAS-2</Link>
-  - <Link to="/data-catalog/nldas3">NLDAS-3</Link>  
+  - <Link href='/datasets/nldas2'>NLDAS-2</Link>
+  - <Link href='/datasets/nldas3'>NLDAS-3</Link>  
   </Prose>
 </Block>
 
@@ -233,7 +229,7 @@ taxonomy:
   NLDAS-3 will employ the Noah-MP land surface model shown below (He et al., 2023) and implemented within LIS. 
     <Figure>
       <Image
-      src={new URL('./media/nldas3/nldas-fig7.png', import.meta.url).href}
+      src={'./images/story/nldas-fig7.png'}
     />
     <Caption attrAuthor='He et al., 2023' attrUrl='https://opensky.ucar.edu/islandora/object/technotes%3A599/datastream/PDF/view'>
     </Caption>
@@ -335,7 +331,7 @@ taxonomy:
   
   NASA model developers are collecting feedback via our NLDAS GitHub discussion page [here](https://github.com/Earth-Information-System/NLDAS-3/discussions) and with periodic stakeholder workshops. Please join the NASA NLDAS community and help us create the next state-of-the-art land surface and hydrology model! 
   </Prose>
-</Block> 
+</Block>  
 
 <Block>
   <Prose>
@@ -361,6 +357,15 @@ taxonomy:
   - Peters-Lidard, C.D., Houser, P.R., Tian, Y., Kumar, S.V., Geiger, J., Olden, S., Lighty, L., Doty, B., Dirmeyer, P., Adams, J., Mitchell, K., Wood, E.F., Sheffield, J., 2007. High-performance Earth system modeling with NASA/GSFC’s Land Information System. Innovations Syst Softw Eng 3, 157–165. https://doi.org/10.1007/s11334-007-0028-x 
   - Rouf, T., Mei, Y., Maggioni, V., Houser, P., Noonan, M., 2020. A Physically Based Atmospheric Variables Downscaling Technique. Journal of Hydrometeorology 21, 93–108. https://doi.org/10.1175/JHM-D-19-0109.1
   - Rutan, D.A., Kato, S., Doelling, D.R., Rose, F.G., Nguyen, L.T., Caldwell, T.E., Loeb, N.G., 2015. CERES Synoptic Product: Methodology and Validation of Surface Radiant Flux. https://doi.org/10.1175/JTECH-D-14-00165.1 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Additional Resources 
+  - [SPoRT Land Information System](https://www.earthdata.nasa.gov/dashboard/data-catalog/soil-moisture)
+  - [FLDAS Surface Soil Moisture Anomalies](https://www.earthdata.nasa.gov/dashboard/data-catalog/fldas-soil-moisture-anomalies)
+  - [A Global Reanalysis for Water, Energy, and Carbon Cycle Variables](https://www.earthdata.nasa.gov/dashboard/data-catalog/global-reanalysis-da)
   </Prose>
 </Block>
 
