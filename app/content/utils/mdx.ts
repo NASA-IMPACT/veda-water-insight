@@ -83,8 +83,21 @@ function getMDXFiles(dir) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx');
 }
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+// Root-relative asset paths in content (e.g. src='/images/...') bypass Next's
+// basePath, so prefix them here. Only matches paths starting right after a
+// quote, bracket, whitespace or '=' so absolute URLs are left alone.
+export function prefixAssetPaths(content: string, basePath = BASE_PATH) {
+  if (!basePath) return content;
+  return content.replace(
+    /(^|[\s'"`({=])\/(images|charts)\//gm,
+    `$1${basePath}/$2/`,
+  );
+}
+
 function readMDXFile(filePath) {
-  const rawContent = fs.readFileSync(filePath, 'utf-8');
+  const rawContent = prefixAssetPaths(fs.readFileSync(filePath, 'utf-8'));
   const parsedData = matter(rawContent);
   return parsedData;
 }
