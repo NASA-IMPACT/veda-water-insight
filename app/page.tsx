@@ -6,19 +6,19 @@ const mainTopSectionData = [
     {
     title: 'Water Availability',
     description:'Mapping water for human use, energy, agriculture, and ecosystems.',
-    img: '/images/homepage/water_avail_theme.png',
+    img: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/homepage/water_avail_theme.png`,
     path: '/topics/water-resources',
   },
   {
     title: 'Floods',
     description:'Data-driven insights for flood preparedness.',
-    img: '/images/homepage/flood_theme.png',
+    img: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/homepage/flood_theme.png`,
     path: '/topics/floods',
   },
   {
     title: 'Droughts',
     description:'Mapping droughts and drought conditions throughout the U.S.',
-    img: '/images/homepage/drought_theme.png',
+    img: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/homepage/drought_theme.png`,
     path: '/topics/droughts',
   }      
 

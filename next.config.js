@@ -1,6 +1,18 @@
 const path = require('path');
 
+// Optional subpath the app is served under (e.g. example.com/waterinsight).
+// Defaults to "waterinsight"; set NEXT_PUBLIC_SUBPATH='' to serve from the root.
+const subpath = (process.env.NEXT_PUBLIC_SUBPATH ?? 'waterinsight').replace(
+  /^\/+|\/+$/g,
+  '',
+);
+const basePath = subpath ? `/${subpath}` : '';
+
 module.exports = {
+  basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if
