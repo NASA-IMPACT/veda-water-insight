@@ -79,6 +79,11 @@ export function parseAttributes(obj) {
   return convert(mdxData);
 }
 
+// 'wq-models.stories.mdx' -> 'wq-models' (file keeps .stories, URL doesn't)
+function getSlug(file: string) {
+  return path.basename(file, path.extname(file)).replace(/\.stories$/, '');
+}
+
 function getMDXFiles(dir) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx');
 }
@@ -108,7 +113,7 @@ function getMDXData(dir): ContentMetadata[] {
     const { content, data } = readMDXFile(path.join(dir, file));
     const parsedData = parseAttributes(data);
     const processedData = processTaxonomies(parsedData);
-    const slug = path.basename(file, path.extname(file));
+    const slug = getSlug(file);
 
     return {
       metadata: processedData,
@@ -124,7 +129,7 @@ function getMDXMetaData(dir: string): ContentMetadata[] {
     const { data } = readMDXFile(path.join(dir, file));
     const parsedData = parseAttributes(data);
     const processedData = processTaxonomies(parsedData);
-    const slug = path.basename(file, path.extname(file));
+    const slug = getSlug(file);
     return {
       metadata: processedData,
       slug,

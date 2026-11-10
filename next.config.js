@@ -1,8 +1,8 @@
 const path = require('path');
 
-// Optional subpath the app is served under (e.g. example.com/waterinsight).
-// Defaults to "waterinsight"; set NEXT_PUBLIC_SUBPATH='' to serve from the root.
-const subpath = (process.env.NEXT_PUBLIC_SUBPATH ?? 'waterinsight').replace(
+// Optional subpath the app is served under (e.g. example.com/mysubpath).
+// Defaults to none (served from the root); set NEXT_PUBLIC_SUBPATH to use one.
+const subpath = (process.env.NEXT_PUBLIC_SUBPATH ?? '').replace(
   /^\/+|\/+$/g,
   '',
 );
