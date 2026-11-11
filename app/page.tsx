@@ -2,23 +2,26 @@ import React from 'react';
 import Link from 'next/link';
 import { getStoriesMetadata } from 'app/content/utils/mdx';
 
+// Empty when served from the root; the env var comes through undefined then.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 const mainTopSectionData = [
     {
     title: 'Water Availability',
     description:'Mapping water for human use, energy, agriculture, and ecosystems.',
-    img: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/homepage/water_avail_theme.png`,
+    img: `${BASE_PATH}/images/homepage/water_avail_theme.png`,
     path: '/topics/water-resources',
   },
   {
     title: 'Floods',
     description:'Data-driven insights for flood preparedness.',
-    img: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/homepage/flood_theme.png`,
+    img: `${BASE_PATH}/images/homepage/flood_theme.png`,
     path: '/topics/floods',
   },
   {
     title: 'Droughts',
     description:'Mapping droughts and drought conditions throughout the U.S.',
-    img: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/homepage/drought_theme.png`,
+    img: `${BASE_PATH}/images/homepage/drought_theme.png`,
     path: '/topics/droughts',
   }      
 
