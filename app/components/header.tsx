@@ -3,7 +3,6 @@
 import React from 'react';
 import { PageHeader } from '@lib';
 import { NavItem } from '@lib';
-import NasaLogoColor from 'app/components/nasa-logo-color.js';
 import {
   DATASET_CATALOG_PATH,
   EXPLORATION_PATH,
@@ -62,17 +61,6 @@ export default function Header() {
         title={'Water Insight'}
         mainNavItems={navItems}
         subNavItems={subNavItems}
-        logoSvg={
-          <div id='logo-container-link'>
-            {/*
-              USWDS targets only <a> tags for styling links. However when the text is a <span>
-              instead of a link, it does not inherit the color styling (it ends up being white).
-              To fix this, we must add the color inline like this.
-              TODO: Ideally we can address this on the veda-ui side so that the color applies to all elements within the logo.
-            */}
-            <NasaLogoColor />
-          </div>
-        }
       />
     </VedaUIConfigProvider>
   );
