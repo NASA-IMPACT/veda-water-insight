@@ -61,16 +61,7 @@ export default function HomePage() {
             return (
               <div
                 key={d.title}
-                className='tablet:grid-col text-center padding-4 radius-lg border border-base-lighter shadow-1 bg-white display-flex flex-column flex-align-center'
-                style={{ transition: 'box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.1)';
-                  e.currentTarget.style.transform = 'translateY(-4px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}
+                className='tablet:grid-col text-center padding-4 radius-lg border border-base-lighter shadow-1 bg-white display-flex flex-column flex-align-center custom-hover-card'
               >
                 <div className='margin-bottom-2'>
                   <img
@@ -93,7 +84,7 @@ export default function HomePage() {
                     className='display-inline-block margin-top-3 text-bold'
                     style={{
                       padding: '0.5rem 1.5rem',
-                      border: '2px solid #005ea2', // Standard primary blue
+                      border: '2px solid #005ea2',
                       borderRadius: '4px',
                       textDecoration: 'none',
                       color: '#005ea2'
@@ -114,35 +105,37 @@ export default function HomePage() {
         
         <div className='grid-row grid-gap-md'>
           {/* Main Top Story */}
-          <div className='tablet:grid-col-6 display-flex'>
-            <div
-              className='card--homepage-topstory text-base-lightest radius-lg display-flex flex-align-end padding-4 shadow-2 width-full'
-              style={{
-                backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), url(${topStory.media?.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                minHeight: '420px',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
-            >
-              <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100 }}>
-                <span 
-                  className='margin-bottom-2 display-inline-block text-bold' 
-                  style={{ backgroundColor: '#e5a000', color: '#111', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.85rem' }}
-                >
-                  Top Story
-                </span>
-                <h3 style={{ fontWeight: 'bold', fontSize: '1.75rem', marginBottom: '0.5rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-                  {topStory.name}
-                </h3>
-                <p className='margin-top-1' style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-                  {topStory.description}
-                </p>
+          {topStory && (
+            <div className='tablet:grid-col-6 display-flex'>
+              <div
+                className='card--homepage-topstory text-base-lightest radius-lg display-flex flex-align-end padding-4 shadow-2 width-full'
+                style={{
+                  backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), url(${topStory.media?.src})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  minHeight: '420px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                }}
+              >
+                <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100 }}>
+                  <span 
+                    className='margin-bottom-2 display-inline-block text-bold' 
+                    style={{ backgroundColor: '#e5a000', color: '#111', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.85rem' }}
+                  >
+                    Top Story
+                  </span>
+                  <h3 style={{ fontWeight: 'bold', fontSize: '1.75rem', marginBottom: '0.5rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
+                    {topStory.name}
+                  </h3>
+                  <p className='margin-top-1' style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
+                    {topStory.description}
+                  </p>
+                </div>
+                <Link className='link--block' href={topStory.path} style={{ position: 'absolute', inset: 0, zIndex: 10 }} />
               </div>
-              <Link className='link--block' href={topStory.path} style={{ position: 'absolute', inset: 0, zIndex: 10 }} />
             </div>
-          </div>
+          )}
 
           {/* Sub Stories */}
           <div className='tablet:grid-col-6 display-flex flex-column' style={{ gap: '1.5rem' }}>
