@@ -4,56 +4,38 @@ import React from 'react';
 import { PageHeader } from '@lib';
 import { NavItem } from '@lib';
 import NasaLogoColor from 'app/components/nasa-logo-color.js';
-import {
-  DATASET_CATALOG_PATH,
-  EXPLORATION_PATH,
-  STORY_HUB_PATH,
-  TOPICS_PATH,
-} from 'app/config';
 import VedaUIConfigProvider from 'app/store/providers/veda-ui-config';
 
+// 1. Updated main navigation to match your slide deck!
 export const navItems: NavItem[] = [
   {
-    id: 'topics',
-    title: 'Topics',
-    to: `/${TOPICS_PATH}`,
+    id: 'applications',
+    title: 'Applications ⮟',
+    to: '/applications', // TODO: Update to actual path when ready
     type: 'internalLink',
   },
   {
-    id: 'data-catalog',
-    title: 'Data Catalog',
-    to: `/${DATASET_CATALOG_PATH}`,
+    id: 'dataset-info',
+    title: 'Dataset Info ⮟',
+    to: '/dataset-info', // TODO: Update to actual path when ready
     type: 'internalLink',
   },
   {
-    id: 'stories',
-    title: 'Stories',
-    to: `/${STORY_HUB_PATH}`,
+    id: 'events',
+    title: 'Events',
+    to: '/events', // TODO: Update to actual path when ready
     type: 'internalLink',
   },
-  {
-    id: 'exploration',
-    title: 'Exploration',
-    to: `/${EXPLORATION_PATH}`,
-    type: 'internalLink',
-  },  
-
-];
-
-export const subNavItems: NavItem[] = [
   {
     id: 'about',
     title: 'About',
-    to: '/about',
-    type: 'internalLink',
-  },
-  {
-    id: 'contact-us',
-    title: 'Contact us',
-    to: '/contact',
+    to: '/about', // TODO: Update to actual path when ready
     type: 'internalLink',
   },
 ];
+
+// 2. We empty this array so no extra links appear in the top-right corner
+export const subNavItems: NavItem[] = [];
 
 export default function Header() {
   return (
