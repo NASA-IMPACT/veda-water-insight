@@ -15,15 +15,38 @@ export default function Page() {
   }));
 
   return (
-    <div className='grid-container'>
-      <div className='margin-top-8 margin-bottom-3'>
-        <h1 className='font-sans-xl'>Topics</h1>
-        <p className='font-sans-md margin-top-1'>
-          This dashboard explores key indicators to track and compare changes
-          over time.
-        </p>
+    <section className='margin-top-5 margin-bottom-8'>
+      <div className='grid-container'>
+        
+        {/* HERO / HEADER SECTION */}
+        <div className='grid-row margin-bottom-5 padding-4 radius-lg shadow-1 bg-base-lightest border border-base-lighter'>
+          <div className='tablet:grid-col-10'>
+            <h1 className='text-primary margin-bottom-2' style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
+              Explore Water Insight Topics
+            </h1>
+            <p className='font-sans-lg text-base-dark line-height-sans-4 margin-bottom-2' style={{ fontSize: '1.25rem' }}>
+              Dive into the critical indicators of Earth&apos;s water cycle.
+            </p>
+            <div className='body-text text-normal font-sans-md line-height-sans-5'>
+              <p>
+                This dashboard categorizes NASA&apos;s state-of-the-art land, weather, and water modeling capabilities into key thematic areas. Select a topic below to discover interactive data, historical trends, and scientific insights regarding droughts, floods, water availability, and more.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* TOPICS HUB (VEDA UI COMPONENT) */}
+        <div className='grid-row'>
+          <div className='tablet:grid-col-12'>
+            {/* 
+              This component automatically renders the grid of your topics
+              based on your MDX files. We leave it exactly as it is! 
+            */}
+            <StoriesHub stories={stories} />
+          </div>
+        </div>
+        
       </div>
-      <StoriesHub stories={stories} />
-    </div>
+    </section>
   );
 }
