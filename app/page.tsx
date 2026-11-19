@@ -169,10 +169,7 @@ export default function HomePage() {
                       backgroundColor: '#e0e0e0', // Matches the light gray boxes from Slide 3
                       color: '#000', 
                       height: '200px',
-                      transition: 'transform 0.2s',
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-                    onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                   >
                     <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{d.title}</h3>
                   </div>
