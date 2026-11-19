@@ -98,6 +98,43 @@ export default function HomePage() {
           })}
         </div>
 
+        {/* PROJECT UPDATES (NLDAS-3 & HYDROGLOBE) */}
+        <div className='grid-row margin-top-8 margin-bottom-3'>
+          <h2 className='text-primary'>Project Updates</h2>
+        </div>
+        
+        <div className='grid-row padding-4 radius-lg bg-white border border-base-lighter shadow-1'>
+          <div className='tablet:grid-col-12 body-text text-normal font-sans-md line-height-sans-4'>
+            
+            <h3 className='margin-bottom-2 text-secondary-dark'>NLDAS-3 Development</h3>
+            <p className='margin-bottom-2'>
+              The third phase of North American Land Data Assimilation System (NLDAS-3) is currently in development. Building off the legacy of NLDAS-2, the new dataset will feature:
+            </p>
+            
+            <ul className='margin-bottom-3 margin-left-4' style={{ listStyleType: 'disc' }}>
+              <li className='margin-bottom-1'>An expanded domain covering all of North and Central America</li>
+              <li className='margin-bottom-1'>Improved spatial resolution of 1-km</li>
+              <li className='margin-bottom-1'>Reduced data latency to less than one day</li>
+              <li className='margin-bottom-1'>More sophisticated land surface processes based on the Noah-MP model</li>
+              <li className='margin-bottom-1'>Assimilation of remote sensing observations for vegetation, soil moisture, land surface temperature, snow, and ground water</li>
+              <li className='margin-bottom-1'>Daily period of record covering 2001-present (hourly for forcings)</li>
+            </ul>
+            
+            <p className='margin-bottom-4'>
+              The beta version of NLDAS-3 forcing data is currently available for download and testing. For information on how to access it, visit the <a href='https://github.com/NASAWaterInsight/NLDAS-3' className='text-primary text-bold' style={{ textDecoration: 'underline' }}>project GitHub page</a>. When model outputs are released, they will also feature 36 land surface variables from Noah-MP and streamflow information from the Hymap routing model. <a href='https://github.com/NASAWaterInsight/NLDAS-3/blob/develop/info/variables.md' className='text-primary text-bold' style={{ textDecoration: 'underline' }}>Click here</a> for a full list of the anticipated data variables.
+            </p>
+
+            {/* HydroGlobe Callout Box */}
+            <div className='padding-3 radius-md shadow-1' style={{ backgroundColor: '#f0f8fa', borderLeft: '6px solid #005ea2' }}>
+              <p className='margin-0'>
+                <strong className='text-primary' style={{ fontSize: '1.1rem' }}>Looking Ahead: HydroGlobe</strong> <br />
+                The WaterInsight team is also developing a 5km dataset with many of the same features as NLDAS-3 covering the entire globe from 2003 to present.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
         {/* FEATURED DATA STORIES SECTION */}
         <div className='grid-row margin-top-8 margin-bottom-3'>
           <h2 className='text-primary'>Featured Data Stories</h2>
