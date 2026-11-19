@@ -13,7 +13,7 @@ export default function AboutPage() {
               About NASA Water Insight
             </h1>
             <p className='font-sans-lg text-base-dark line-height-sans-4' style={{ fontSize: '1.25rem', maxWidth: '800px' }}>
-              Transforming NASA’s unique Earth observations into actionable intelligence for managing our planet's most critical resource.
+              Transforming NASA&apos;s unique Earth observations into actionable intelligence for managing our planet&apos;s most critical resource.
             </p>
           </div>
         </div>
@@ -25,11 +25,11 @@ export default function AboutPage() {
           <div className='tablet:grid-col-8 body-text text-normal font-sans-md line-height-sans-5'>
             
             <p className='margin-bottom-3'>
-              NASA Water Insight combines NASA’s unique and trusted satellite-based Earth observations with state-of-the-art land, weather, and water modeling capabilities to produce information for water resource managers, farmers, weather forecasters, private industry, and the public.
+              NASA Water Insight combines NASA&apos;s unique and trusted satellite-based Earth observations with state-of-the-art land, weather, and water modeling capabilities to produce information for water resource managers, farmers, weather forecasters, private industry, and the public.
             </p>
             
             <p className='margin-bottom-3'>
-              Working with community members, data is transformed into useful information products available via this open-access dashboard and our partner agencies. By observing Earth’s water resources at all stages of the water cycle, we track changes in atmospheric and land surface properties, placing them in historical context for a dynamically changing world.
+              Working with community members, data is transformed into useful information products available via this open-access dashboard and our partner agencies. By observing Earth&apos;s water resources at all stages of the water cycle, we track changes in atmospheric and land surface properties, placing them in historical context for a dynamically changing world.
             </p>
 
             <h2 className='text-secondary-dark margin-top-5 margin-bottom-3' style={{ borderBottom: '2px solid #eee', paddingBottom: '0.5rem' }}>
