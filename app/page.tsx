@@ -2,25 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { getStoriesMetadata } from 'app/content/utils/mdx';
 
-const mainTopSectionData = [
-  {
-    title: 'Water Availability',
-    description: 'Mapping water for human use, energy, agriculture, and ecosystems.',
-    img: '/images/homepage/water_avail_theme.png',
-    path: '/topics/water-resources',
-  },
-  {
-    title: 'Floods',
-    description: 'Data-driven insights for flood preparedness.',
-    img: '/images/homepage/flood_theme.png',
-    path: '/topics/floods',
-  },
-  {
-    title: 'Droughts',
-    description: 'Mapping droughts and drought conditions throughout the U.S.',
-    img: '/images/homepage/drought_theme.png',
-    path: '/topics/droughts',
-  },
+// If you need your base path for future images
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+// Updated topics to match Slide 3
+const topicsData = [
+  { title: 'Drought and Fire', path: '/topics/drought-and-fire' },
+  { title: 'Floods and Landslides', path: '/topics/floods-and-landslides' },
+  { title: 'Water Resources and Water Quality', path: '/topics/water-resources' },
 ];
 
 const featuredStories = getStoriesMetadata()
@@ -35,109 +24,169 @@ const otherStories = featuredStories.slice(1);
 
 export default function HomePage() {
   return (
-    <section>
-      <div className='grid-container'>
+    // Wraps the entire page in a dark theme
+    <div style={{ backgroundColor: '#0b0b0b', color: '#f8f8f8', minHeight: '100vh', paddingBottom: '4rem' }}>
+      
+      {/* 
+        ===========================================================
+        NAVBAR MOCKUP (Match Slide 1)
+        Note: You will likely want to move this <nav> block into 
+        your global Header.tsx or Layout.tsx file later!
+        =========================================================== 
+      */}
+      <nav 
+        className='padding-3' 
+        style={{ 
+          backgroundColor: '#000', 
+          borderBottom: '2px solid #333', 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center' 
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          {/* Placeholder for NASA logo, replace src with your actual logo path */}
+          <div style={{ 
+            backgroundColor: '#fff', 
+            padding: '0.5rem 1rem', 
+            borderRadius: '4px',
+            color: '#000',
+            fontWeight: 'bold',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem'
+          }}>
+            <span style={{ color: '#005ea2' }}>NASA</span> Water Insight <span style={{ backgroundColor: '#d32f2f', color: '#fff', padding: '0.1rem 0.3rem', borderRadius: '4px', fontSize: '0.8rem' }}>BETA</span>
+          </div>
+        </div>
+        <div style={{ fontSize: '1.1rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <Link href="#" style={{ color: '#fff', textDecoration: 'none' }}>Applications ⮟</Link> <span style={{ color: '#555' }}>|</span>
+          <Link href="#" style={{ color: '#fff', textDecoration: 'none' }}>Dataset Info ⮟</Link> <span style={{ color: '#555' }}>|</span>
+          <Link href="#" style={{ color: '#fff', textDecoration: 'none' }}>Events</Link> <span style={{ color: '#555' }}>|</span>
+          <Link href="#" style={{ color: '#fff', textDecoration: 'none' }}>About</Link>
+        </div>
+      </nav>
+
+      <div className='grid-container margin-top-6'>
         
-        {/* WELCOME SECTION */}
-        <div className='grid-row margin-top-5 margin-bottom-4 padding-4 radius-lg bg-base-lightest shadow-1'>
-          <div className='tablet:grid-col-10 tablet:grid-offset-1'>
-            <h2 className='text-center margin-bottom-3 text-primary'>
-              Welcome to NASA Water Insight
-            </h2>
-            <div className='body-text text-normal font-sans-md line-height-sans-4'>
-              <p className='margin-bottom-2'>
-                Water is arguably the most important resource for sustaining ecosystems, agriculture, and life itself. The water cycle describes how water moves throughout the planet’s atmosphere, oceans, and land impacting weather patterns, water availability, and natural disasters such as floods, wildfires, and droughts.
-              </p>
+        {/* ==========================================
+            SLIDE 1: WELCOME TEXT & MAP PLACEHOLDER 
+            ========================================== */}
+        <div className='grid-row grid-gap-lg margin-bottom-6'>
+          <div className='tablet:grid-col-6 display-flex flex-column flex-justify-center'>
+            <div className='body-text text-normal font-sans-md line-height-sans-5'>
               <p>
-                Using a combination of Earth observing satellites and sensors, ground-based monitoring and scientific modeling, we can observe Earth’s water resources at all stages of the water cycle. NASA Water Insight data products leverage these capabilities to track changes in atmospheric and land surface properties including soil moisture, precipitation, and vegetation, and to place them in historical context for a dynamically changing world.
+                Water is arguably the most important resource for sustaining ecosystems, agriculture, and life itself. The water cycle describes how water moves throughout the planet’s atmosphere, oceans, and land impacting weather patterns, water availability, and natural disasters such as floods, wildfires, and droughts. Using a combination of Earth observing satellites and sensors, ground-based monitoring and scientific modeling, we can observe Earth’s water resources at all stages of the water cycle. NASA Water Insight data products leverage these capabilities to track changes in atmospheric and land surface properties including soil moisture, precipitation, and vegetation, and to place them in historical context for a dynamically changing world.
               </p>
+            </div>
+          </div>
+          <div className='tablet:grid-col-6'>
+            {/* MAP PLACEHOLDER */}
+            <div 
+              style={{ 
+                backgroundColor: '#222', 
+                border: '1px solid #444', 
+                borderRadius: '8px', 
+                height: '400px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                color: '#888',
+                fontSize: '1.5rem'
+              }}
+            >
+              pan/zoom domain graphic
             </div>
           </div>
         </div>
 
-        {/* TOPICS SECTION */}
-        <div className='grid-row grid-gap-lg card--homepage-main margin-top-4'>
-          {mainTopSectionData.map((d) => {
+        {/* ==========================================
+            SLIDE 2: TIME SERIES PLACEHOLDER & NLDAS 
+            ========================================== */}
+        <div className='grid-row grid-gap-lg margin-bottom-6'>
+          <div className='tablet:grid-col-6'>
+            {/* TIME SERIES PLACEHOLDER */}
+            <div 
+              style={{ 
+                backgroundColor: '#222', 
+                border: '1px solid #444', 
+                borderRadius: '8px', 
+                height: '400px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                color: '#888',
+                fontSize: '1.5rem'
+              }}
+            >
+              time series sample graphic
+            </div>
+          </div>
+          <div className='tablet:grid-col-6 display-flex flex-column flex-justify-center'>
+            <div className='body-text text-normal font-sans-md line-height-sans-5'>
+              <p className='margin-bottom-2'>
+                The third phase of North American Land Data Assimilation System (NLDAS-3) is currently in development. Building off the legacy of NLDAS-2, the new dataset will feature:
+              </p>
+              <ul className='margin-bottom-0 margin-left-4' style={{ listStyleType: 'disc', color: '#ccc' }}>
+                <li className='margin-bottom-1'>An expanded domain covering all of North and Central America</li>
+                <li className='margin-bottom-1'>Improved spatial resolution of 1-km</li>
+                <li className='margin-bottom-1'>Reduced data latency to less than one day</li>
+                <li className='margin-bottom-1'>More sophisticated land surface processes based on the Noah-MP model</li>
+                <li className='margin-bottom-1'>Assimilation of remote sensing observations for vegetation, soil moisture, land surface temperature, snow, and ground water</li>
+                <li className='margin-bottom-1'>Daily period of record covering 2001-present (hourly for forcings)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className='grid-row margin-bottom-6'>
+          <div className='tablet:grid-col-12 body-text text-normal font-sans-md line-height-sans-5'>
+            <p>
+              The beta version of NLDAS-3 forcing data is currently available for download and testing. For information on how to access it, visit the <a href='#' style={{ color: '#66b2ff', textDecoration: 'underline' }}>project GitHub page</a>. When model outputs are released, they will also feature 36 land surface variables from Noah-MP and streamflow information from the Hymap routing model. <a href='#' style={{ color: '#66b2ff', textDecoration: 'underline' }}>Click here for a full list of the anticipated data variables</a>.
+            </p>
+          </div>
+        </div>
+
+        {/* ==========================================
+            SLIDE 3: HYDROGLOBE & TOPIC CARDS 
+            ========================================== */}
+        <div className='grid-row margin-bottom-4'>
+          <div className='tablet:grid-col-12 body-text text-normal font-sans-md line-height-sans-5'>
+            <p>
+              The WaterInsight team is also developing HydroGlobe: a 5km dataset with many of the same features as NLDAS-3 covering the entire globe from 2003 to present.
+            </p>
+          </div>
+        </div>
+
+        <div className='grid-row grid-gap-lg margin-bottom-6'>
+          {topicsData.map((d) => {
             return (
-              <div
-                key={d.title}
-                className='tablet:grid-col text-center padding-4 radius-lg border border-base-lighter shadow-1 bg-white display-flex flex-column flex-align-center custom-hover-card'
-              >
-                <div className='margin-bottom-2'>
-                  <img
-                    className='radius-pill shadow-2'
-                    src={d.img}
-                    alt={d.title}
+              <div key={d.title} className='tablet:grid-col-4'>
+                <Link href={d.path} style={{ textDecoration: 'none' }}>
+                  <div 
+                    className='padding-4 radius-md display-flex flex-align-center flex-justify-center text-center shadow-1'
                     style={{ 
-                      width: '140px', 
-                      height: '140px', 
-                      objectFit: 'cover', 
-                      border: '4px solid #fff' 
+                      backgroundColor: '#e0e0e0', // Matches the light gray boxes from Slide 3
+                      color: '#000', 
+                      height: '200px',
+                      transition: 'transform 0.2s',
                     }}
-                  />
-                </div>
-                <div className='display-flex flex-column flex-1 width-full'>
-                  <h3 className='margin-top-1 text-secondary-dark'>{d.title}</h3>
-                  <p className='margin-top-1 flex-1 text-base-dark'>{d.description}</p>
-                  <Link 
-                    href={d.path} 
-                    className='display-inline-block margin-top-3 text-bold'
-                    style={{
-                      padding: '0.5rem 1.5rem',
-                      border: '2px solid #005ea2',
-                      borderRadius: '4px',
-                      textDecoration: 'none',
-                      color: '#005ea2'
-                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+                    onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                   >
-                    Explore {d.title} →
-                  </Link>
-                </div>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{d.title}</h3>
+                  </div>
+                </Link>
               </div>
             );
           })}
         </div>
 
-        {/* PROJECT UPDATES (NLDAS-3 & HYDROGLOBE) */}
-        <div className='grid-row margin-top-8 margin-bottom-3'>
-          <h2 className='text-primary'>Project Updates</h2>
-        </div>
-        
-        <div className='grid-row padding-4 radius-lg bg-white border border-base-lighter shadow-1'>
-          <div className='tablet:grid-col-12 body-text text-normal font-sans-md line-height-sans-4'>
-            
-            <h3 className='margin-bottom-2 text-secondary-dark'>NLDAS-3 Development</h3>
-            <p className='margin-bottom-2'>
-              The third phase of North American Land Data Assimilation System (NLDAS-3) is currently in development. Building off the legacy of NLDAS-2, the new dataset will feature:
-            </p>
-            
-            <ul className='margin-bottom-3 margin-left-4' style={{ listStyleType: 'disc' }}>
-              <li className='margin-bottom-1'>An expanded domain covering all of North and Central America</li>
-              <li className='margin-bottom-1'>Improved spatial resolution of 1-km</li>
-              <li className='margin-bottom-1'>Reduced data latency to less than one day</li>
-              <li className='margin-bottom-1'>More sophisticated land surface processes based on the Noah-MP model</li>
-              <li className='margin-bottom-1'>Assimilation of remote sensing observations for vegetation, soil moisture, land surface temperature, snow, and ground water</li>
-              <li className='margin-bottom-1'>Daily period of record covering 2001-present (hourly for forcings)</li>
-            </ul>
-            
-            <p className='margin-bottom-4'>
-              The beta version of NLDAS-3 forcing data is currently available for download and testing. For information on how to access it, visit the <a href='https://github.com/NASAWaterInsight/NLDAS-3' className='text-primary text-bold' style={{ textDecoration: 'underline' }}>project GitHub page</a>. When model outputs are released, they will also feature 36 land surface variables from Noah-MP and streamflow information from the Hymap routing model. <a href='https://github.com/NASAWaterInsight/NLDAS-3/blob/develop/info/variables.md' className='text-primary text-bold' style={{ textDecoration: 'underline' }}>Click here</a> for a full list of the anticipated data variables.
-            </p>
-
-            {/* HydroGlobe Callout Box */}
-            <div className='padding-3 radius-md shadow-1' style={{ backgroundColor: '#f0f8fa', borderLeft: '6px solid #005ea2' }}>
-              <p className='margin-0'>
-                <strong className='text-primary' style={{ fontSize: '1.1rem' }}>Looking Ahead: HydroGlobe</strong> <br />
-                The WaterInsight team is also developing a 5km dataset with many of the same features as NLDAS-3 covering the entire globe from 2003 to present.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        {/* FEATURED DATA STORIES SECTION */}
-        <div className='grid-row margin-top-8 margin-bottom-3'>
-          <h2 className='text-primary'>Featured Data Stories</h2>
+        {/* ==========================================
+            FEATURED DATA STORIES 
+            ========================================== */}
+        <div className='grid-row margin-bottom-3'>
+          <h2 style={{ color: '#fff' }}>Featured Data Stories</h2>
         </div>
         
         <div className='grid-row grid-gap-md'>
@@ -145,27 +194,22 @@ export default function HomePage() {
           {topStory && (
             <div className='tablet:grid-col-6 display-flex'>
               <div
-                className='card--homepage-topstory text-base-lightest radius-lg display-flex flex-align-end padding-4 shadow-2 width-full'
+                className='card--homepage-topstory text-base-lightest radius-md display-flex flex-align-end padding-3 shadow-2 width-full'
                 style={{
-                  backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), url(${topStory.media?.src})`,
+                  backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%), url(${topStory.media?.src})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  minHeight: '420px',
+                  minHeight: '350px',
                   position: 'relative',
                   overflow: 'hidden',
+                  border: '1px solid #333'
                 }}
               >
                 <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100 }}>
-                  <span 
-                    className='margin-bottom-2 display-inline-block text-bold' 
-                    style={{ backgroundColor: '#e5a000', color: '#111', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.85rem' }}
-                  >
-                    Top Story
-                  </span>
-                  <h3 style={{ fontWeight: 'bold', fontSize: '1.75rem', marginBottom: '0.5rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
+                  <h3 style={{ fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
                     {topStory.name}
                   </h3>
-                  <p className='margin-top-1' style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
+                  <p className='margin-top-1 text-sm' style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
                     {topStory.description}
                   </p>
                 </div>
@@ -175,23 +219,24 @@ export default function HomePage() {
           )}
 
           {/* Sub Stories */}
-          <div className='tablet:grid-col-6 display-flex flex-column' style={{ gap: '1.5rem' }}>
+          <div className='tablet:grid-col-6 display-flex flex-column' style={{ gap: '1rem' }}>
             {otherStories.map((d) => {
               return (
                 <div key={d.id} className='flex-1 display-flex'>
                   <div
-                    className='card--homepage-substory text-base-lightest radius-lg display-flex flex-align-end padding-3 shadow-2 width-full'
+                    className='card--homepage-substory text-base-lightest radius-md display-flex flex-align-end padding-3 shadow-2 width-full'
                     style={{
-                      backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), url(${d.media?.src}?v=${d.id})`,
+                      backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%), url(${d.media?.src}?v=${d.id})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
-                      minHeight: '198px',
+                      minHeight: '167px',
                       position: 'relative',
                       overflow: 'hidden',
+                      border: '1px solid #333'
                     }}
                   >
                     <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100 }}>
-                      <h3 style={{ fontWeight: 'bold', fontSize: '1.25rem', marginBottom: '0.25rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
+                      <h3 style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: '0.25rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
                         {d.name}
                       </h3>
                       <p className='margin-top-1 text-sm' style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
@@ -207,6 +252,6 @@ export default function HomePage() {
         </div>
         
       </div>
-    </section>
+    </div>
   );
 }
