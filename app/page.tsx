@@ -30,8 +30,8 @@ export default function HomePage() {
       {/* 
         ===========================================================
         NAVBAR MOCKUP (Match Slide 1)
-        Note: You will likely want to move this <nav> block into 
-        your global Header.tsx or Layout.tsx file later!
+        Note: You will want to move this into your real header component
+        located at ./components/header.tsx !
         =========================================================== 
       */}
       <nav 
@@ -60,10 +60,10 @@ export default function HomePage() {
           </div>
         </div>
         <div style={{ fontSize: '1.1rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Link href="#" style={{ color: '#fff', textDecoration: 'none' }}>Applications ⮟</Link> <span style={{ color: '#555' }}>|</span>
-          <Link href="#" style={{ color: '#fff', textDecoration: 'none' }}>Dataset Info ⮟</Link> <span style={{ color: '#555' }}>|</span>
-          <Link href="#" style={{ color: '#fff', textDecoration: 'none' }}>Events</Link> <span style={{ color: '#555' }}>|</span>
-          <Link href="#" style={{ color: '#fff', textDecoration: 'none' }}>About</Link>
+          <Link href='#' style={{ color: '#fff', textDecoration: 'none' }}>Applications ⮟</Link> <span style={{ color: '#555' }}>|</span>
+          <Link href='#' style={{ color: '#fff', textDecoration: 'none' }}>Dataset Info ⮟</Link> <span style={{ color: '#555' }}>|</span>
+          <Link href='#' style={{ color: '#fff', textDecoration: 'none' }}>Events</Link> <span style={{ color: '#555' }}>|</span>
+          <Link href='#' style={{ color: '#fff', textDecoration: 'none' }}>About</Link>
         </div>
       </nav>
 
