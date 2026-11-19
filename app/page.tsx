@@ -2,25 +2,29 @@ import React from 'react';
 import Link from 'next/link';
 import { getStoriesMetadata } from 'app/content/utils/mdx';
 
+// Empty when served from the root; the env var comes through undefined then.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 const mainTopSectionData = [
-  {
+    {
     title: 'Water Availability',
-    description: 'Mapping water for human use, energy, agriculture, and ecosystems.',
-    img: '/images/homepage/water_avail_theme.png',
+    description:'Mapping water for human use, energy, agriculture, and ecosystems.',
+    img: `${BASE_PATH}/images/homepage/water_avail_theme.png`,
     path: '/topics/water-resources',
   },
   {
     title: 'Floods',
-    description: 'Data-driven insights for flood preparedness.',
-    img: '/images/homepage/flood_theme.png',
+    description:'Data-driven insights for flood preparedness.',
+    img: `${BASE_PATH}/images/homepage/flood_theme.png`,
     path: '/topics/floods',
   },
   {
     title: 'Droughts',
-    description: 'Mapping droughts and drought conditions throughout the U.S.',
-    img: '/images/homepage/drought_theme.png',
+    description:'Mapping droughts and drought conditions throughout the U.S.',
+    img: `${BASE_PATH}/images/homepage/drought_theme.png`,
     path: '/topics/droughts',
-  },
+  }      
+
 ];
 
 const featuredStories = getStoriesMetadata()
@@ -37,60 +41,36 @@ export default function HomePage() {
   return (
     <section>
       <div className='grid-container'>
-        
-        {/* WELCOME SECTION */}
-        <div className='grid-row margin-top-5 margin-bottom-4 padding-4 radius-lg bg-base-lightest shadow-1'>
-          <div className='tablet:grid-col-10 tablet:grid-offset-1'>
-            <h2 className='text-center margin-bottom-3 text-primary'>
-              Welcome to NASA Water Insight
-            </h2>
-            <div className='body-text text-normal font-sans-md line-height-sans-4'>
-              <p className='margin-bottom-2'>
-                Water is arguably the most important resource for sustaining ecosystems, agriculture, and life itself. The water cycle describes how water moves throughout the planet’s atmosphere, oceans, and land impacting weather patterns, water availability, and natural disasters such as floods, wildfires, and droughts.
-              </p>
-              <p>
-                Using a combination of Earth observing satellites and sensors, ground-based monitoring and scientific modeling, we can observe Earth’s water resources at all stages of the water cycle. NASA Water Insight data products leverage these capabilities to track changes in atmospheric and land surface properties including soil moisture, precipitation, and vegetation, and to place them in historical context for a dynamically changing world.
-              </p>
-            </div>
+        <div className='grid-row margin-top-5'>
+          <h2>
+          Welcome
+          </h2>
+          <div className='body-text'>
+          <p>
+          NASA Water Insight provides essential information for managing water and land resources for the benefit of all sectors of society. State and federal agencies are working together to develop this system over North America to monitor and forecast precipitation, soil moisture, snow, groundwater, streamflow, and other variables critical for water resources, energy, and agriculture managers, as well as for early warning of drought and flood conditions.
+          </p>
           </div>
         </div>
-
-        {/* TOPICS SECTION */}
-        <div className='grid-row grid-gap-lg card--homepage-main margin-top-4'>
+        <div className='grid-row grid-gap-lg card--homepage-main margin-top-2'>
           {mainTopSectionData.map((d) => {
             return (
               <div
                 key={d.title}
-                className='tablet:grid-col text-center padding-4 radius-lg border border-base-lighter shadow-1 bg-white display-flex flex-column flex-align-center custom-hover-card'
+                className='tablet:grid-col text-center padding-5'
               >
-                <div className='margin-bottom-2'>
+                <div>
                   <img
-                    className='radius-pill shadow-2'
+                    className='radius-pill'
                     src={d.img}
                     alt={d.title}
-                    style={{ 
-                      width: '140px', 
-                      height: '140px', 
-                      objectFit: 'cover', 
-                      border: '4px solid #fff' 
-                    }}
-                  />
+                    style={{ width: '150px', height: '150px', objectFit: 'cover' }}
+                  ></img>
                 </div>
-                <div className='display-flex flex-column flex-1 width-full'>
-                  <h3 className='margin-top-1 text-secondary-dark'>{d.title}</h3>
-                  <p className='margin-top-1 flex-1 text-base-dark'>{d.description}</p>
-                  <Link 
-                    href={d.path} 
-                    className='display-inline-block margin-top-3 text-bold'
-                    style={{
-                      padding: '0.5rem 1.5rem',
-                      border: '2px solid #005ea2',
-                      borderRadius: '4px',
-                      textDecoration: 'none',
-                      color: '#005ea2'
-                    }}
-                  >
-                    Explore {d.title} →
+                <div className='margin-top-3'>
+                  <h3>{d.title}</h3>
+                  <p className='margin-top-1'>{d.description}</p>
+                  <Link href={d.path} className='display-inline-block margin-top-2 text-bold'>
+                  Read More →
                   </Link>
                 </div>
               </div>
@@ -98,77 +78,51 @@ export default function HomePage() {
           })}
         </div>
 
-        {/* FEATURED DATA STORIES SECTION */}
-        <div className='grid-row margin-top-8 margin-bottom-3'>
-          <h2 className='text-primary'>Featured Data Stories</h2>
+        <div className='grid-row margin-top-5'>
+          <h2>Featured Data Stories</h2>
         </div>
-        
-        <div className='grid-row grid-gap-md'>
-          {/* Main Top Story */}
-          {topStory && (
-            <div className='tablet:grid-col-6 display-flex'>
-              <div
-                className='card--homepage-topstory text-base-lightest radius-lg display-flex flex-align-end padding-4 shadow-2 width-full'
-                style={{
-                  backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), url(${topStory.media?.src})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  minHeight: '420px',
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}
-              >
-                <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100 }}>
-                  <span 
-                    className='margin-bottom-2 display-inline-block text-bold' 
-                    style={{ backgroundColor: '#e5a000', color: '#111', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.85rem' }}
-                  >
-                    Top Story
-                  </span>
-                  <h3 style={{ fontWeight: 'bold', fontSize: '1.75rem', marginBottom: '0.5rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-                    {topStory.name}
-                  </h3>
-                  <p className='margin-top-1' style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-                    {topStory.description}
-                  </p>
-                </div>
-                <Link className='link--block' href={topStory.path} style={{ position: 'absolute', inset: 0, zIndex: 10 }} />
+        <div className='grid-row grid-gap-md  margin-top-2'>
+          <div className='tablet:grid-col-6'>
+            <div
+              className='card--homepage-topstory text-base-lightest radius-md display-flex flex-align-end padding-2'
+              style={{
+                backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${topStory.media?.src})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <div className='card--homepage-topstory-text'>
+                <h3 style={{ fontWeight: 'bold' }}>{topStory.name}</h3>
+                <p className='margin-top-1'> {topStory.description}</p>
               </div>
+              <Link className='link--block' href={topStory.path} />
             </div>
-          )}
-
-          {/* Sub Stories */}
-          <div className='tablet:grid-col-6 display-flex flex-column' style={{ gap: '1.5rem' }}>
+          </div>
+          <div className='tablet:grid-col-6'>
             {otherStories.map((d) => {
               return (
-                <div key={d.id} className='flex-1 display-flex'>
-                  <div
-                    className='card--homepage-substory text-base-lightest radius-lg display-flex flex-align-end padding-3 shadow-2 width-full'
-                    style={{
-                      backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), url(${d.media?.src}?v=${d.id})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      minHeight: '198px',
-                      position: 'relative',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100 }}>
-                      <h3 style={{ fontWeight: 'bold', fontSize: '1.25rem', marginBottom: '0.25rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-                        {d.name}
-                      </h3>
-                      <p className='margin-top-1 text-sm' style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-                        {d.description}
-                      </p>
+                <div key={d.id} className='grid-row'>
+                  <div className='tablet:grid-col'>
+                    <div
+                      className='card--homepage-substory text-base-lightest radius-md display-flex flex-align-end padding-2'
+                      style={{
+                        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${d.media?.src}?v=${d.id})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
+                    >
+                      <div className='card--homepage-topstory-text'>
+                        <h3 style={{ fontWeight: 'bold' }}>{d.name}</h3>
+                        <p className='margin-top-1'> {d.description}</p>
+                      </div>
+                      <Link className='link--block' href={d.path} />
                     </div>
-                    <Link className='link--block' href={d.path} style={{ position: 'absolute', inset: 0, zIndex: 10 }} />
                   </div>
                 </div>
               );
             })}
           </div>
         </div>
-        
       </div>
     </section>
   );
