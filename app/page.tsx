@@ -6,7 +6,7 @@ import { getStoriesMetadata } from 'app/content/utils/mdx';
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
 const mainTopSectionData = [
-    {
+  {
     title: 'Water Availability',
     description:'Mapping water for human use, energy, agriculture, and ecosystems.',
     img: `${BASE_PATH}/images/homepage/water_avail_theme.png`,
@@ -24,7 +24,6 @@ const mainTopSectionData = [
     img: `${BASE_PATH}/images/homepage/drought_theme.png`,
     path: '/topics/droughts',
   }      
-
 ];
 
 const featuredStories = getStoriesMetadata()
@@ -83,20 +82,23 @@ export default function HomePage() {
         </div>
         <div className='grid-row grid-gap-md  margin-top-2'>
           <div className='tablet:grid-col-6'>
-            <div
-              className='card--homepage-topstory text-base-lightest radius-md display-flex flex-align-end padding-2'
-              style={{
-                backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${topStory.media?.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            >
-              <div className='card--homepage-topstory-text'>
-                <h3 style={{ fontWeight: 'bold' }}>{topStory.name}</h3>
-                <p className='margin-top-1'> {topStory.description}</p>
+            {/* SAFETY CHECK ADDED HERE */}
+            {topStory && (
+              <div
+                className='card--homepage-topstory text-base-lightest radius-md display-flex flex-align-end padding-2'
+                style={{
+                  backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${topStory.media?.src})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                <div className='card--homepage-topstory-text'>
+                  <h3 style={{ fontWeight: 'bold' }}>{topStory.name}</h3>
+                  <p className='margin-top-1'> {topStory.description}</p>
+                </div>
+                <Link className='link--block' href={topStory.path} />
               </div>
-              <Link className='link--block' href={topStory.path} />
-            </div>
+            )}
           </div>
           <div className='tablet:grid-col-6'>
             {otherStories.map((d) => {
