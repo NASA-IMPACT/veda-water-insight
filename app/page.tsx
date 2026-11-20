@@ -4,6 +4,12 @@ import { getStoriesMetadata } from 'app/content/utils/mdx';
 
 const mainTopSectionData = [
   {
+    title: 'Droughts',
+    description: 'Mapping droughts and drought conditions throughout the U.S.',
+    img: '/images/homepage/drought_theme.png',
+    path: '/topics/droughts',
+  },
+  {
     title: 'Water Availability',
     description: 'Mapping water for human use, energy, agriculture, and ecosystems.',
     img: '/images/homepage/water_avail_theme.png',
@@ -14,13 +20,7 @@ const mainTopSectionData = [
     description: 'Data-driven insights for flood preparedness.',
     img: '/images/homepage/flood_theme.png',
     path: '/topics/floods',
-  },
-  {
-    title: 'Droughts',
-    description: 'Mapping droughts and drought conditions throughout the U.S.',
-    img: '/images/homepage/drought_theme.png',
-    path: '/topics/droughts',
-  },
+  }
 ];
 
 const featuredStories = getStoriesMetadata()
@@ -46,10 +46,10 @@ export default function HomePage() {
             </h2>
             <div className='body-text text-normal font-sans-md line-height-sans-4'>
               <p className='margin-bottom-2'>
-                Water is arguably the most important resource for sustaining ecosystems, agriculture, and life itself. The water cycle describes how water moves throughout the planet’s atmosphere, oceans, and land impacting weather patterns, water availability, and natural disasters such as floods, wildfires, and droughts.
+                Water is arguably the most important resource for sustaining ecosystems, agriculture, and life itself. The water cycle describes how water moves throughout the planet&apos;s atmosphere, oceans, and land impacting weather patterns, water availability, and natural disasters such as floods, wildfires, and droughts.
               </p>
               <p>
-                Using a combination of Earth observing satellites and sensors, ground-based monitoring and scientific modeling, we can observe Earth’s water resources at all stages of the water cycle. NASA Water Insight data products leverage these capabilities to track changes in atmospheric and land surface properties including soil moisture, precipitation, and vegetation, and to place them in historical context for a dynamically changing world.
+                Using a combination of Earth observing satellites and sensors, ground-based monitoring and scientific modeling, we can observe Earth&apos;s water resources at all stages of the water cycle. NASA Water Insight data products leverage these capabilities to track changes in atmospheric and land surface properties including soil moisture, precipitation, and vegetation, and to place them in historical context for a dynamically changing world.
               </p>
             </div>
           </div>

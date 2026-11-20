@@ -37,7 +37,7 @@ export default function AboutPage() {
             </h2>
             <ul className='margin-bottom-4 margin-left-4' style={{ listStyleType: 'disc' }}>
               <li className='margin-bottom-2'>
-                <strong>Monitoring & Forecasting:</strong> Tracking critical variables including precipitation, soil moisture, snow, groundwater, and streamflow.
+                <strong>Monitoring & Outlooks:</strong> Tracking critical variables including precipitation, soil moisture, snow, groundwater, and streamflow.
               </li>
               <li className='margin-bottom-2'>
                 <strong>Early Warning Systems:</strong> Providing data-driven insights to help communities prepare for droughts, floods, and wildfires.
