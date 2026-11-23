@@ -157,12 +157,12 @@ export default function HomePage() {
               >
                 <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100, pointerEvents: 'none' }}>
                   <span 
-                    className='margin-bottom-2 display-inline-block text-bold' 
+                    className='margin-bottom-1 display-inline-block text-bold' 
                     style={{ backgroundColor: '#e5a000', color: '#111', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.85rem' }}
                   >
                     Top Story
                   </span>
-                  <h3 style={{ fontWeight: 'bold', fontSize: '1.75rem', marginBottom: '0.5rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
+                  <h3 style={{ fontWeight: 'bold', fontSize: '1.75rem', marginTop: 0, marginBottom: '0.5rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
                     {topStory.name}
                   </h3>
                   <p className='margin-top-1' style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
