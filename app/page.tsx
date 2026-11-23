@@ -155,7 +155,7 @@ export default function HomePage() {
                   overflow: 'hidden',
                 }}
               >
-                <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100 }}>
+                <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100, pointerEvents: 'none' }}>
                   <span 
                     className='margin-bottom-2 display-inline-block text-bold' 
                     style={{ backgroundColor: '#e5a000', color: '#111', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.85rem' }}
@@ -190,7 +190,7 @@ export default function HomePage() {
                       overflow: 'hidden',
                     }}
                   >
-                    <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100 }}>
+                    <div className='card--homepage-topstory-text position-relative' style={{ zIndex: 100, pointerEvents: 'none' }}>
                       <h3 style={{ fontWeight: 'bold', fontSize: '1.25rem', marginBottom: '0.25rem', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
                         {d.name}
                       </h3>
